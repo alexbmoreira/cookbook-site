@@ -1,9 +1,12 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 
-const RecipesContainer = ({match}) => {
+const RecipesContainer = () => {
+  const { id } = useParams();
+
   return (
     <div>
-      {`Recipe ${match.params.id}`}
+      {`Recipe ${id}`}
     </div>
   );
 };
