@@ -1,11 +1,18 @@
 import React from 'react';
+import { withState } from '../../../shared';
+import HomeContainerState from '../state/HomeContainerState';
+import RecipeLink from './RecipeLink';
 
-const HomeContainer = () => {
+const HomeContainer = ({ uiState }) => {
+  const { recipes } = uiState;
+
   return (
     <div>
-      {'Home'}
+      {recipes.map((recipe) => (
+        <RecipeLink recipe={recipe}/>
+      ))}
     </div>
-  );
+  )
 };
 
-export default HomeContainer;
+export default withState(HomeContainer, HomeContainerState);
