@@ -1,12 +1,44 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FormattedMessage } from 'react-intl'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+const Card = ({children}) => {
+  return (<div className='drop-shadow my-4 bg-gray-100 active:drop-shadow-none'>
+    {children}
+  </div>);
+};
+
+const RecipeInfo = ({recipe}) => {
+  return (
+    <div className='p-2'>
+      <div className='font-serif text-2xl mb-1'>
+        {recipe.name}
+      </div>
+      <div className='text-sky-800 flex justify-between'>
+        <div>
+          <FormattedMessage id={`recipes.categories.${recipe.category}`}/>
+        </div>
+        <div className='space-x-1 text-gray-400 text-sm'>
+          <FontAwesomeIcon icon="fa-solid fa-clock"/>
+          <span>
+            <FormattedMessage id='time.minutes' values={{time: recipe.prepTime + recipe.cookTime}}/>
+          </span>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const RecipeLink = ({ recipe }) => {;
   return (
-    <div className='my-2 hover:underline'>
-      <Link to={`/recipes/${recipe.id}`}>{recipe.name}</Link>
-    </div>
-  )
+    <Link to={`/recipes/${recipe.id}`}>
+      <Card>
+        <div className='h-48 bg-gray-600'/>
+        <RecipeInfo recipe={recipe}/>
+      </Card>
+    </Link>
+  );
 };
 
 export default RecipeLink;

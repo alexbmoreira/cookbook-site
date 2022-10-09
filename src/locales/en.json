@@ -1,0 +1,11 @@
+{
+  "recipes.categories.breakfast": "Breakfast",
+  "recipes.categories.soup": "Soups",
+  "recipes.categories.side": "Sides",
+  "recipes.categories.meat_and_poultry": "Meat & Poultry",
+  "recipes.categories.fish": "Fish",
+  "recipes.categories.pasta": "Pasta",
+  "recipes.categories.dessert": "Fika",
+  "recipes.categories.misc": "Odds & Ends",
+  "time.minutes": "{time} mins"
+}

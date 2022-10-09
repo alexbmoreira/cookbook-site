@@ -7,9 +7,9 @@ const HomeContainer = ({ uiState }) => {
   const { recipes } = uiState;
 
   return (
-    <div>
+    <div className='p-4'>
       {recipes.map((recipe) => (
-        <RecipeLink recipe={recipe}/>
+        <RecipeLink key={recipe.id} recipe={recipe}/>
       ))}
     </div>
   )
