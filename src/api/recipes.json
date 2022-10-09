@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Test Recipe",
+    "category": "dessert",
+    "prepTime": 10,
+    "cookTime": 15,
+    "ingredients": [
+      {
+        "name": "sugar",
+        "quantity": "1",
+        "measurement": "cup"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Other Recipe",
+    "category": "pasta",
+    "prepTime": 5,
+    "cookTime": 15,
+    "ingredients": [
+      {
+        "name": "salt",
+        "quantity": "2",
+        "measurement": "pinch"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Final Recipe",
+    "category": "breakfast",
+    "prepTime": 15,
+    "cookTime": 45,
+    "ingredients": [
+      {
+        "name": "oil",
+        "quantity": "1",
+        "measurement": "tsp"
+      }
+    ]
+  }
+]
