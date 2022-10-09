@@ -1,7 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom';
-import Root from './containers/root/Root';
-import HomeContainer from './containers/home/HomeContainer';
-import RecipesContainer from './containers/recipes/RecipesContainer';
+import { Root } from './containers/root';
+import { HomeContainer } from './containers/home';
+import { RecipesContainer } from './containers/recipes';
 
 
 const router = createBrowserRouter([
