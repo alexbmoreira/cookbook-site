@@ -4,7 +4,7 @@ import { FormattedMessage } from 'react-intl';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Card = ({children}) => {
-  return (<div className='drop-shadow my-4 bg-gray-100 active:drop-shadow-none'>
+  return (<div className='drop-shadow bg-powder active:drop-shadow-none'>
     {children}
   </div>);
 };
@@ -15,11 +15,11 @@ const RecipeInfo = ({recipe}) => {
       <div className='font-serif text-2xl mb-1'>
         {recipe.name}
       </div>
-      <div className='text-sky-800 flex justify-between'>
+      <div className='text-lapis flex justify-between'>
         <div>
           <FormattedMessage id={`recipes.categories.${recipe.category}`}/>
         </div>
-        <div className='space-x-1 text-gray-400 text-sm'>
+        <div className='space-x-1 text-manatee text-sm'>
           <FontAwesomeIcon icon="fa-solid fa-clock"/>
           <span>
             <FormattedMessage id='time.minutes' values={{time: recipe.prepTime + recipe.cookTime}}/>

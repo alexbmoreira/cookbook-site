@@ -6,7 +6,7 @@ const Root = () => {
   return (
     <div>
       <div className='p-4 w-full bg-white sticky z-50 top-0 drop-shadow-sm'>
-        <span className='text-sky-800'>
+        <span className='text-lapis'>
           <Link to='/'>
             <FontAwesomeIcon icon="fa-solid fa-house-chimney" />
           </Link>
