@@ -10,7 +10,7 @@ class RecipesContainerState {
 
   async load() {
     const id = matchPath({ path: "/recipes/:id" }, window.location.pathname).params.id
-    const recipes = require('../../../api/recipes');
+    const recipes = require('../../../api/recipes').recipes;
 
     this.recipe = recipes.find((r) => r.id === id)
   }

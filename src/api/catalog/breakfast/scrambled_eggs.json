@@ -1,0 +1,50 @@
+{
+  "id": "4",
+  "name": "Scrambled Eggs",
+  "category": "breakfast",
+  "prepTime": 5,
+  "cookTime": 5,
+  "serves": 2,
+  "ingredients": [
+    {
+      "quantity": "4",
+      "measurement": "",
+      "name": "eggs"
+    },
+    {
+      "quantity": "1/4",
+      "measurement": "cup",
+      "name": "milk"
+    },
+    {
+      "quantity": "2",
+      "measurement": "tsp",
+      "name": "salt"
+    },
+    {
+      "quantity": "2",
+      "measurement": "tsp",
+      "name": "pepper"
+    },
+    {
+      "quantity": "2",
+      "measurement": "tsp",
+      "name": "cumin"
+    },
+    {
+      "quantity": "2",
+      "measurement": "tsp",
+      "name": "cayenne pepper"
+    },
+    {
+      "quantity": "1",
+      "measurement": "tbsp",
+      "name": "butter"
+    }
+  ],
+  "steps": [
+    "Beat eggs, milk, salt, pepper, cumin, and cayenne in medium bowl until blended.",
+    "Heat butter in large nonstick skillet over medium heat until melted. Pour in egg mixture, gently stirring as eggs begin to set.",
+    "Continue cooking -- pulling, lifting, and folding eggs -- until thickened and no visible liquid egg remains. Do not stir constantly. Remove from heat. Serve immediately."
+  ]
+}
