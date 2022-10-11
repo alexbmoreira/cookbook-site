@@ -1,4 +1,6 @@
 {
+  "recipes.Ingredients": "Ingredients",
+  "recipes.Instructions": "Instructions",
   "recipes.categories.breakfast": "Breakfast",
   "recipes.categories.soup": "Soups",
   "recipes.categories.side": "Sides",
@@ -7,5 +9,8 @@
   "recipes.categories.pasta": "Pasta",
   "recipes.categories.dessert": "Fika",
   "recipes.categories.misc": "Odds & Ends",
+  "recipes.cook_times.prep": "PREP",
+  "recipes.cook_times.cook": "COOK",
+  "recipes.cook_times.total": "TOTAL",
   "time.minutes": "{time} mins"
 }
