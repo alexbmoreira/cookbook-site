@@ -32,12 +32,12 @@ const RecipeInfo = ({recipe}) => {
 
 const RecipeLink = ({ recipe }) => {;
   return (
-    <Link to={`/recipes/${recipe.id}`}>
-      <Card>
+    <Card>
+      <Link to={`/recipes/${recipe.id}`}>
         <div className='h-48 bg-gray-600'/>
         <RecipeInfo recipe={recipe}/>
-      </Card>
-    </Link>
+      </Link>
+    </Card>
   );
 };
 

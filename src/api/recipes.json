@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": "1",
     "name": "Test Recipe",
     "category": "dessert",
     "prepTime": 10,
@@ -11,10 +11,15 @@
         "quantity": "1",
         "measurement": "cup"
       }
+    ],
+    "steps": [
+      "Preheat oven to 425ºF",
+      "Do a bunch of stuff",
+      "Bake for 20mins"
     ]
   },
   {
-    "id": 2,
+    "id": "2",
     "name": "Other Recipe",
     "category": "pasta",
     "prepTime": 5,
@@ -28,7 +33,7 @@
     ]
   },
   {
-    "id": 3,
+    "id": "3",
     "name": "Final Recipe",
     "category": "breakfast",
     "prepTime": 15,
