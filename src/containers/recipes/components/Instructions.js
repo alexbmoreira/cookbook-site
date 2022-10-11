@@ -11,11 +11,13 @@ const Step = ({text}) => {
 const Instructions = ({steps}) => {
   if (!steps) return null;
 
-  return steps.map((step, index) => (
-    <div className='space-y-1 text-sm'>
-      <Step key={index} text={step}/>
+  return (
+    <div className='space-y-2 text-sm'>
+      {steps.map((step, index) => (
+        <Step key={index} text={step}/>
+      ))}
     </div>
-  ));
+  )
 };
 
 export default Instructions;

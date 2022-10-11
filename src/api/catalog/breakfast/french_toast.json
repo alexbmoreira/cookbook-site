@@ -1,0 +1,42 @@
+{
+  "id": "2",
+  "name": "French Toast",
+  "category": "breakfast",
+  "prepTime": 5,
+  "cookTime": 5,
+  "serves": 2,
+  "ingredients": [
+    {
+      "quantity": "2",
+      "measurement": "",
+      "name": "eggs"
+    },
+    {
+      "quantity": "1/2",
+      "measurement": "cup",
+      "name": "milk"
+    },
+    {
+      "quantity": "4",
+      "measurement": "slices",
+      "name": "bread"
+    },
+    {
+      "quantity": "1",
+      "measurement": "tbsp",
+      "name": "melted butter"
+    },
+    {
+      "quantity": "1",
+      "measurement": "tsp",
+      "name": "vanilla extract"
+    }
+  ],
+  "steps": [
+    "Whisk milk, eggs, and vanilla extract in a large bowl.",
+    "Melt butter in a pan over medium heat.",
+    "Dip bread slices in egg mixture for about about 5 seconds each. Make sure both sides are well coated.",
+    "Carefully place bread in the pan and cook until golden brown on both sides.",
+    "Approximately 2 minutes per side."
+  ]
+}

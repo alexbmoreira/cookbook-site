@@ -1,0 +1,32 @@
+{
+  "id": "3",
+  "name": "Hash Browns",
+  "category": "breakfast",
+  "prepTime": 10,
+  "cookTime": 5,
+  "serves": 2,
+  "ingredients": [
+    {
+      "quantity": "1/4",
+      "measurement": "lb",
+      "name": "Russet potatoes"
+    },
+    {
+      "quantity": "",
+      "measurement": "",
+      "name": "vegetable oil"
+    },
+    {
+      "quantity": "",
+      "measurement": "",
+      "name": "salt"
+    }
+  ],
+  "steps": [
+    "Peel the potatoes and grate them using the large holes of a box grater.",
+    "Squeeze out as much moisture as possible with a potato ricer or a cloth towel.",
+    "Heat oil in a large frying pan on medium-high heat. Once heated, add grated potatoes, spreading them out evenly along the bottom of the pan. The potatoes should not be too thick in any one place -- about 1/4 to 1/2-inch thick.",
+    "Sprinkle with salt and pepper.",
+    "Cook until crispy and golden brown on both sides."
+  ]
+}

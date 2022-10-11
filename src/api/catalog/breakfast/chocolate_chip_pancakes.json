@@ -1,0 +1,58 @@
+{
+  "id": "1",
+  "name": "Chocolate Chip Pancakes",
+  "category": "breakfast",
+  "prepTime": 10,
+  "cookTime": 10,
+  "serves": 2,
+  "ingredients": [
+    {
+      "quantity": "3/4",
+      "measurement": "cup",
+      "name": "flour"
+    },
+    {
+      "quantity": "1 1/2",
+      "measurement": "tsp",
+      "name": "sugar"
+    },
+    {
+      "quantity": "1",
+      "measurement": "tsp",
+      "name": "baking powder"
+    },
+    {
+      "quantity": "1/2",
+      "measurement": "tsp",
+      "name": "salt"
+    },
+    {
+      "quantity": "1/2",
+      "measurement": "tbsp",
+      "name": "melted butter"
+    },
+    {
+      "quantity": "1",
+      "measurement": "",
+      "name": "egg"
+    },
+    {
+      "quantity": "1/2",
+      "measurement": "cup",
+      "name": "milk"
+    },
+    {
+      "quantity": "",
+      "measurement": "",
+      "name": "semi-sweet chocolate chips"
+    }
+  ],
+  "steps": [
+    "In a large bowl, sift together flour, baking powder, salt, and sugar.",
+    "Make a well in the center and pour in the milk, egg and melted butter; mix until smooth.",
+    "Heat a lightly oiled griddle or frying pan over medium high heat.",
+    "Pour or scoop the batter onto the griddle, using approximately 1/4 cup for each pancake.",
+    "Drop the desired amount of chocolate chips into each scoop of batter.",
+    "Brown pancake on both sides and serve hot and topped with maple syrup."
+  ]
+}

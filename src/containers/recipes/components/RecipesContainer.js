@@ -14,7 +14,7 @@ const RecipesContainer = ({uiState}) => {
       <div className='h-48 bg-gray-600'/>
       <Container className='space-y-2'>
         <BlockHeader title={recipe.name} size='lg' translateTitle={false}/>
-        <CookTimes prepTime={recipe.prepTime} cookTime={recipe.prepTime}/>
+        <CookTimes prepTime={recipe.prepTime} cookTime={recipe.cookTime}/>
         <BlockHeader title={'recipes.Ingredients'}/>
         <Ingredients ingredients={recipe.ingredients}/>
         <BlockHeader title={'recipes.Instructions'}/>
