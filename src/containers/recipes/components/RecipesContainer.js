@@ -9,9 +9,10 @@ import Instructions from './Instructions';
 
 const RecipesContainer = ({uiState}) => {
   const { recipe } = uiState;
+
   return (
     <div>
-      <div className='h-48 bg-gray-600'/>
+      {recipe.image && <div className='h-48 bg-gray-600'/>}
       <Container className='space-y-2'>
         <BlockHeader title={recipe.name} size='lg' translateTitle={false}/>
         <CookTimes prepTime={recipe.prepTime} cookTime={recipe.cookTime} restTime={recipe.restTime} totalTime={recipe.totalTime}/>
