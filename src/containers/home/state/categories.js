@@ -6,7 +6,7 @@ const CATEGORIES = [
   { value: 'pasta', label: 'Pastas' },
   { value: 'meat_and_poultry', label: 'Meat & Poultry' },
   { value: 'fish', label: 'Fish' },
-  { value: 'dessert', label: 'Dessert' },
+  { value: 'dessert', label: 'Fika' },
   { value: 'misc', label: 'Odds & Ends' }
 ];
 
