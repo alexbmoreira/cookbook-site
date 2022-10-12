@@ -1,0 +1,53 @@
+{
+  "id": "5",
+  "name": "Caldo Verde",
+  "category": "soup",
+  "prepTime": 10,
+  "cookTime": 35,
+  "serves": 8,
+  "ingredients": [
+    {
+      "quantity": "2",
+      "measurement": "lbs",
+      "name": "Russet potatoes"
+    },
+    {
+      "quantity": "1",
+      "measurement": "",
+      "name": "onion"
+    },
+    {
+      "quantity": "2",
+      "measurement": "cloves",
+      "name": "garlic"
+    },
+    {
+      "quantity": "4",
+      "measurement": "cups",
+      "name": "chicken stock"
+    },
+    {
+      "quantity": "1",
+      "measurement": "lb",
+      "name": "kale"
+    },
+    {
+      "quantity": "1",
+      "measurement": "",
+      "name": "Portuguese couriço"
+    },
+    {
+      "quantity": "3",
+      "measurement": "tbsp",
+      "name": "olive oil"
+    }
+  ],
+  "steps": [
+    "Peel and cut potatoes into 1-inch pieces. Mince garlic and onion.",
+    "In a large pot over medium heat, cook onion and garlic in olive oil for 3 minutes.",
+    "Stir in potatoes and cook, stirring constantly, for 3 minutes more. Pour in chicken stock and 2 cups water, bring to a boil, and let boil gently for 20 minutes, until potatoes are soft.",
+    "Puree potatoes until no large chunks remain.",
+    "Add kale to soup and simmer until kale is tender and jade green, 5 minutes.",
+    "Stir in sliced chouriço and add salt and pepper to taste."
+  ]
+}

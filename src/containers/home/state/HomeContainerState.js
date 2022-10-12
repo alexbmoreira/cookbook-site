@@ -8,7 +8,7 @@ class HomeContainerState {
   }
 
   async load() {
-    this.recipes = require('../../../api/recipes');
+    this.recipes = require('../../../api/recipes').recipes;
   }
 }
 
