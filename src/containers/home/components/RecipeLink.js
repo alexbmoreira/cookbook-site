@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FormattedMessage } from 'react-intl';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { timeFormatter } from '../../../shared';
 
 const Card = ({children}) => {
   return (<div className='drop-shadow bg-carolina active:drop-shadow-none'>
@@ -22,7 +23,7 @@ const RecipeInfo = ({recipe}) => {
         <div className='space-x-1 opacity-50 text-sm'>
           <FontAwesomeIcon icon="fa-solid fa-clock"/>
           <span>
-            <FormattedMessage id='time.minutes' values={{time: recipe.prepTime + recipe.cookTime}}/>
+            <FormattedMessage id='time' values={timeFormatter(recipe.totalTime)}/>
           </span>
         </div>
       </div>
