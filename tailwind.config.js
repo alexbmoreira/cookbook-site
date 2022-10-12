@@ -11,6 +11,7 @@ module.exports = {
         'carolina': '#009FE3',
         'powder': '#F3F4F6',
         'lapis': '#075985',
+        'silver': '#CCCCCC',
         'eerie-black': '#151515'
       }
     },

@@ -4,11 +4,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Root = () => {
   return (
-    <div>
-      <div className='p-4 w-full bg-white sticky z-50 top-0 drop-shadow-sm'>
-        <span className='text-lapis'>
+    <div className='text-eerie-black'>
+      <div className='flex py-2 justify-center w-full bg-white sticky z-50 top-0 drop-shadow-sm'>
+        <span className='text-xl text-carolina'>
           <Link to='/'>
-            <FontAwesomeIcon icon="fa-solid fa-house-chimney" />
+            <FontAwesomeIcon icon="fa-solid fa-utensils" />
           </Link>
         </span>
       </div>
