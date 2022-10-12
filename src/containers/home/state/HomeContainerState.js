@@ -1,4 +1,5 @@
 import { makeObservable, observable, computed, action } from 'mobx';
+import { Recipe } from '../../../store';
 import CATEGORIES from './categories';
 
 class HomeContainerState {
@@ -20,7 +21,7 @@ class HomeContainerState {
   }
 
   async load() {
-    this.recipes = require('../../../api/recipes').recipes;
+    this.recipes = require('../../../api/recipes').recipes.map((recipe) => new Recipe(recipe));
   }
 
   updateSearch(value) {

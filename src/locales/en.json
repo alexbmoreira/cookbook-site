@@ -12,5 +12,5 @@
   "recipes.cook_times.prep": "PREP",
   "recipes.cook_times.cook": "COOK",
   "recipes.cook_times.total": "TOTAL",
-  "time.minutes": "{time} mins"
+  "time": "{hours, plural, =0 {} other {{hours} h }}{minutes, plural, =0 {} other {{minutes} mins}}"
 }
