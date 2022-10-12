@@ -40,6 +40,11 @@
       "quantity": "3",
       "measurement": "tbsp",
       "name": "olive oil"
+    },
+    {
+      "quantity": "",
+      "measurement": "",
+      "name": "salt and pepper"
     }
   ],
   "steps": [
