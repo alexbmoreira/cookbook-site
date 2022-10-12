@@ -5,19 +5,21 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { timeFormatter } from '../../../shared';
 
 const Card = ({children}) => {
-  return (<div className='drop-shadow bg-carolina active:drop-shadow-none'>
-    {children}
-  </div>);
+  return (
+    <div className='drop-shadow bg-powder active:drop-shadow-none'>
+      {children}
+    </div>
+  );
 };
 
 const RecipeInfo = ({recipe}) => {
   return (
-    <div className='p-2 text-white'>
+    <div className='p-2 text-eerie-black'>
       <div className='font-serif text-2xl mb-1'>
         {recipe.name}
       </div>
       <div className='flex justify-between'>
-        <div>
+        <div className='text-carolina'>
           <FormattedMessage id={`recipes.categories.${recipe.category}`}/>
         </div>
         <div className='space-x-1 opacity-50 text-sm'>
@@ -35,7 +37,6 @@ const RecipeLink = ({ recipe }) => {;
   return (
     <Card>
       <Link to={`/recipes/${recipe.id}`}>
-        <div className='h-48 bg-gray-600'/>
         <RecipeInfo recipe={recipe}/>
       </Link>
     </Card>

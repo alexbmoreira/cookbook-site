@@ -8,18 +8,6 @@ import HomeContainerState from '../state/HomeContainerState';
 import RecipeLink from './RecipeLink';
 import CATEGORIES from '../state/categories';
 
-const CatgoriesDropdown = observer(({ uiState }) => {
-  return (
-    <Select
-      options={CATEGORIES}
-      defaultValue={CATEGORIES[0]}
-      value={uiState.category}
-      onChange={(option) => uiState.updateCategory(option)}
-      className='mb-2'
-    />
-  );
-});
-
 const SearchBar = observer(({ uiState }) => {
   return (
     <div className='relative mb-2'>
@@ -34,6 +22,18 @@ const SearchBar = observer(({ uiState }) => {
         <FontAwesomeIcon icon="fa-solid fa-search" />
       </span>
     </div>
+  );
+});
+
+const CatgoriesDropdown = observer(({ uiState }) => {
+  return (
+    <Select
+      options={CATEGORIES}
+      defaultValue={CATEGORIES[0]}
+      value={uiState.category}
+      onChange={(option) => uiState.updateCategory(option)}
+      className='mb-4'
+    />
   );
 });
 
