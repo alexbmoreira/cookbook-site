@@ -7,6 +7,7 @@ const recipes = [
   require('./catalog/breakfast/scrambled_eggs'), // 4
   require('./catalog/soup/caldo_verde'), // 5
   require('./catalog/side/sweet_potato_casserole'), // 6
+  require('./catalog/meat_and_poultry/chicken_yakitori_bowl'), // 8
   require('./catalog/dessert/creme_brulee'), // 7
 ]
 
