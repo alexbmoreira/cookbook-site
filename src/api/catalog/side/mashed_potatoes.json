@@ -1,0 +1,41 @@
+{
+  "name": "Mashed Potatoes",
+  "category": "side",
+  "prepTime": 5,
+  "cookTime": 15,
+  "serves": 2,
+  "ingredients": [
+    {
+      "quantity": "1/2",
+      "measurement": "lb",
+      "name": "potatoes"
+    },
+    {
+      "quantity": "1/3",
+      "measurement": "cup",
+      "name": "sour cream"
+    },
+    {
+      "quantity": "2",
+      "measurement": "tbsp",
+      "name": "butter"
+    },
+    {
+      "quantity": "1",
+      "measurement": "tbsp",
+      "name": "chives"
+    },
+    {
+      "quantity": "",
+      "measurement": "",
+      "name": "salt and pepper"
+    }
+  ],
+  "steps": [
+    "Peel and cut potatoes into 1-inch pieces.",
+    "Combine potatoes, 2 tsp salt, and enough water to cover in a large pot. Cover and bring to a boil over high heat.",
+    "Once boiling, reduce to medium heat and simmer, uncovered, until fork-tender, 12-14 minutes.",
+    "Meanwhile, thinly slice chives and set aside.",
+    "Once potatoes are fork-tender, drain and remove from heat. Mash in sour cream, butter, and chives until smooth. Season with salt and pepper."
+  ]
+}
