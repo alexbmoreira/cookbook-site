@@ -1,0 +1,51 @@
+{
+  "name": "Pan-Seared Steak",
+  "category": "meat_and_poultry",
+  "prepTime": 5,
+  "cookTime": 15,
+  "serves": 2,
+  "ingredients": [
+    {
+      "quantity": "1",
+      "measurement": "lb",
+      "name": "steak"
+    },
+    {
+      "quantity": "2",
+      "measurement": "cloves",
+      "name": "garlic"
+    },
+    {
+      "quantity": "2",
+      "measurement": "sprigs",
+      "name": "rosemary"
+    },
+    {
+      "quantity": "1/4",
+      "measurement": "cup",
+      "name": "butter"
+    },
+    {
+      "quantity": "",
+      "measurement": "",
+      "name": "olive oil"
+    },
+    {
+      "quantity": "",
+      "measurement": "",
+      "name": "salt"
+    },
+    {
+      "quantity": "",
+      "measurement": "",
+      "name": "Montreal steak spice"
+    }
+  ],
+  "steps": [
+    "Pat steak dry with paper towel. Salt both sides generously and season with steak spice.",
+    "Heat up olive oil in a medium pan (enough to coat the bottom) over medium high heat.",
+    "Once hot, place steak in pan and sear for 2-3 minutes.",
+    "Flip and add crushed garlic, rosemary, and butter. Baste steak in butter and oil while it cooks for another 2-3 minutes.",
+    "Once cooked, let steak rest for 3-5 minutes. Cover with butter and oil from pan and season with pepper."
+  ]
+}

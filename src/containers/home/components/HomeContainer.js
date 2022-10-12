@@ -12,7 +12,7 @@ const SearchBar = observer(({ uiState }) => {
   return (
     <div className='relative mb-2'>
       <input
-        type='search'
+        type='text'
         placeholder='Search...'
         value={uiState.search}
         className='w-full border-silver border rounded p-2 pl-8 focus:outline-0'
