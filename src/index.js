@@ -4,6 +4,7 @@ import { RouterProvider } from 'react-router-dom';
 import router from './router';
 import './style/tailwind.css';
 import './style/fonts.css';
+import './style/index.css';
 import { IntlProvider } from 'react-intl';
 import English from './locales/en.json';
 import { library } from '@fortawesome/fontawesome-svg-core'
