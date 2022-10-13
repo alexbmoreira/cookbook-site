@@ -1,0 +1,4 @@
+.striped {
+  background-color: transparent;
+  background: repeating-linear-gradient( -45deg, #009FE3, #009FE3 2px, #FFFFFF 2px, #FFFFFF 35px );
+}
