@@ -1,0 +1,40 @@
+{
+  "name": "Garlic Roasted Potatoes",
+  "category": "side",
+  "prepTime": 10,
+  "cookTime": 50,
+  "serves": 2,
+  "ingredients": [
+    {
+      "quantity": "1/2",
+      "measurement": "lb",
+      "name": "potatoes"
+    },
+    {
+      "quantity": "1",
+      "measurement": "tbsp",
+      "name": "chopped parsley"
+    },
+    {
+      "quantity": "1",
+      "measurement": "clove",
+      "name": "garlic"
+    },
+    {
+      "quantity": "",
+      "measurement": "",
+      "name": "olive oil"
+    },
+    {
+      "quantity": "",
+      "measurement": "",
+      "name": "salt and pepper"
+    }
+  ],
+  "steps": [
+    "Preheat oven to 400ºF.",
+    "Cut potatoes into 1-inch cubes and place in a bowl with a drizzle with oil, salt, pepper, and garlic; Toss until well coated.",
+    "Transfer potatoes to a baking sheet and spread out evenly. Roast in the oven for 50 minutes while flipping occasionally, until crisp and golden.",
+    "Remove potatoes from the oven and season with extra salt and pepper to taste. Sprinkle with parsley."
+  ]
+}
