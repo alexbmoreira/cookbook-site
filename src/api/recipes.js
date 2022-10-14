@@ -1,26 +1,29 @@
-import _ from 'lodash';
+var _ = require('lodash');
+var slugify = require('slugify');
 
-const recipes = [
-  _.merge({ id: "1" },  require('./catalog/meat_and_poultry/almond_crusted_chicken')),
-  _.merge({ id: "2" },  require('./catalog/fish/maple_dijon_salmon')),
-  _.merge({ id: "3" },  require('./catalog/meat_and_poultry/pan_seared_steak')),
-  _.merge({ id: "4" },  require('./catalog/soup/caldo_verde')),
-  _.merge({ id: "5" },  require('./catalog/side/garlic_roasted_potatoes')),
-  _.merge({ id: "6" },  require('./catalog/dessert/banana_bread')),
-  _.merge({ id: "7" },  require('./catalog/breakfast/chocolate_chip_pancakes')),
-  _.merge({ id: "8" },  require('./catalog/side/sweet_potato_casserole')),
-  _.merge({ id: "9" },  require('./catalog/breakfast/scrambled_eggs')),
-  _.merge({ id: "10" }, require('./catalog/breakfast/hash_browns')),
-  _.merge({ id: "11" }, require('./catalog/side/mashed_potatoes')),
-  _.merge({ id: "12" }, require('./catalog/breakfast/french_toast')),
-  _.merge({ id: "13" }, require('./catalog/meat_and_poultry/chicken_yakitori_bowl')),
-  _.merge({ id: "14" }, require('./catalog/dessert/creme_brulee')),
-  _.merge({ id: "15" }, require('./catalog/pasta/pasta_carbonara')),
-  _.merge({ id: "16" }, require('./catalog/dessert/famous_pumpkin_pie.json')),
+var recipes = [
+  require('./catalog/meat_and_poultry/almond_crusted_chicken'),
+  require('./catalog/fish/maple_dijon_salmon'),
+  require('./catalog/meat_and_poultry/pan_seared_steak'),
+  require('./catalog/soup/caldo_verde'),
+  require('./catalog/side/garlic_roasted_potatoes'),
+  require('./catalog/dessert/banana_bread'),
+  require('./catalog/breakfast/chocolate_chip_pancakes'),
+  require('./catalog/side/sweet_potato_casserole'),
+  require('./catalog/breakfast/scrambled_eggs'),
+  require('./catalog/breakfast/hash_browns'),
+  require('./catalog/side/mashed_potatoes'),
+  require('./catalog/breakfast/french_toast'),
+  require('./catalog/meat_and_poultry/chicken_yakitori_bowl'),
+  require('./catalog/dessert/creme_brulee'),
+  require('./catalog/pasta/pasta_carbonara'),
+  require('./catalog/dessert/famous_pumpkin_pie.json'),
 ]
 
-if (_.uniqBy(recipes, 'id').length !== recipes.length) {
+recipes = _.map(recipes, (r) => _.merge({ slug: slugify(r.name, { lower: true, remove: /[*+~.()'"!:@]/g }) }, r));
+
+if (_.uniqBy(recipes, 'slug').length !== recipes.length) {
   throw new Error('Duplicate ids in recipes');
 }
 
-export { recipes };
+module.exports = recipes;

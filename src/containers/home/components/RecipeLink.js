@@ -36,7 +36,7 @@ const RecipeInfo = ({recipe}) => {
 const RecipeLink = ({ recipe }) => {;
   return (
     <Card>
-      <Link to={`/recipes/${recipe.id}`}>
+      <Link to={`/recipes/${recipe.slug}`}>
         <RecipeInfo recipe={recipe}/>
       </Link>
     </Card>

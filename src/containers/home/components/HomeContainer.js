@@ -47,7 +47,7 @@ const HomeContainer = observer(({ uiState }) => {
       <CatgoriesDropdown uiState={uiState}/>
       <div className='space-y-4'>
         {searchedRecipes.map((recipe) => (
-          <RecipeLink key={recipe.id} recipe={recipe}/>
+          <RecipeLink key={recipe.slug} recipe={recipe}/>
         ))}
       </div>
     </Container>

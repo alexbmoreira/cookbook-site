@@ -21,7 +21,7 @@ class HomeContainerState {
   }
 
   async load() {
-    this.recipes = require('../../../api/recipes').recipes.map((recipe) => new Recipe(recipe));
+    this.recipes = require('../../../api/recipes').map((recipe) => new Recipe(recipe));
   }
 
   updateSearch(value) {
