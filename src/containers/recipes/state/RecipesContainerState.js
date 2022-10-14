@@ -13,10 +13,10 @@ class RecipesContainerState {
   }
 
   async load() {
-    const id = matchPath({ path: "/recipes/:id" }, window.location.pathname).params.id
-    const recipes = require('../../../api/recipes').recipes.map((recipe) => new Recipe(recipe));
+    const slug = matchPath({ path: "/recipes/:slug" }, window.location.pathname).params.slug
+    const recipes = require('../../../api/recipes').map((recipe) => new Recipe(recipe));
 
-    this.recipe = recipes.find((r) => r.id === id)
+    this.recipe = recipes.find((r) => r.slug === slug)
   }
 }
 
