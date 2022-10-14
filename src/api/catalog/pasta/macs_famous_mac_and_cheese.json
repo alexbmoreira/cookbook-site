@@ -1,0 +1,63 @@
+{
+  "name": "Mac's Famous Mac & Cheese",
+  "category": "pasta",
+  "prepTime": 5,
+  "cookTime": 15,
+  "servings": 2,
+  "ingredients": [
+    {
+      "quantity": "100",
+      "measurement": "g",
+      "name": "macaroni"
+    },
+    {
+      "quantity": "1",
+      "measurement": "cup",
+      "name": "milk"
+    },
+    {
+      "quantity": "1/2",
+      "measurement": "cup",
+      "name": "American cheese"
+    },
+    {
+      "quantity": "1/2",
+      "measurement": "cup",
+      "name": "sharp cheddar"
+    },
+    {
+      "quantity": "1",
+      "measurement": "tbsp",
+      "name": "butter"
+    },
+    {
+      "quantity": "1/4",
+      "measurement": "cup",
+      "name": "Panko bread crumbs"
+    },
+    {
+      "quantity": "1/4",
+      "measurement": "cup",
+      "name": "Parmesan cheese"
+    },
+    {
+      "quantity": "1/2",
+      "measurement": "tsp",
+      "name": "dijon mustard"
+    },
+    {
+      "quantity": "1/2",
+      "measurement": "tsp",
+      "name": "cayenne pepper"
+    }
+  ],
+  "steps": [
+    "Combine milk and 1 1/2 cups water in a saucepan and bring to a simmer.",
+    "Toast Panko breadcrumbs in butter while waiting for milk and water to simmer.",
+    "Once simmering, pour in pasta and cook over medium-low heat until all the liquid is absorbed.",
+    "Once breadcrumbs look golden brown, remove from heat and mix in a bowl Parmesan cheese.",
+    "After pasta is done cooking add American cheese with Dijon mustard, and stir until melted.",
+    "Add sharp cheddar and cayenne, mix, then kill the heat and cover for 5 minutes.",
+    "Serve topped with Parmesan breadcrumbs."
+  ]
+}

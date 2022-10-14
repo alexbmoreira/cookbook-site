@@ -18,6 +18,7 @@ var recipes = [
   require('./catalog/dessert/creme_brulee'),
   require('./catalog/pasta/pasta_carbonara'),
   require('./catalog/dessert/famous_pumpkin_pie.json'),
+  require('./catalog/pasta/macs_famous_mac_and_cheese.json'),
 ]
 
 recipes = _.map(recipes, (r) => _.merge({ slug: slugify(r.name, { lower: true, remove: /[*+~.()'"!:@]/g }) }, r));
