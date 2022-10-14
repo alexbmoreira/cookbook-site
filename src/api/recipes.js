@@ -16,6 +16,7 @@ const recipes = [
   _.merge({ id: "13" }, require('./catalog/meat_and_poultry/chicken_yakitori_bowl')),
   _.merge({ id: "14" }, require('./catalog/dessert/creme_brulee')),
   _.merge({ id: "15" }, require('./catalog/pasta/pasta_carbonara')),
+  _.merge({ id: "16" }, require('./catalog/dessert/famous_pumpkin_pie.json')),
 ]
 
 if (_.uniqBy(recipes, 'id').length !== recipes.length) {

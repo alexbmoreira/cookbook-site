@@ -1,0 +1,42 @@
+{
+  "name": "Alexander's Famous Pumpkin Pie",
+  "category": "dessert",
+  "prepTime": 10,
+  "cookTime": 50,
+  "restTime": 120,
+  "servings": 8,
+  "ingredients": [
+    {
+      "quantity": "1 1/2",
+      "measurement": "cups",
+      "name": "35% cream"
+    },
+    {
+      "quantity": "4",
+      "measurement": "",
+      "name": "egg yolks"
+    },
+    {
+      "quantity": "1/4",
+      "measurement": "cup",
+      "name": "sugar"
+    },
+    {
+      "quantity": "1",
+      "measurement": "tsp",
+      "name": "vanilla extract"
+    },
+    {
+      "quantity": "4-6",
+      "measurement": "tsp",
+      "name": "sugar (for caramelizing)"
+    }
+  ],
+  "steps": [
+    "Preheat oven to 425ºF.",
+    "Whisk pumpkin, sweetened condensed milk, eggs, spices, and salt in medium bowl until smooth.",
+    "Pour pupkin mixture into crust and bake for 15 minutes.",
+    "Reduce oven temperature to 350ºF and continue baking 35 to 40 minutes or until toothpick inserted 1-inch from crust comes out clean.",
+    "Let cool for 2 hours before serving."
+  ]
+}

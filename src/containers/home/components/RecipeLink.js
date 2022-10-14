@@ -25,7 +25,7 @@ const RecipeInfo = ({recipe}) => {
         <div className='space-x-1 opacity-50 text-sm'>
           <FontAwesomeIcon icon="fa-solid fa-clock"/>
           <span>
-            <FormattedMessage id='time' values={timeFormatter(recipe.totalTime)}/>
+            <FormattedMessage id='time' values={timeFormatter(recipe.timeEstimate)}/>
           </span>
         </div>
       </div>

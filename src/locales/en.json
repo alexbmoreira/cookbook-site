@@ -9,8 +9,10 @@
   "recipes.categories.pasta": "Pasta",
   "recipes.categories.dessert": "Fika",
   "recipes.categories.misc": "Odds & Ends",
-  "recipes.cook_times.prep": "PREP",
-  "recipes.cook_times.cook": "COOK",
-  "recipes.cook_times.total": "TOTAL",
+  "recipes.cook_info.prep": "PREP",
+  "recipes.cook_info.cook": "COOK",
+  "recipes.cook_info.rest": "REST",
+  "recipes.cook_info.total": "TOTAL",
+  "recipes.cook_info.servings": "SERVINGS",
   "time": "{hours, plural, =0 {} other {{hours} h }}{minutes, plural, =0 {} other {{minutes} mins}}"
 }

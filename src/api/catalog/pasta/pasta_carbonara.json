@@ -3,7 +3,7 @@
   "category": "pasta",
   "prepTime": 10,
   "cookTime": 20,
-  "serves": 2,
+  "servings": 2,
   "ingredients": [
     {
       "quantity": "100",
