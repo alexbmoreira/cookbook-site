@@ -1,0 +1,71 @@
+{
+  "name": "Chocolate Chunk Cookies",
+  "category": "dessert",
+  "prepTime": 40,
+  "cookTime": 15,
+  "restTime": 10,
+  "ingredients": [
+    {
+      "quantity": "3 1/4",
+      "measurement": "cups",
+      "name": "flour"
+    },
+    {
+      "quantity": "1",
+      "measurement": "cup",
+      "name": "unsalted butter"
+    },
+    {
+      "quantity": "1 1/2",
+      "measurement": "cups",
+      "name": "brown sugar"
+    },
+    {
+      "quantity": "1/2",
+      "measurement": "cup",
+      "name": "sugar"
+    },
+    {
+      "quantity": "2",
+      "measurement": "",
+      "name": "eggs"
+    },
+    {
+      "quantity": "2",
+      "measurement": "tsp",
+      "name": "vanilla extract"
+    },
+    {
+      "quantity": "1 1/4",
+      "measurement": "tsp",
+      "name": "baking powder"
+    },
+    {
+      "quantity": "1",
+      "measurement": "tsp",
+      "name": "baking soda"
+    },
+    {
+      "quantity": "1",
+      "measurement": "tsp",
+      "name": "salt"
+    },
+    {
+      "quantity": "1",
+      "measurement": "",
+      "name": "dark chocolate bar"
+    }
+  ],
+  "steps": [
+    "Preheat oven to 365ºF.",
+    "Chop chocolate into desired size and set aside. Save small shavings to sprinkle on before baking.",
+    "Cut butter into small cubes and melt in a small saucepan.",
+    "Whisk together flour, baking powder, baking soda, and salt. Set aside.",
+    "Pour melted butter into a large mixing bowl and whisk in sugars. Add eggs one at a time to the butter mixture - whisking after each addition until just combined. Stir in vanilla extract.",
+    "Combine dry ingredients to wet mixture slowly and mix at low-medium speed. Once combined, add chopped chocolate to the dough.",
+    "Cover dough in parchment paper or plastic wrap and refrigerate for 15-30 minutes.",
+    "Once refrigerated, form dough into cookie balls using ice cream scoop and arrange on a baking sheet. Sprinkle with leftover choclate shavings.",
+    "Bake for 10-12 minutes or until edges are golden brown.",
+    "Let cool on a wire rack for 10 minutes."
+  ]
+}
