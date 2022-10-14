@@ -1,0 +1,64 @@
+{
+  "name": "Almond Crusted Chicken",
+  "category": "meat_and_poultry",
+  "prepTime": 10,
+  "cookTime": 15,
+  "serves": 2,
+  "ingredients": [
+    {
+      "quantity": "1/2",
+      "measurement": "lb",
+      "name": "chicken breast"
+    },
+    {
+      "quantity": "1/2",
+      "measurement": "cup",
+      "name": "Panko bread crumbs"
+    },
+    {
+      "quantity": "1 1/2",
+      "measurement": "cups",
+      "name": "almonds"
+    },
+    {
+      "quantity": "1",
+      "measurement": "cup",
+      "name": "flour"
+    },
+    {
+      "quantity": "1",
+      "measurement": "tbsp",
+      "name": "garlic powder"
+    },
+    {
+      "quantity": "1",
+      "measurement": "tsp",
+      "name": "dried oregano"
+    },
+    {
+      "quantity": "2",
+      "measurement": "",
+      "name": "large eggs"
+    },
+    {
+      "quantity": "2",
+      "measurement": "tbsp",
+      "name": "butter"
+    },
+    {
+      "quantity": "",
+      "measurement": "",
+      "name": "salt and pepper"
+    }
+  ],
+  "steps": [
+    "Preheat oven to 400ºF.",
+    "Slice almonds and mash until fine.",
+    "Beat eggs and set aside. In a small bowl, mix almonds, garlic powder, and oregano. In another small bowl, season bread crumbs with salt and pepper.",
+    "Pat chicken breasts dry with paper towel and tenderize. Cut into 1/2-inch thick strips lengthwise.",
+    "Dip chicken in egg, wiping away excess, and dip in bread-crumb mixture. Dredge until lightly coated.",
+    "Dip in egg again, and coat thoroughly with almonds.",
+    "Heat butter in a medium pan over medium heat. Saute chicken until nicely browned, about 3 minutes, and turn over to cook 1 minute more.",
+    "Transfer to oven and bake for 10 minutes, or until chicken reaches 165ºF."
+  ]
+}

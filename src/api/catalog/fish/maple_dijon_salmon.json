@@ -1,0 +1,45 @@
+{
+  "name": "Maple Dijon Salmon",
+  "category": "fish",
+  "prepTime": 5,
+  "cookTime": 25,
+  "serves": 2,
+  "ingredients": [
+    {
+      "quantity": "1",
+      "measurement": "lb",
+      "name": "salmon"
+    },
+    {
+      "quantity": "1",
+      "measurement": "tbsp",
+      "name": "dijon mustard"
+    },
+    {
+      "quantity": "1",
+      "measurement": "tbsp",
+      "name": "maple syrup"
+    },
+    {
+      "quantity": "1",
+      "measurement": "tsp",
+      "name": "paprika"
+    },
+    {
+      "quantity": "1/2",
+      "measurement": "tbsp",
+      "name": "olive oil"
+    },
+    {
+      "quantity": "",
+      "measurement": "",
+      "name": "salt and pepper"
+    }
+  ],
+  "steps": [
+    "Preheat oven to 400ºF. Line baking sheet with aluminum foil.",
+    "Place salmon on prepared baking sheet. In a small bowl, combine mustard, maple syrup, olive oil, salt, paprika, and pepper. Spoon about half of this mixture over the salmon in an even layer.",
+    "Bake for 15 minutes. Remove from oven and spoon on the rest of the maple mustard mixture.",
+    "Return to oven and bake for an additional 5-10 minutes or until a thermometer reads 145ºF."
+  ]
+}
