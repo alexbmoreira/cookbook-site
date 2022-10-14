@@ -46,12 +46,7 @@ class HomeContainerState {
   }
 
   get sortedRecipes() {
-    return _.chain(this.recipes)
-      .sortBy(_.propertyOf(CATEGORY_ORDERS))
-      .groupBy('category')
-      .map((c) => _.sortBy(c, 'name'))
-      .flatten()
-      .value()
+    return _.sortBy(this.recipes, [(r) => CATEGORY_ORDERS[r.category], 'name'])
   }
 
   get filteredRecipes() {
