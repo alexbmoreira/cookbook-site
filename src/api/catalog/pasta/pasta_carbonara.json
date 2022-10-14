@@ -1,0 +1,52 @@
+{
+  "name": "Pasta Carbonara",
+  "category": "pasta",
+  "prepTime": 10,
+  "cookTime": 20,
+  "serves": 2,
+  "ingredients": [
+    {
+      "quantity": "100",
+      "measurement": "g",
+      "name": "spaghetti"
+    },
+    {
+      "quantity": "1/4",
+      "measurement": "lb",
+      "name": "pancetta"
+    },
+    {
+      "quantity": "1/2",
+      "measurement": "cup",
+      "name": "Parmesan cheese"
+    },
+    {
+      "quantity": "1",
+      "measurement": "",
+      "name": "large egg"
+    },
+    {
+      "quantity": "1",
+      "measurement": "",
+      "name": "egg yolk"
+    },
+    {
+      "quantity": "1",
+      "measurement": "clove",
+      "name": "garlic"
+    },
+    {
+      "quantity": "",
+      "measurement": "",
+      "name": "salt and pepper"
+    }
+  ],
+  "steps": [
+    "Beat eggs and egg yolk in a measuring cup or small bowl with Parmesan. Add black pepper and beat until well incorporated.",
+    "Fill a pot with water and salt generously. Bring to a boil and add pasta once boiling.",
+    "Dump pancetta into a cold pan, and turn the heat to medium.",
+    "Once cooked, but not crispy, strain a small amount of fat out and return to medium-low heat. Add garlic and saute for one minute.",
+    "Once pasta is cooked, toss with pancetta and evenly coat in pancetta fat.",
+    "Dump egg mixture into pasta and mix rigorously. Add leftover pasta water as needed. Salt to taste and top with Parmesan cheese."
+  ]
+}
