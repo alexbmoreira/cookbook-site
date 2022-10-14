@@ -13,6 +13,6 @@
   "recipes.cook_info.cook": "COOK",
   "recipes.cook_info.rest": "REST",
   "recipes.cook_info.total": "TOTAL",
-  "recipes.cook_info.serves": "SERVES",
+  "recipes.cook_info.servings": "SERVINGS",
   "time": "{hours, plural, =0 {} other {{hours} h }}{minutes, plural, =0 {} other {{minutes} mins}}"
 }

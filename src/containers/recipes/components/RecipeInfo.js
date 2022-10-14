@@ -16,15 +16,15 @@ const InfoLine = ({title, value, isTime}) => {
 }
 
 const RecipeInfo = ({recipe}) => {
-  const {cookTime, prepTime, restTime, serves} = recipe;
+  const {cookTime, prepTime, restTime, servings} = recipe;
   return (
     <div className='space-y-1 text-sm'>
       {prepTime && <InfoLine title='prep' value={prepTime} isTime/>}
       {cookTime && <InfoLine title='cook' value={cookTime} isTime/>}
       {restTime && <InfoLine title='rest' value={restTime} isTime/>}
-      {serves && <React.Fragment>
+      {servings && <React.Fragment>
         <div className='border-b'/>
-        <InfoLine title='serves' value={serves}/>
+        <InfoLine title='servings' value={servings}/>
       </React.Fragment>}
     </div>
   );

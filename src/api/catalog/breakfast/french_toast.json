@@ -3,7 +3,7 @@
   "category": "breakfast",
   "prepTime": 5,
   "cookTime": 5,
-  "serves": 2,
+  "servings": 2,
   "ingredients": [
     {
       "quantity": "2",
