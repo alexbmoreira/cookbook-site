@@ -1,6 +1,18 @@
 import { makeObservable, observable, computed, action } from 'mobx';
 import { Recipe } from '../../../store';
+import _ from 'lodash';
 import CATEGORIES from './categories';
+
+const CATEGORY_ORDERS = {
+  'breakfast': 1,
+  'soup': 2,
+  'side': 3,
+  'pasta': 4,
+  'meat_and_poultry': 5,
+  'fish': 6,
+  'dessert': 7,
+  'misc': 8
+};
 
 class HomeContainerState {
   recipes = [];
@@ -15,8 +27,9 @@ class HomeContainerState {
       load: action,
       updateSearch: action,
       updateCategory: action,
+      sortedRecipes: computed,
+      filteredRecipes: computed,
       searchedRecipes: computed,
-      filteredRecipes: computed
     });
   }
 
@@ -32,10 +45,19 @@ class HomeContainerState {
     this.category = value;
   }
 
-  get filteredRecipes() {
-    if (this.category.value === 'all') return this.recipes;
+  get sortedRecipes() {
+    return _.chain(this.recipes)
+      .sortBy(_.propertyOf(CATEGORY_ORDERS))
+      .groupBy('category')
+      .map((c) => _.sortBy(c, 'name'))
+      .flatten()
+      .value()
+  }
 
-    return this.recipes.filter((recipe) => recipe.category === this.category.value);
+  get filteredRecipes() {
+    if (this.category.value === 'all') return this.sortedRecipes;
+
+    return this.sortedRecipes.filter((recipe) => recipe.category === this.category.value);
   }
 
   get searchedRecipes() {
