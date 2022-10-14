@@ -32,6 +32,7 @@ const CatgoriesDropdown = observer(({ uiState }) => {
       defaultValue={CATEGORIES[0]}
       value={uiState.category}
       onChange={(option) => uiState.updateCategory(option)}
+      isSearchable={false}
       className='mb-4'
     />
   );

@@ -3,7 +3,7 @@ import { Container } from '../../../components';
 import BlockHeader from './BlockHeader';
 import { withState } from '../../../shared';
 import RecipesContainerState from '../state/RecipesContainerState';
-import CookTimes from './CookTimes';
+import RecipeInfo from './RecipeInfo';
 import Ingredients from './Ingredients';
 import Instructions from './Instructions';
 
@@ -15,7 +15,7 @@ const RecipesContainer = ({uiState}) => {
       {recipe.image && <div className='h-48 bg-gray-600'/>}
       <Container className='space-y-2'>
         <BlockHeader title={recipe.name} size='lg' translateTitle={false}/>
-        <CookTimes prepTime={recipe.prepTime} cookTime={recipe.cookTime} restTime={recipe.restTime} totalTime={recipe.totalTime}/>
+        <RecipeInfo recipe={recipe}/>
         <BlockHeader title={'recipes.Ingredients'}/>
         <Ingredients ingredients={recipe.ingredients}/>
         <BlockHeader title={'recipes.Instructions'}/>
