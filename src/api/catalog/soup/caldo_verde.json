@@ -6,8 +6,8 @@
   "serves": 8,
   "ingredients": [
     {
-      "quantity": "2",
-      "measurement": "lbs",
+      "quantity": "1",
+      "measurement": "kg",
       "name": "Russet potatoes"
     },
     {
@@ -26,8 +26,8 @@
       "name": "chicken stock"
     },
     {
-      "quantity": "1",
-      "measurement": "lb",
+      "quantity": "1/2",
+      "measurement": "kg",
       "name": "kale"
     },
     {
