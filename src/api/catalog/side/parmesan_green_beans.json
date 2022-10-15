@@ -1,0 +1,45 @@
+{
+  "name": "Parmesan Green Beans",
+  "category": "side",
+  "prepTime": 10,
+  "cookTime": 20,
+  "servings": 2,
+  "ingredients": [
+    {
+      "quantity": "250",
+      "measurement": "g",
+      "name": "green beans"
+    },
+    {
+      "quantity": "1",
+      "measurement": "tbsp",
+      "name": "chopped parsley"
+    },
+    {
+      "quantity": "1/4",
+      "measurement": "cup",
+      "name": "Parmesan cheese"
+    },
+    {
+      "quantity": "1",
+      "measurement": "clove",
+      "name": "garlic"
+    },
+    {
+      "quantity": "",
+      "measurement": "",
+      "name": "olive oil"
+    },
+    {
+      "quantity": "",
+      "measurement": "",
+      "name": "salt and pepper"
+    }
+  ],
+  "steps": [
+    "Preheat the oven to 425ºF. Lightly spray a baking sheet or tray with cooking oil spray.",
+    "Wash beans and place in a bowl with a drizzle with oil, salt, pepper, Parmesan, and garlic; Toss until well coated.",
+    "Roast in the oven for 20-25 minutes, tossing halfway through cooking time, until fork tender.",
+    "Remove from oven, season with extra salt and pepper to taste. Sprinkle over with parsley."
+  ]
+}
