@@ -1,0 +1,46 @@
+{
+  "name": "Broccoli Pesto Cavatelli",
+  "category": "pasta",
+  "prepTime": 15,
+  "cookTime": 15,
+  "servings": 2,
+  "ingredients": [
+    {
+      "quantity": "100",
+      "measurement": "g",
+      "name": "fresh cavatelli"
+    },
+    {
+      "quantity": "100",
+      "measurement": "g",
+      "name": "sausage"
+    },
+    {
+      "quantity": "1",
+      "measurement": "crown",
+      "name": "broccoli"
+    },
+    {
+      "quantity": "2",
+      "measurement": "cloves",
+      "name": "garlic"
+    },
+    {
+      "quantity": "1",
+      "measurement": "tsp",
+      "name": "red chili flakes"
+    },
+    {
+      "quantity": "1",
+      "measurement": "tbsp",
+      "name": "olive oil"
+    }
+  ],
+  "steps": [
+    "Cut broccoli into florets and peel stems. Roughly chop into small pieces and set aside.",
+    "Bring a pot of salted water to a boil and steam broccoli in a steamer basket. Season generously with salt and pepper.",
+    "Pull apart sausage into tiny pieces. Heat oil in a small pan and add sausage with chili peppers and a clove of crushed garlic.",
+    "Saute another clove of crushed garlic and chili flakes in oil in a new pan for about 3 minutes. Add brocolli once steamed and mash well or blend.",
+    "Cook pasta in water for a couple minutes and add to broccoli. Toss with sausage to finish cooking."
+  ]
+}
