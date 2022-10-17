@@ -6,14 +6,14 @@
   "servings": 2,
   "ingredients": [
     {
-      "quantity": "1 cup",
-      "measurement": "orzo",
-      "name": ""
+      "quantity": "1",
+      "measurement": "cup",
+      "name": "orzo"
     },
     {
-      "quantity": "3/4",
-      "measurement": "cup",
-      "name": "broccoli florets"
+      "quantity": "1",
+      "measurement": "crown",
+      "name": "broccoli"
     },
     {
       "quantity": "250",
@@ -26,13 +26,13 @@
       "name": "butter"
     },
     {
-      "quantity": "1",
-      "measurement": "clove",
+      "quantity": "2",
+      "measurement": "cloves",
       "name": "garlic"
     },
     {
-      "quantity": "1",
-      "measurement": "tbsp",
+      "quantity": "1/4",
+      "measurement": "cup",
       "name": "milk"
     },
     {
