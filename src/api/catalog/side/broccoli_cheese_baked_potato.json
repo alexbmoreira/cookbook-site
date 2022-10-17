@@ -1,0 +1,59 @@
+{
+  "name": "Broccoli and Cheese Baked Potato",
+  "category": "side",
+  "prepTime": 10,
+  "cookTime": 50,
+  "servings": 2,
+  "ingredients": [
+    {
+      "quantity": "2",
+      "measurement": "",
+      "name": "Russet potatoes"
+    },
+    {
+      "quantity": "1",
+      "measurement": "crown",
+      "name": "broccoli"
+    },
+    {
+      "quantity": "1 1/2",
+      "measurement": "cups",
+      "name": "milk"
+    },
+    {
+      "quantity": "1 1/2",
+      "measurement": "tbsp",
+      "name": "butter"
+    },
+    {
+      "quantity": "1/4",
+      "measurement": "tsp",
+      "name": "garlic powder"
+    },
+    {
+      "quantity": "1",
+      "measurement": "tbsp",
+      "name": "shredded cheddar cheese"
+    },
+    {
+      "quantity": "",
+      "measurement": "",
+      "name": "olive oil"
+    },
+    {
+      "quantity": "",
+      "measurement": "",
+      "name": "salt and pepper"
+    }
+  ],
+  "steps": [
+    "Preheat oven to 400ºF.",
+    "Cut broccoli into florets and peel stems. Roughly chop into small pieces and set aside.,",
+    "Wash and dry potatoes and pierce each potato several times with a fork. Cover each potato in oil on a baking sheet. Place potatoes in oven and bake until potatoes are tender, about 45 minutes to 1 hour.",
+    "As potatoes bake, add butter and milk to a medium saucepan and bring to a simmer over medium heat. Whisk together as butter melts and the mixture thickens.",
+    "Once thick enough to coat a spoon, turn heat to low. Season with garlic powder, salt, and pepper.",
+    "Add shredded cheddar to sauce by the handful, whisking until fully melted before adding each handful. Once all cheddar is melted into the sauce, stir in chopped broccoli. Leave over low flame, stirring occasionally.",
+    "When potatoes are finished baking, carefully cut them open. Use a fork to slightly mash the insides of the potatoes.",
+    "Once ready to serve, place each potato on a plate and ladle broccoli cheese sauce over each one. Garnish with extra shredded cheddar, if desired."
+  ]
+}
