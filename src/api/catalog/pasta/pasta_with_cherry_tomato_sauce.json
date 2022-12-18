@@ -1,0 +1,54 @@
+{
+  "name": "Pasta with Cherry Tomato Sauce",
+  "category": "pasta",
+  "image": "pasta_with_cherry_tomato_sauce.jpg",
+  "prepTime": 10,
+  "cookTime": 20,
+  "servings": 2,
+  "ingredients": [
+    {
+      "quantity": "100",
+      "measurement": "g",
+      "name": "dry pasta"
+    },
+    {
+      "quantity": "1",
+      "measurement": "pint",
+      "name": "cherry tomatoes"
+    },
+    {
+      "quantity": "4",
+      "measurement": "cloves",
+      "name": "garlic"
+    },
+    {
+      "quantity": "1/2",
+      "measurement": "cup",
+      "name": "fresh basil"
+    },
+    {
+      "quantity": "1/4",
+      "measurement": "cup",
+      "name": "Parmesan cheese"
+    },
+    {
+      "quantity": "",
+      "measurement": "",
+      "name": "olive oil"
+    },
+    {
+      "quantity": "",
+      "measurement": "",
+      "name": "salt and pepper"
+    }
+  ],
+  "steps": [
+    "Fill a pot with water and salt generously. Bring to a boil and add pasta once boiling.",
+    "Meanwhile, saute garlic in olive oil until garlic is softened but not browned, about 3 minutes.",
+    "Add tomatoes and cook, stirring, until tomatoes begin to burst. Carefully press lightly with the back of a wooden spoon as they soften to speed up the bursting.",
+    "Continue to cook until sauce is rich and creamy, about 5 minutes longer. Stir in basil and season to taste with salt and pepper.",
+    "Once pasta is cooked, drain, reserving a cup of pasta water.",
+    "Add pasta to sauce and increase heat to medium-high. Cook, stirring and tossing constantly, and adding pasta water as necessary to adjust consistency.",
+    "Remove from heat, stir in olive oil, and grate in parmesan cheese."
+  ]
+}
