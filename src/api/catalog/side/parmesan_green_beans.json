@@ -1,6 +1,7 @@
 {
   "name": "Parmesan Green Beans",
   "category": "side",
+  "image": "parmesan_green_beans.png",
   "prepTime": 10,
   "cookTime": 20,
   "servings": 2,

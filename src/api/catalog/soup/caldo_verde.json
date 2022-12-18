@@ -1,6 +1,7 @@
 {
   "name": "Caldo Verde",
   "category": "soup",
+  "image": "caldo_verde.jpg",
   "prepTime": 10,
   "cookTime": 35,
   "servings": 8,

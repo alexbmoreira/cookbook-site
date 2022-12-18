@@ -1,6 +1,7 @@
 {
   "name": "Almond Crusted Chicken",
   "category": "meat_and_poultry",
+  "image": "almond_crusted_chicken.jpg",
   "prepTime": 10,
   "cookTime": 15,
   "servings": 2,

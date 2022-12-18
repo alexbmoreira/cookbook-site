@@ -1,6 +1,7 @@
 {
   "name": "Chicken Yakitori Bowl",
   "category": "meat_and_poultry",
+  "image": "chicken_yakitori_bowl.jpg",
   "prepTime": 10,
   "cookTime": 20,
   "servings": 2,
