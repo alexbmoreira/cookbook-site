@@ -1,6 +1,7 @@
 {
   "name": "Banana Bread",
   "category": "dessert",
+  "image": "banana_bread.png",
   "prepTime": 10,
   "cookTime": 60,
   "servings": 6,

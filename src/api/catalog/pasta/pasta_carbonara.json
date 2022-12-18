@@ -1,6 +1,7 @@
 {
   "name": "Pasta Carbonara",
   "category": "pasta",
+  "image": "pasta_carbonara.jpg",
   "prepTime": 10,
   "cookTime": 20,
   "servings": 2,

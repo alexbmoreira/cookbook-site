@@ -1,6 +1,7 @@
 {
   "name": "Mac's Famous Mac & Cheese",
   "category": "pasta",
+  "image": "macs_famous_mac_and_cheese.jpg",
   "prepTime": 5,
   "cookTime": 15,
   "servings": 2,

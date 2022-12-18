@@ -1,6 +1,7 @@
 {
   "name": "Mashed Potatoes",
   "category": "side",
+  "image": "mashed_potatoes.jpg",
   "prepTime": 5,
   "cookTime": 15,
   "servings": 2,
