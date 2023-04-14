@@ -5,7 +5,7 @@ const requireModule = require.context('./catalog/', true, /\.json$/);
 
 const recipes = requireModule.keys().map(filename => {
   const recipe = require(`./catalog/${filename.replace(/(\.\/|\.json)/g, '')}`);
-  return _.merge({ slug: slugify(recipe.name, { lower: true, remove: /[*+~.()'"!:@]/g }) }, recipe);
+  return _.merge({slug: slugify(recipe.name, { lower: true, remove: /[*+~.()'"!:@]/g }) }, recipe);
 });
 
 if (_.uniqBy(recipes, 'slug').length !== recipes.length) {
