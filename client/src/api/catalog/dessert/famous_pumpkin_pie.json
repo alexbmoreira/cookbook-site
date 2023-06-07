@@ -1,6 +1,7 @@
 {
   "name": "Alexander's Famous Pumpkin Pie",
   "category": "dessert",
+  "image": "famous_pumpkin_pie.png",
   "prepTime": 5,
   "cookTime": 50,
   "restTime": 120,

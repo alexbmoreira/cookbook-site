@@ -1,0 +1,79 @@
+{
+  "name": "Retro Burger",
+  "category": "meat_and_poultry",
+  "image": "retro_burger.jpg",
+  "prepTime": 10,
+  "cookTime": 15,
+  "servings": 2,
+  "ingredients": [
+    {
+      "quantity": "250",
+      "measurement": "g",
+      "name": "ground beef"
+    },
+    {
+      "quantity": "2",
+      "measurement": "cloves",
+      "name": "garlic"
+    },
+    {
+      "quantity": "1",
+      "measurement": "tsp",
+      "name": "sugar"
+    },
+    {
+      "quantity": "2",
+      "measurement": "tbsp",
+      "name": "mayonnaise"
+    },
+    {
+      "quantity": "2",
+      "measurement": "tbsp",
+      "name": "Italian breadcrumbs"
+    },
+    {
+      "quantity": "1",
+      "measurement": "tbsp",
+      "name": "balsamic vinegar"
+    },
+    {
+      "quantity": "2",
+      "measurement": "tbsp",
+      "name": "whole grain mustard"
+    },
+    {
+      "quantity": "1/4",
+      "measurement": "cup",
+      "name": "shredded cheddar cheese"
+    },
+    {
+      "quantity": "2",
+      "measurement": "",
+      "name": "brioche buns"
+    },
+    {
+      "quantity": "1",
+      "measurement": "",
+      "name": "yellow onion"
+    },
+    {
+      "quantity": "",
+      "measurement": "",
+      "name": "olive oil"
+    },
+    {
+      "quantity": "",
+      "measurement": "",
+      "name": "salt and pepper"
+    }
+  ],
+  "steps": [
+    "Peel and cut onion into 1/4-inch slices.",
+    "Heat a large non-stick pan over medium heat. When hot, add oil and cook onions until slightly softened. Add sugar and season with salt. Cook until dark golden-brown.",
+    "Remove from heat and add balsamic vinegar, stirring until absorbed. Set aside in a small bowl.",
+    "Meanwhile, peel and mince garlic. Combine beef, breadcrumbs, garlic, half the mustard, and some salt and pepper in a medium bowl. Form mixture into two 4-inch-wide patties.",
+    "Heat another large pan over medium heat, adding oil and patties once hot. Pan-fry until cooked through, 4-5 min per side.",
+    "Meanwhile, halve buns. Arrange on an unlined baking sheet, cut-side up. Sprinkle cheese over bottom buns. Toast in the top of the oven until cheese is melted and top buns are golden, 2-3 min.",
+    "Stir together mayo and remaining mustard in another small bowl and spread on top buns. Stack patties and caramelized onions on bottom buns and serve."
+  ]
+}

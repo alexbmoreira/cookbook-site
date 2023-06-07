@@ -1,6 +1,7 @@
 {
   "name": "French Toast",
   "category": "breakfast",
+  "image": "french_toast.jpg",
   "prepTime": 5,
   "cookTime": 5,
   "servings": 2,

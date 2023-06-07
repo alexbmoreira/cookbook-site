@@ -1,6 +1,7 @@
 {
   "name": "Scrambled Eggs",
   "category": "breakfast",
+  "image": "scrambled_eggs.jpg",
   "prepTime": 5,
   "cookTime": 5,
   "servings": 2,

@@ -1,6 +1,7 @@
 {
   "name": "Sweet Potato Casserole",
   "category": "side",
+  "image": "sweet_potato_casserole.jpg",
   "prepTime": 15,
   "cookTime": 45,
   "servings": 4,

@@ -1,9 +1,11 @@
 {
   "name": "Chocolate Chunk Cookies",
   "category": "dessert",
+  "image": "chocolate_chunk_cookies.jpg",
   "prepTime": 40,
   "cookTime": 15,
   "restTime": 10,
+  "servings": 8,
   "ingredients": [
     {
       "quantity": "3 1/4",

@@ -1,6 +1,7 @@
 {
   "name": "Chocolate Chip Pancakes",
   "category": "breakfast",
+  "image": "chocolate_chip_pancakes.png",
   "prepTime": 10,
   "cookTime": 10,
   "servings": 2,

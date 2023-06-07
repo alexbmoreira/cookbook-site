@@ -1,0 +1,84 @@
+{
+  "name": "Pumpkin Ravioli",
+  "category": "pasta",
+  "image": "pumpkin_ravioli.jpg",
+  "prepTime": 40,
+  "cookTime": 20,
+  "servings": 2,
+  "ingredients": [
+    {
+      "quantity": "100",
+      "measurement": "g",
+      "name": "all-purpose flour"
+    },
+    {
+      "quantity": "1",
+      "measurement": "",
+      "name": "egg"
+    },
+    {
+      "quantity": "1",
+      "measurement": "small",
+      "name": "pumpkin"
+    },
+    {
+      "quantity": "1",
+      "measurement": "",
+      "name": "shallot"
+    },
+    {
+      "quantity": "2",
+      "measurement": "cloves",
+      "name": "garlic"
+    },
+    {
+      "quantity": "1/2",
+      "measurement": "cup",
+      "name": "Parmesan cheese"
+    },
+    {
+      "quantity": "1/4",
+      "measurement": "tsp",
+      "name": "nutmeg"
+    },
+    {
+      "quantity": "1/4",
+      "measurement": "tsp",
+      "name": "allspice"
+    },
+    {
+      "quantity": "1",
+      "measurement": "tsp",
+      "name": "cornstarch"
+    },
+    {
+      "quantity": "",
+      "measurement": "",
+      "name": "Amaretti biscuits"
+    },
+    {
+      "quantity": "",
+      "measurement": "",
+      "name": "olive oil"
+    },
+    {
+      "quantity": "",
+      "measurement": "",
+      "name": "salt and pepper"
+    }
+  ],
+  "steps": [
+    "Mound flour on a clean work surface and make well in center. Crack egg into center.",
+    "Beat eggs lightly with a fork. Gradually incorporate flour into eggs, starting with inner rim of well.",
+    "Once mixed, knead dough until smooth and elastic. Cover and let rest for 30 minutes.",
+    "While dough is resting, cut pumpkin into small chunks, finely chop shallot, and mince garlic.",
+    "Heat olive oil in a large pan over medium heat. Add the chopped pumpkin and sauté until pumpkin is tender and caramelized, about 10-15 minutes, adding shallot and garlic part way through.",
+    "Transfer pumpkin to a bowl to cool slightly. Once cooled, mash until smooth.",
+    "In a medium bowl, mix pumpkin with parmesan cheese, salt, pepper, nutmeg, and allspice.",
+    "Once dough is ready, roll into a thin sheet over a lightly floured surface.",
+    "Scoop pumpkin filling out onto dough spaced 1-2 inches apart on the top half of the dough. Fold in half and press put air bubbles to seal in filling. Trim edges with a pasta cutter.",
+    "Bring pot of salted water to a boil. Gently add ravioli to the pot and cook for 3-4 minutes, or until they float to the surface.",
+    "Meanwhile, melt butter in a small saucepan over medium heat. Add 1/4 cup of water and cornstarch, stirring until the mixture thickens. Season with salt. Crumble biscuits into sauce and mix well.",
+    "Remove ravioli and drizzle with butter sauce and some extra Parmesan cheese to taste."
+  ]
+}

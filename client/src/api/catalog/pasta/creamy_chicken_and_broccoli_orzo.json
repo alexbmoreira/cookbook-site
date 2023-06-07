@@ -1,6 +1,7 @@
 {
   "name": "Creamy Chicken and Broccoli Orzo",
   "category": "pasta",
+  "image": "creamy_chicken_and_broccoli_orzo.jpg",
   "prepTime": 5,
   "cookTime": 20,
   "servings": 2,
@@ -56,7 +57,7 @@
     "Fill pot with water and salt generously. Bring to a boil and add orzo. Add broccoli in last 5 minutes.",
     "While orzo cooks, heat butter in a large skillet and add chicken once hot. Cook until golden brown and cooked through.",
     "Mince garlic and cook with chicken until golden, 30 seconds to 1 minute.",
-    "Once orzo is cooked, drain and add to chicken, stirring in cream and Parmesan cheese. Add salt and pepper to taste.",
+    "Once orzo is cooked, drain and add to chicken, stirring in milk and Parmesan cheese. Add salt and pepper to taste.",
     "Top with more parmesan if desired."
   ]
 }

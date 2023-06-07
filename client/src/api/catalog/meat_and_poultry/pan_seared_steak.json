@@ -1,6 +1,7 @@
 {
   "name": "Pan-Seared Steak",
   "category": "meat_and_poultry",
+  "image": "pan_seared_steak.jpg",
   "prepTime": 5,
   "cookTime": 15,
   "servings": 2,
