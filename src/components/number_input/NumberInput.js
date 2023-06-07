@@ -9,7 +9,7 @@ const NumberInput = observer(({uiState}) => {
 
   console.log(value);
   return (
-    <React.Fragment>
+    <div className='flex select-none'>
       <button className='bg-powder rounded-l hover:bg-silver cursor-pointer' onClick={() => uiState.decrementValue()}>
         <span className='m-auto px-2 text-2xl'>-</span>
       </button>
@@ -19,7 +19,7 @@ const NumberInput = observer(({uiState}) => {
       <button className='bg-powder rounded-r hover:bg-silver cursor-pointer' onClick={() => uiState.incrementValue()}>
         <span className='m-auto px-2 text-2xl'>+</span>
       </button>
-    </React.Fragment>
+    </div>
   );
 });
 

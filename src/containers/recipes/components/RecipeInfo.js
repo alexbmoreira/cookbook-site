@@ -30,7 +30,7 @@ const RecipeInfo = observer(({uiState}) => {
         <div className='border-b'/>
         <div className='flex justify-between'>
           <span className='bold text-lapis'><FormattedMessage id='recipes.cook_info.servings'/></span>
-          <span className='font-serif flex justify-end'>
+          <span className='font-serif justify-end'>
             <NumberInput value={servings} step={recipe.servings} min={recipe.servings} onChange={(value) => uiState.updateServings(value)}/>
           </span>
         </div>
