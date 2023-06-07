@@ -1,6 +1,8 @@
+import { observer } from 'mobx-react';
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import { timeFormatter } from '../../../shared';
+import NumberInput from '../../../components/number_input/NumberInput';
 
 const InfoLine = ({title, value, isTime}) => {
   return (
@@ -15,8 +17,10 @@ const InfoLine = ({title, value, isTime}) => {
   )
 }
 
-const RecipeInfo = ({recipe}) => {
-  const {cookTime, prepTime, restTime, servings} = recipe;
+const RecipeInfo = observer(({uiState}) => {
+  const {recipe, servings} = uiState;
+  const {cookTime, prepTime, restTime} = recipe;
+
   return (
     <div className='space-y-1 text-sm'>
       {prepTime && <InfoLine title='prep' value={prepTime} isTime/>}
@@ -24,10 +28,15 @@ const RecipeInfo = ({recipe}) => {
       {restTime && <InfoLine title='rest' value={restTime} isTime/>}
       {servings && <React.Fragment>
         <div className='border-b'/>
-        <InfoLine title='servings' value={servings}/>
+        <div className='flex justify-between'>
+          <span className='bold text-lapis'><FormattedMessage id='recipes.cook_info.servings'/></span>
+          <span className='font-serif flex justify-end'>
+            <NumberInput value={servings} step={recipe.servings} min={recipe.servings} onChange={(value) => uiState.updateServings(value)}/>
+          </span>
+        </div>
       </React.Fragment>}
     </div>
   );
-};
+});
 
 export default RecipeInfo;

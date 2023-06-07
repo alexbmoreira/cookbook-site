@@ -5,6 +5,7 @@
   "prepTime": 40,
   "cookTime": 15,
   "restTime": 10,
+  "servings": 8,
   "ingredients": [
     {
       "quantity": "3 1/4",

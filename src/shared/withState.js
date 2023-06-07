@@ -9,6 +9,9 @@ const withState = (Component, State) => {
     async componentWillMount() {
       this.uiState = new State();
 
+      if (this.uiState.receiveProps) {
+        this.uiState.receiveProps(this.props);
+      }
       if (this.uiState.load) {
         await Promise.resolve(this.uiState.load());
       }
