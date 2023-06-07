@@ -1,20 +1,23 @@
 import { observer } from 'mobx-react';
 import React from 'react';
-import { withState } from '../../../shared';
-import NumberInputState from '../state/RecipesContainerState';
+import { withState } from '../../shared';
+import NumberInputState from './state/NumberInputState';
 
 
 const NumberInput = observer(({uiState}) => {
   const {value} = uiState;
 
+  console.log(value);
   return (
     <React.Fragment>
-      <button class='bg-powder rounded-l hover:bg-silver cursor-pointer'>
-        <span class='m-auto px-2 text-2xl'>-</span>
+      <button className='bg-powder rounded-l hover:bg-silver cursor-pointer' onClick={() => uiState.decrementValue()}>
+        <span className='m-auto px-2 text-2xl'>-</span>
       </button>
-      <input className='bg-powder px-2 text-center w-10 outline-none' min={min} step={step} value={value} onChange={(e) => uiState.updateValue(e.target.value)}/>
-      <button class='bg-powder rounded-r hover:bg-silver cursor-pointer'>
-        <span class='m-auto px-2 text-2xl'>+</span>
+      <div className='bg-powder px-2 text-center w-10 outline-none flex items-center justify-center'>
+      <span>{value}</span>
+      </div>
+      <button className='bg-powder rounded-r hover:bg-silver cursor-pointer' onClick={() => uiState.incrementValue()}>
+        <span className='m-auto px-2 text-2xl'>+</span>
       </button>
     </React.Fragment>
   );
