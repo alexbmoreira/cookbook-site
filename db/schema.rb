@@ -10,9 +10,42 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_09_180644) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_10_122551) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "ingredients", force: :cascade do |t|
+    t.string "name", null: false
+    t.datetime "deleted_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["deleted_at"], name: "index_ingredients_on_deleted_at"
+  end
+
+  create_table "recipe_ingredients", force: :cascade do |t|
+    t.bigint "ingredient_id", null: false
+    t.string "quantity"
+    t.integer "measurement"
+    t.datetime "deleted_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["deleted_at"], name: "index_recipe_ingredients_on_deleted_at"
+    t.index ["ingredient_id"], name: "index_recipe_ingredients_on_ingredient_id"
+  end
+
+  create_table "recipes", force: :cascade do |t|
+    t.string "name"
+    t.string "image"
+    t.integer "prep_time", null: false
+    t.integer "cook_time", null: false
+    t.integer "servings"
+    t.text "steps", null: false
+    t.integer "category", default: 0, null: false
+    t.datetime "deleted_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["deleted_at"], name: "index_recipes_on_deleted_at"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "username"
@@ -24,4 +57,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_09_180644) do
     t.index ["deleted_at"], name: "index_users_on_deleted_at"
   end
 
+  add_foreign_key "recipe_ingredients", "ingredients"
 end
