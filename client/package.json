@@ -9,6 +9,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.4.0",
     "lodash": "^4.17.21",
     "mathjs": "^11.5.0",
     "mobx": "^6.6.2",
