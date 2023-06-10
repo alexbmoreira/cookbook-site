@@ -2,7 +2,7 @@ module Api
   module V1
     class RecipesController < ApplicationController
       def show
-        render json: Recipe.find(params[:id]), except: [:deleted_at, :created_at, :updated_at], status: :ok
+        render json: Recipe.find_by(slug: params[:slug]), except: [:deleted_at, :created_at, :updated_at], status: :ok
       end
 
       def index

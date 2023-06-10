@@ -1,22 +1,13 @@
 import React from 'react';
-
-const Step = ({text}) => {
-  return (
-    <div>
-      <span className='font-serif'>{text}</span>
-    </div>
-  )
-}
+import { HtmlRender } from '../../../components';
 
 const Instructions = ({steps}) => {
   if (!steps) return null;
 
   return (
-    <div className='space-y-2 text-sm'>
-      {steps.map((step, index) => (
-        <Step key={index} text={step}/>
-      ))}
-    </div>
+    <React.Fragment>
+      <HtmlRender html={steps} className='space-y-2 text-sm'/>
+    </React.Fragment>
   )
 };
 
