@@ -24,6 +24,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_10_122551) do
 
   create_table "recipe_ingredients", force: :cascade do |t|
     t.bigint "ingredient_id", null: false
+    t.bigint "recipe_id", null: false
     t.string "quantity"
     t.integer "measurement"
     t.datetime "deleted_at"
@@ -31,11 +32,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_10_122551) do
     t.datetime "updated_at", null: false
     t.index ["deleted_at"], name: "index_recipe_ingredients_on_deleted_at"
     t.index ["ingredient_id"], name: "index_recipe_ingredients_on_ingredient_id"
+    t.index ["recipe_id"], name: "index_recipe_ingredients_on_recipe_id"
   end
 
   create_table "recipes", force: :cascade do |t|
-    t.string "name"
+    t.string "name", null: false
     t.string "image"
+    t.string "slug", null: false
     t.integer "prep_time", null: false
     t.integer "cook_time", null: false
     t.integer "servings"
@@ -45,6 +48,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_10_122551) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["deleted_at"], name: "index_recipes_on_deleted_at"
+    t.index ["slug"], name: "index_recipes_on_slug", unique: true
   end
 
   create_table "users", force: :cascade do |t|
@@ -58,4 +62,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_10_122551) do
   end
 
   add_foreign_key "recipe_ingredients", "ingredients"
+  add_foreign_key "recipe_ingredients", "recipes"
 end
