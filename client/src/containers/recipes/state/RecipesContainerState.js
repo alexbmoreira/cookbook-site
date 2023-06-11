@@ -20,7 +20,6 @@ class RecipesContainerState {
   async load() {
     const slug = matchPath({ path: "/recipes/:slug" }, window.location.pathname).params.slug;
     const recipe = await fetchData(`/recipes/${slug}`);
-    debugger
 
     this.recipe = new Recipe(recipe);
     this.servings = this.recipe.servings;
