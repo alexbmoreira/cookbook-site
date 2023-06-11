@@ -26,7 +26,7 @@ class AddRecipeModels < ActiveRecord::Migration[7.0]
       t.references :ingredient, foreign_key: true, null: false
       t.references :recipe, foreign_key: true, null: false
       t.string :quantity
-      t.integer :measurement
+      t.string :measurement
 
       t.datetime :deleted_at, index: true
       t.timestamps

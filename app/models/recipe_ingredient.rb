@@ -9,7 +9,7 @@ end
 #
 #  id            :bigint           not null, primary key
 #  deleted_at    :datetime
-#  measurement   :integer
+#  measurement   :string
 #  quantity      :string
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
