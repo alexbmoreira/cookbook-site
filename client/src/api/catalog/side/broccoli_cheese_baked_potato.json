@@ -22,6 +22,11 @@
       "name": "milk"
     },
     {
+      "quantity": "1/2",
+      "measurement": "cup",
+      "name": "shredded cheddar cheese"
+    },
+    {
       "quantity": "1 1/2",
       "measurement": "tbsp",
       "name": "butter"
@@ -30,11 +35,6 @@
       "quantity": "1/4",
       "measurement": "tsp",
       "name": "garlic powder"
-    },
-    {
-      "quantity": "1",
-      "measurement": "tbsp",
-      "name": "shredded cheddar cheese"
     },
     {
       "quantity": "",
