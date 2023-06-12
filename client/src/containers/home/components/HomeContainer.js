@@ -2,7 +2,7 @@ import React from 'react';
 import { observer } from 'mobx-react';
 import Select from 'react-select'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Container } from '../../../components';
+import { Container, LoadingIcon } from '../../../components';
 import { withState } from '../../../shared';
 import HomeContainerState from '../state/HomeContainerState';
 import RecipeLink from './RecipeLink';
@@ -38,20 +38,30 @@ const CatgoriesDropdown = observer(({ uiState }) => {
   );
 });
 
+const RecipesList = observer(({ fetchingRecipes, recipes }) => {
+  if (fetchingRecipes) {
+    return <LoadingIcon/>;
+  }
+  
+  return (
+    <div className='space-y-4'>
+      {recipes.map((recipe) => (
+        <RecipeLink key={recipe.slug} recipe={recipe}/>
+      ))}
+    </div>
+  );
+});
+
 const HomeContainer = observer(({ uiState }) => {
-  const { searchedRecipes } = uiState;
+  const { fetchingRecipes, searchedRecipes } = uiState;
 
   return (
     <Container>
       <SearchBar uiState={uiState}/>
       <CatgoriesDropdown uiState={uiState}/>
-      <div className='space-y-4'>
-        {searchedRecipes.map((recipe) => (
-          <RecipeLink key={recipe.slug} recipe={recipe}/>
-        ))}
-      </div>
+      <RecipesList fetchingRecipes={fetchingRecipes} recipes={searchedRecipes}/>
     </Container>
   );
 });
 
-export default withState(HomeContainer, HomeContainerState);
+export default withState(HomeContainer, HomeContainerState, {noLoadingIcon: true});
