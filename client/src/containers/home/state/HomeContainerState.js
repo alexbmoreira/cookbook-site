@@ -2,6 +2,7 @@ import { makeObservable, observable, computed, action } from 'mobx';
 import { Recipe } from '../../../store';
 import _ from 'lodash';
 import CATEGORIES from './categories';
+import { fetchData } from '../../../api/api.service'
 
 const CATEGORY_ORDERS = {
   'breakfast': 1,
@@ -34,7 +35,8 @@ class HomeContainerState {
   }
 
   async load() {
-    this.recipes = require('../../../api/recipes').map((recipe) => new Recipe(recipe));
+    const recipes = await fetchData('/recipes?category=all')
+    this.recipes = recipes.map((recipe) => new Recipe(recipe));
   }
 
   updateSearch(value) {

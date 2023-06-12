@@ -7,7 +7,6 @@ import NumberInputState from './state/NumberInputState';
 const NumberInput = observer(({uiState}) => {
   const {value} = uiState;
 
-  console.log(value);
   return (
     <div className='flex select-none'>
       <button className='bg-powder rounded-l hover:bg-silver cursor-pointer' onClick={() => uiState.decrementValue()}>

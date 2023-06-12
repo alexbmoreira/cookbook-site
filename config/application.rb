@@ -18,15 +18,34 @@ module TwosCompany
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    config.middleware.use OliveBranch::Middleware, inflection: 'camel'
 
-    Rails.application.config.middleware.insert_before 0, Rack::Cors do
+    config.middleware.insert_before 0, Rack::Cors do
       allow do
-        origins '*'
+        origins 'localhost:3001'
         resource '*',
           headers: :any,
           methods: [:get, :post, :put, :patch, :delete, :options, :head]
       end
-    end    
+    end
+
+    config.middleware.insert_before 0, Rack::Cors do
+      allow do
+        origins 'twoscompanycookbook.com'
+        resource '*',
+          headers: :any,
+          methods: [:get, :post, :put, :patch, :delete, :options, :head]
+      end
+    end
+
+    config.middleware.insert_before 0, Rack::Cors do
+      allow do
+        origins /cookbook-13--[-\w]+\.web\.app/
+        resource '*',
+          headers: :any,
+          methods: [:get, :post, :put, :patch, :delete, :options, :head]
+      end
+    end
 
     # Only loads a smaller set of middleware suitable for API only apps.
     # Middleware like session, flash, cookies can be added back manually.
