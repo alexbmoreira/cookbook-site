@@ -40,7 +40,7 @@ module TwosCompany
 
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-        origins /cookbook-13--\w+\.web\.app/
+        origins /cookbook-13--[-\w]+\.web\.app/
         resource '*',
           headers: :any,
           methods: [:get, :post, :put, :patch, :delete, :options, :head]
