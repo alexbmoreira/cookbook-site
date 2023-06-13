@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { LoginModal } from './auth';
 
 const Header = () => {
   return (
@@ -21,6 +22,8 @@ const Footer = () => {
 };
 
 const Root = () => {
+  const [loginModalOpen, setLoginModalOpen] = React.useState(true);
+
   return (
     <div className='text-eerie-black flex flex-col min-h-screen'>
       <Header/>
@@ -28,6 +31,7 @@ const Root = () => {
         <Outlet/>
       </div>
       <Footer/>
+      <LoginModal isOpen={loginModalOpen} onClose={() => setLoginModalOpen(false)}/>
     </div>
   );
 }
