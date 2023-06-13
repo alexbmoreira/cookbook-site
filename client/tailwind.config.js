@@ -15,19 +15,29 @@ module.exports = {
         'eerie-black': '#151515'
       },
       animation: {
-        'beat': 'beat 3s ease-in-out infinite',
+        'beat': 'beat 1s infinite',
+        'spin': 'spin 3s linear infinite',
+        'spin-reverse': 'spin-reverse 2.5s linear infinite'
       },
       keyframes: {
-        beat: {
-          '0%, 100%': {
-            transform: 'scale(0.7)',
+        'beat': {
+          '0%': {
+            transform: 'scale(0)',
             opacity: 1
           },
-          '50%': {
+          '100%': {
             transform: 'scale(1)',
-            opacity: 0.5
+            opacity: 0
           },
-        }
+        },
+        'spin': {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' },
+        },
+        'spin-reverse': {
+          '0%': { transform: 'rotate(810deg)' },
+          '100%': { transform: 'rotate(90deg)' },
+        },
       },
     },
   },
