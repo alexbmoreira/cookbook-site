@@ -19,12 +19,14 @@ class HomeContainerState {
   recipes = [];
   search = '';
   category = CATEGORIES[0];
+  fetchingRecipes = true;
 
   constructor() {
     makeObservable(this, {
       recipes: observable,
       search: observable,
       category: observable,
+      fetchingRecipes: observable,
       load: action,
       updateSearch: action,
       updateCategory: action,
@@ -35,8 +37,10 @@ class HomeContainerState {
   }
 
   async load() {
+    this.fetchingRecipes = true;
     const recipes = await fetchData('/recipes?category=all')
     this.recipes = recipes.map((recipe) => new Recipe(recipe));
+    this.fetchingRecipes = false;
   }
 
   updateSearch(value) {
