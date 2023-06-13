@@ -1,4 +1,8 @@
 class ApplicationController < ActionController::API
+  include ActionController::Cookies
+
+  before_action :authorize
+
   def encode_token(payload)
     JWT.encode(payload, Rails.application.secrets.secret_key_base)
   end
@@ -29,7 +33,7 @@ class ApplicationController < ActionController::API
     !!logged_in_user
   end
 
-  def authorized
+  def authorize
     render json: { message: 'Please log in' }, status: :unauthorized unless logged_in?
   end
 end
