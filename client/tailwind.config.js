@@ -22,7 +22,8 @@ module.exports = {
         'eerie-black': {
           'DEFAULT': '#151515',
           'clear': '#15151588'
-        }
+        },
+        'crimson': '#DE3202'
       },
       animation: {
         'beat': 'beat 1s infinite',

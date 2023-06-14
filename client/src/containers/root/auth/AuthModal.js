@@ -14,6 +14,7 @@ const AuthModal = observer(({isOpen, onClose}) => {
   const [formErrors, setFormErrors] = useState({});
 
   const handleSubmit = async () => {
+    setFormErrors({});
     const {errors} = await postData(
       `/${formType}`,
       { username, email, password, passwordConfirmation }
@@ -48,23 +49,27 @@ const AuthModal = observer(({isOpen, onClose}) => {
           value={username}
           placeholder='Username'
           onChange={(value) => setUsername(value)}
+          errorMessage={formErrors.username}
         />
         {formType === 'register' && <Input
           value={email}
           placeholder='Email'
           onChange={(value) => setEmail(value)}
+          errorMessage={formErrors.email}
         />}
         <Input
           type='password'
           placeholder='Password'
           value={password}
           onChange={(value) => setPassword(value)}
+          errorMessage={formErrors.password}
         />
         {formType === 'register' && <Input
           type='password'
           value={passwordConfirmation}
           placeholder='Confirm Password'
           onChange={(value) => setPasswordConfirmation(value)}
+          errorMessage={formErrors.passwordConfirmation}
         />}
         <div className='mt-6'>
           <Button onClick={handleSubmit} trait='primary'>

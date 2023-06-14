@@ -11,9 +11,13 @@ const Input = observer(({value, onChange, iconClass, errorMessage, ...rest}) => 
       <input
         {...rest}
         value={value}
-        className={`w-full border-silver border rounded p-2 focus:outline-0 ${iconClass ? 'pl-8' : ''}`}
+        className={`w-full border-silver border rounded p-2 focus:outline-0 ${iconClass ? 'pl-8' : ''} ${errorMessage ? 'border-crimson' : ''}`}
         onChange={(e) => onChange(e.target.value)}
       />
+      {errorMessage && <div className='text-crimson text-xs space-x-1 mt-1'>
+        <FontAwesomeIcon icon='fa-solid fa-circle-exclamation' />
+        <span>{errorMessage}</span>
+      </div>}
     </div>
   );
 });
