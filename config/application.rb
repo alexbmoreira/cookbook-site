@@ -19,23 +19,10 @@ module TwosCompany
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
 
-    config.middleware.insert_before 0, Rack::Cors do
-      allow do
-        origins 'twoscompanycookbook.com'
-        resource '*',
-          headers: :any,
-          methods: [:get, :post, :put, :patch, :delete, :options, :head]
-      end
-    end
+    config.middleware.use ActionDispatch::Cookies
+    config.middleware.use ActionDispatch::Session::CookieStore
 
-    config.middleware.insert_before 0, Rack::Cors do
-      allow do
-        origins /cookbook-13--[-\w]+\.web\.app/
-        resource '*',
-          headers: :any,
-          methods: [:get, :post, :put, :patch, :delete, :options, :head]
-      end
-    end
+    config.middleware.use OliveBranch::Middleware, inflection: 'camel'
 
     config.middleware.use ActionDispatch::Cookies
     config.middleware.use ActionDispatch::Session::CookieStore
