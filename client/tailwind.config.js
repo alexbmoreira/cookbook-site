@@ -12,7 +12,10 @@ module.exports = {
         'powder': '#F3F4F6',
         'lapis': '#075985',
         'silver': '#CCCCCC',
-        'eerie-black': '#151515'
+        'eerie-black': {
+          'DEFAULT': '#151515',
+          'clear': '#15151588'
+        }
       },
       animation: {
         'beat': 'beat 1s infinite',

@@ -7,7 +7,8 @@ const Modal = observer(({isOpen, onClose, children}) => {
     <ReactModal
       isOpen={isOpen}
       onRequestClose={onClose}
-      className={{base: 'absolute top-1/2 left-1/2 right-auto bottom-auto outline-none -translate-x-1/2 -translate-y-1/2 shadow-md p-8'}}
+      className={{base: 'absolute top-1/4 inset-x-4 outline-none origin-center shadow-md p-8 bg-white'}}
+      overlayClassName={{base: 'fixed inset-0 bg-eerie-black-clear'}}
     >
       {children}
     </ReactModal>

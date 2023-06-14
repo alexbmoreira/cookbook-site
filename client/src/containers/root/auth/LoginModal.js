@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { observer } from 'mobx-react';
 import { authStore } from '../../../store';
-import { Modal } from '../../../components';
+import { Button, Input, Modal } from '../../../components';
 import { FormattedMessage } from 'react-intl';
 
 const LoginModal = observer(({isOpen, onClose}) => {
@@ -19,19 +19,22 @@ const LoginModal = observer(({isOpen, onClose}) => {
       isOpen={isOpen}
       onClose={onClose}
     >
-      <FormattedMessage id='auth.Log In'/>
+      <div className='font-serif text-2xl mb-4 text-center'>
+        <FormattedMessage id='auth.Log In'/>
+      </div>
       <div>
-        <input
-          type="text"
+        <Input
           value={username}
-          onChange={(e) => setUsername(e.target.value)}
-          />
-        <input
-          type="password"
+          placeholder='Username'
+          onChange={(value) => setUsername(value)}
+        />
+        <Input
+          type='password'
+          placeholder='Password'
           value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          />
-        <button onClick={handleLogin}>Login</button>
+          onChange={(value) => setPassword(value)}
+        />
+        <Button onClick={handleLogin}>Login</Button>
       </div>
     </Modal>
   );
