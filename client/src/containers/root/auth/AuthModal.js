@@ -16,9 +16,15 @@ const AuthModal = observer(({isOpen, onClose}) => {
     )
 
     authStore.login();
+    onClose();
+    _clearFields();
   };
 
-  console.log(authStore.isLoggedIn);
+  const _clearFields = () => {
+    setUsername('');
+    setPassword('');
+  }
+
   return (
     <Modal
       isOpen={isOpen}
@@ -40,7 +46,9 @@ const AuthModal = observer(({isOpen, onClose}) => {
           onChange={(value) => setPassword(value)}
         />
         <div className='mt-6'>
-          <Button onClick={handleLogin} trait='primary'>Login</Button>
+          <Button onClick={handleLogin} trait='primary'>
+            <FormattedMessage id='auth.Log In'/>
+          </Button>
         </div>
       </div>
     </Modal>

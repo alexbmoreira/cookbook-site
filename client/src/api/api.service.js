@@ -41,3 +41,13 @@ export const postData = async (url, payload) => {
     throw error;
   }
 };
+
+export const deleteData = async (url) => {
+  try {
+    const response = await api.delete(url);
+    return response.data;
+  } catch (error) {
+    console.error(`Error posting data to ${url}: ${error}`);
+    throw error;
+  }
+};

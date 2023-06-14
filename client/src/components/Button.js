@@ -11,7 +11,7 @@ const classesForTrait = (trait) => {
   }
 };
 
-const Button = observer(({onClick, trait, ...rest}) => {
+const Button = observer(({onClick, trait, className, ...rest}) => {
   const [processing, setProcessing] = useState(false);
 
   const _onClick = async (e, cb) => {
@@ -33,7 +33,7 @@ const Button = observer(({onClick, trait, ...rest}) => {
   return (
     <button
       {...rest}
-      className={`border-silver border rounded p-2 w-full transition ease-in-out duration-200 ${classesForTrait(trait)}`}
+      className={`border-silver border rounded p-2 w-full transition ease-in-out duration-200 ${classesForTrait(trait)} ${className ? className : ''}`}
       onClick={async (e) => _onClick(e, onClick)}
     />
   );
