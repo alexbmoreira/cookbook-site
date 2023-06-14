@@ -7,10 +7,8 @@ class AuthenticationController < ApplicationController
       if user.save
         token = encode_token({ user_id: user.id })
         cookies.signed[:jwt] = {value:  token, httponly: true, same_site: :strict}
-        render json: { user:, token: }, status: :created
-      else
-        render json: { errors: user.errors.full_messages }, status: :unprocessable_entity
       end
+      render_resource(user, status: :created)
     end
   end
 
@@ -21,16 +19,16 @@ class AuthenticationController < ApplicationController
       if user&.authenticate(params[:password])
         token = encode_token({ user_id: user.id })
         cookies.signed[:jwt] = {value:  token, httponly: true, same_site: :strict}
-        render json: { user:, token: }, status: :ok
+        render_resource(user, status: :ok)
       else
-        render json: { error: 'Invalid credentials' }, status: :unauthorized
+        render_resource({ error: 'Invalid credentials' }, status: :unauthorized)
       end
     end
   end
 
   def logout
     cookies.delete(:jwt)
-    render json: {message: "Logged out"}, status: :accepted
+    render_resource({ message: 'Logged out' }, status: :accepted)
   end
 
   private

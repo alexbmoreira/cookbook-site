@@ -1,7 +1,12 @@
 class ApplicationController < ActionController::API
   include ActionController::Cookies
+  include Renderable
 
   before_action :authorize
+
+  def self.responder
+    ApiResponder
+  end
 
   def encode_token(payload)
     JWT.encode(payload, Rails.application.secrets.secret_key_base)
