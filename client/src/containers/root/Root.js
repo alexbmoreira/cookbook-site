@@ -16,7 +16,7 @@ const Header = observer(({onClick}) => {
         </Link>
       </span>
       <div
-        className='absolute right-2 text-xl text-carolina hover:cursor-pointer'
+        className='absolute right-2 text-xl text-carolina cursor-pointer'
         onClick={() => onClick()}
       >
         {authStore.isLoggedIn ?

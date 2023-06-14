@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { authStore } from '../store';
+import _ from 'lodash';
 
 const api = axios.create({
   baseURL: `${process.env.REACT_APP_API_URL}`,
@@ -38,7 +39,14 @@ export const postData = async (url, payload) => {
     return response.data;
   } catch (error) {
     console.error(`Error posting data to ${url}: ${error}`);
-    throw error;
+
+    const status = _.get(error, 'response.status');
+    switch (status) {
+      case 422:
+        return error.response.data
+      default:
+        throw error;
+    }
   }
 };
 
