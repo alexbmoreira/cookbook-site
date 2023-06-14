@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { LoginModal } from './auth';
+import { AuthModal } from './auth';
 
 const Header = () => {
   return (
@@ -31,7 +31,7 @@ const Root = () => {
         <Outlet/>
       </div>
       <Footer/>
-      <LoginModal isOpen={loginModalOpen} onClose={() => setLoginModalOpen(false)}/>
+      <AuthModal isOpen={loginModalOpen} onClose={() => setLoginModalOpen(false)}/>
     </div>
   );
 }

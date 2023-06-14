@@ -1,5 +1,5 @@
-import LoginModal from './LoginModal';
+import AuthModal from './AuthModal';
 
 export {
-  LoginModal
+  AuthModal
 };

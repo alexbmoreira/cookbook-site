@@ -3,9 +3,5 @@ Rails.application.routes.draw do
   post '/login', to: 'authentication#login'
   delete '/logout', to: 'authentication#logout'
 
-  namespace :api do
-    namespace :v1 do
-      resources :recipes, only: [:index, :show], param: :slug
-    end
-  end
+  resources :recipes, only: [:index, :show], param: :slug
 end

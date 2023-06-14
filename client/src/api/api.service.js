@@ -1,13 +1,43 @@
 import axios from 'axios';
+import { authStore } from '../store';
 
-const api = axios.create();
+const api = axios.create({
+  baseURL: `${process.env.REACT_APP_API_URL}`,
+  withCredentials: true,
+  headers: {
+    Accept: 'application/json',
+    'Content-Type': 'application/json'
+  }
+});
+
+api.interceptors.request.use(
+  (config) => {
+    if (authStore.token) {
+      config.headers.Authorization = `Bearer ${authStore.token}`;
+    }
+    return config;
+  },
+  (error) => {
+    return Promise.reject(error);
+  }
+);
 
 export const fetchData = async (url) => {
   try {
-    const response = await api.get(`${process.env.REACT_APP_API_URL}${url}`);
+    const response = await api.get(url);
     return response.data;
   } catch (error) {
     console.error(`Error fetching data from ${url}: ${error}`);
+    throw error;
+  }
+};
+
+export const postData = async (url, payload) => {
+  try {
+    const response = await api.post(url, payload);
+    return response.data;
+  } catch (error) {
+    console.error(`Error posting data to ${url}: ${error}`);
     throw error;
   }
 };

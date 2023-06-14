@@ -3,17 +3,22 @@ import { observer } from 'mobx-react';
 import { authStore } from '../../../store';
 import { Button, Input, Modal } from '../../../components';
 import { FormattedMessage } from 'react-intl';
+import { postData } from '../../../api/api.service'
 
-const LoginModal = observer(({isOpen, onClose}) => {
+const AuthModal = observer(({isOpen, onClose}) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleLogin = () => {
-    // Perform login action using username and password
-    // For simplicity, this example assumes login is successful
+  const handleLogin = async () => {
+    postData(
+      '/login',
+      { username, password }
+    )
+
     authStore.login();
   };
 
+  console.log(authStore.isLoggedIn);
   return (
     <Modal
       isOpen={isOpen}
@@ -34,10 +39,12 @@ const LoginModal = observer(({isOpen, onClose}) => {
           value={password}
           onChange={(value) => setPassword(value)}
         />
-        <Button onClick={handleLogin}>Login</Button>
+        <div className='mt-6'>
+          <Button onClick={handleLogin} trait='primary'>Login</Button>
+        </div>
       </div>
     </Modal>
   );
 });
 
-export default LoginModal;
+export default AuthModal;
