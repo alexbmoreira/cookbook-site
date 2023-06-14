@@ -1,7 +1,6 @@
 import React from 'react';
 import { observer } from 'mobx-react';
 import Select from 'react-select'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Container, Input, LoadingIcon } from '../../../components';
 import { withState } from '../../../shared';
 import HomeContainerState from '../state/HomeContainerState';
@@ -15,11 +14,7 @@ const SearchBar = observer(({ uiState }) => {
         placeholder='Search...'
         value={uiState.search}
         onChange={(value) => uiState.updateSearch(value)}
-        icon={
-          <span className='absolute text-silver left-2 bottom-2'>
-            <FontAwesomeIcon icon="fa-solid fa-search" />
-          </span>
-        }
+        iconClass='fa-solid fa-search'
       />
     </div>
   );
