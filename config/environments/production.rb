@@ -2,6 +2,25 @@ require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
+  config.middleware.insert_before 0, Rack::Cors do
+    allow do
+      origins /cookbook-13--[-\w]+\.web\.app/
+      resource '*',
+        headers: :any,
+        methods: [:get, :post, :put, :patch, :delete, :options, :head],
+        credentials: true
+    end
+  end
+
+  config.middleware.insert_before 0, Rack::Cors do
+    allow do
+      origins /twoscompanycookbook\.com/
+      resource '*',
+        headers: :any,
+        methods: [:get, :post, :put, :patch, :delete, :options, :head],
+        credentials: true
+    end
+  end
 
   # Code is not reloaded between requests.
   config.cache_classes = true
