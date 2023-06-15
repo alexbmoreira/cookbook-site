@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { authStore } from '../store';
 import _ from 'lodash';
 
 const api = axios.create({
@@ -9,6 +10,18 @@ const api = axios.create({
     'Content-Type': 'application/json'
   }
 });
+
+api.interceptors.request.use(
+  (config) => {
+    if (authStore.token) {
+      config.headers.Authorization = `Bearer ${authStore.token}`;
+    }
+    return config;
+  },
+  (error) => {
+    return Promise.reject(error);
+  }
+);
 
 export const fetchData = async (url) => {
   try {

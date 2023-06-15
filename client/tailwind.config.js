@@ -8,11 +8,22 @@ module.exports = {
         'sans': ['Nunito', 'sans-serif']
       },
       colors: {
-        'carolina': '#009FE3',
-        'powder': '#F3F4F6',
+        'carolina': {
+          'DEFAULT': '#009FE3',
+          'hover': '#0095D5',
+          'active': '#008AC6'
+        },
+        'powder': {
+          'DEFAULT': '#F3F4F6',
+          'active': '#E8EAED'
+        },
         'lapis': '#075985',
         'silver': '#CCCCCC',
-        'eerie-black': '#151515'
+        'eerie-black': {
+          'DEFAULT': '#151515',
+          'clear': '#15151588'
+        },
+        'crimson': '#DE3202'
       },
       animation: {
         'beat': 'beat 1s infinite',

@@ -1,4 +1,8 @@
 {
+  "auth.Log In": "Log In",
+  "auth.Register": "Register",
+  "auth.Username": "Username",
+  "auth.Password": "Password",
   "recipes.Ingredients": "Ingredients",
   "recipes.Instructions": "Instructions",
   "recipes.categories.breakfast": "Breakfast",
@@ -14,5 +18,6 @@
   "recipes.cook_info.rest": "REST",
   "recipes.cook_info.total": "TOTAL",
   "recipes.cook_info.servings": "SERVINGS",
+  "recipe_list.Search...": "Search...",
   "time": "{hours, plural, =0 {} other {{hours} h }}{minutes, plural, =0 {} other {{minutes} mins}}"
 }
