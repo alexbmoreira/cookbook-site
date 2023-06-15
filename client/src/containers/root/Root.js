@@ -9,7 +9,7 @@ import { observer } from 'mobx-react';
 
 const Header = observer(({onClick}) => {
   return (
-    <div className='flex relative py-2 justify-center w-full bg-white sticky top-0 drop-shadow-sm'>
+    <div className='flex relative py-2 justify-center w-full bg-white sticky top-0 drop-shadow-sm z-10'>
       <span className='text-xl text-carolina'>
         <Link to='/'>
           <FontAwesomeIcon icon='fa-solid fa-utensils'/>
