@@ -3,7 +3,7 @@ class AuthenticationController < ApplicationController
 
   def register
     ActiveRecord::Base.transaction do
-      user = User.create(user_params)
+      user = User.new(user_params)
       if user.save
         token = encode_token({ user_id: user.id })
         cookies.signed[:jwt] = {value:  token, httponly: true, same_site: :strict}

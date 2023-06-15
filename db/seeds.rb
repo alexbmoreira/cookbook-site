@@ -106,7 +106,7 @@ def seed_recipes
       prep_time: 10,
       cook_time: 10,
       servings: 2,
-      steps: '<span>In a large bowl, sift together flour, baking powder, salt, and sugar.</span><br><span>Make a well in the center and pour in the milk, egg and melted butter; mix until smooth.</span><br><span>Heat a lightly oiled griddle or frying pan over medium high heat.</span><br><span>Pour or scoop the batter onto the griddle, using approximately 1/4 cup for each pancake.</span><br><span>Drop the desired amount of chocolate chips into each scoop of batter.</span><br><span>Brown pancake on both sides and serve hot and topped with maple syrup.</span><br>'
+      steps: '<p>In a large bowl, sift together flour, baking powder, salt, and sugar.</p><p>Make a well in the center and pour in the milk, egg and melted butter; mix until smooth.</p><p>Heat a lightly oiled griddle or frying pan over medium high heat.</p><p>Pour or scoop the batter onto the griddle, using approximately 1/4 cup for each pancake.</p><p>Drop the desired amount of chocolate chips into each scoop of batter.</p><p>Brown pancake on both sides and serve hot and topped with maple syrup.</p>'
     },
     {
       name: 'French Toast',
@@ -116,7 +116,7 @@ def seed_recipes
       prep_time: 5,
       cook_time: 5,
       servings: 2,
-      steps: '<span>Whisk milk, eggs, and vanilla extract in a large bowl.</span><br><span>Melt butter in a pan over medium heat.</span><br><span>Dip bread slices in egg mixture for about about 5 seconds each. Make sure both sides are well coated.</span><br><span>Carefully place bread in the pan and cook until golden brown on both sides.</span><br><span>Approximately 2 minutes per side.</span><br>'
+      steps: '<p>Whisk milk, eggs, and vanilla extract in a large bowl.</p><p>Melt butter in a pan over medium heat.</p><p>Dip bread slices in egg mixture for about about 5 seconds each. Make sure both sides are well coated.</p><p>Carefully place bread in the pan and cook until golden brown on both sides.</p><p>Approximately 2 minutes per side.</p>'
     },
     {
       name: 'Hash Browns',
@@ -126,7 +126,7 @@ def seed_recipes
       prep_time: 10,
       cook_time: 5,
       servings: 2,
-      steps: '<span>Peel the potatoes and grate them using the large holes of a box grater.</span><br><span>Squeeze out as much moisture as possible with a potato ricer or a cloth towel.</span><br><span>Heat oil in a large frying pan on medium-high heat. Once heated, add grated potatoes, spreading them out evenly along the bottom of the pan. The potatoes should not be too thick in any one place -- about 1/4 to 1/2-inch thick.</span><br><span>Sprinkle with salt and pepper.</span><br><span>Cook until crispy and golden brown on both sides.</span><br>'
+      steps: '<p>Peel the potatoes and grate them using the large holes of a box grater.</p><p>Squeeze out as much moisture as possible with a potato ricer or a cloth towel.</p><p>Heat oil in a large frying pan on medium-high heat. Once heated, add grated potatoes, spreading them out evenly along the bottom of the pan. The potatoes should not be too thick in any one place -- about 1/4 to 1/2-inch thick.</p><p>Sprinkle with salt and pepper.</p><p>Cook until crispy and golden brown on both sides.</p>'
     },
     {
       name: 'Scrambled Eggs',
@@ -136,7 +136,7 @@ def seed_recipes
       prep_time: 5,
       cook_time: 5,
       servings: 2,
-      steps: '<span>Beat eggs, milk, salt, pepper, cumin, and cayenne in medium bowl until blended.</span><br><span>Heat butter in large nonstick skillet over medium heat until melted. Pour in egg mixture, gently stirring as eggs begin to set.</span><br><span>Continue cooking -- pulling, lifting, and folding eggs -- until thickened and no visible liquid egg remains. Do not stir constantly. Remove from heat. Serve immediately.</span><br>'
+      steps: '<p>Beat eggs, milk, salt, pepper, cumin, and cayenne in medium bowl until blended.</p><p>Heat butter in large nonstick skillet over medium heat until melted. Pour in egg mixture, gently stirring as eggs begin to set.</p><p>Continue cooking -- pulling, lifting, and folding eggs -- until thickened and no visible liquid egg remains. Do not stir constantly. Remove from heat. Serve immediately.</p>'
     },
     {
       name: 'Banana Bread',
@@ -146,7 +146,7 @@ def seed_recipes
       prep_time: 10,
       cook_time: 60,
       servings: 6,
-      steps: '<span>Preheat oven to 350ºF. Grease a 9x5-inch loaf pan (or 12-cup muffin pan) with butter, or spray with non stick cooking spray.</span><br><span>In a large bowl mash bananas until smooth. Mix in oil, vanilla, and sugar.</span><br><span>In another bowl lightly mix baking soda and baking powder with flour. Mix into banana mixture and stir until combined. Fold in chocolate chips.</span><br><span>Pour batter into prepared pan. Bake for 50-60 minutes (25 minutes for muffins), or until a toothpick inserted in the center comes out clean.</span><br>'
+      steps: '<p>Preheat oven to 350ºF. Grease a 9x5-inch loaf pan (or 12-cup muffin pan) with butter, or spray with non stick cooking spray.</p><p>In a large bowl mash bananas until smooth. Mix in oil, vanilla, and sugar.</p><p>In another bowl lightly mix baking soda and baking powder with flour. Mix into banana mixture and stir until combined. Fold in chocolate chips.</p><p>Pour batter into prepared pan. Bake for 50-60 minutes (25 minutes for muffins), or until a toothpick inserted in the center comes out clean.</p>'
     },
     {
       name: 'Chocolate Chunk Cookies',
@@ -156,7 +156,7 @@ def seed_recipes
       prep_time: 40,
       cook_time: 15,
       servings: 8,
-      steps: '<span>Preheat oven to 365ºF.</span><br><span>Chop chocolate into desired size and set aside. Save small shavings to sprinkle on before baking.</span><br><span>Cut butter into small cubes and melt in a small saucepan.</span><br><span>Whisk together flour, baking powder, baking soda, and salt. Set aside.</span><br><span>Pour melted butter into a large mixing bowl and whisk in sugars. Add eggs one at a time to the butter mixture - whisking after each addition until just combined. Stir in vanilla extract.</span><br><span>Combine dry ingredients to wet mixture slowly and mix at low-medium speed. Once combined, add chopped chocolate to the dough.</span><br><span>Cover dough in parchment paper or plastic wrap and refrigerate for 15-30 minutes.</span><br><span>Once refrigerated, form dough into cookie balls using ice cream scoop and arrange on a baking sheet. Sprinkle with leftover choclate shavings.</span><br><span>Bake for 10-12 minutes or until edges are golden brown.</span><br><span>Let cool on a wire rack for 10 minutes.</span><br>'
+      steps: '<p>Preheat oven to 365ºF.</p><p>Chop chocolate into desired size and set aside. Save small shavings to sprinkle on before baking.</p><p>Cut butter into small cubes and melt in a small saucepan.</p><p>Whisk together flour, baking powder, baking soda, and salt. Set aside.</p><p>Pour melted butter into a large mixing bowl and whisk in sugars. Add eggs one at a time to the butter mixture - whisking after each addition until just combined. Stir in vanilla extract.</p><p>Combine dry ingredients to wet mixture slowly and mix at low-medium speed. Once combined, add chopped chocolate to the dough.</p><p>Cover dough in parchment paper or plastic wrap and refrigerate for 15-30 minutes.</p><p>Once refrigerated, form dough into cookie balls using ice cream scoop and arrange on a baking sheet. Sprinkle with leftover choclate shavings.</p><p>Bake for 10-12 minutes or until edges are golden brown.</p><p>Let cool on a wire rack for 10 minutes.</p>'
     },
     {
       name: 'Crème Brûlée',
@@ -166,7 +166,7 @@ def seed_recipes
       prep_time: 10,
       cook_time: 30,
       servings: 4,
-      steps: '<span>Preheat oven to 325ºF. Place four 1/2 cup ramekins or custard cups in a baking dish. Boil water in a kettle. Set aside.</span><br><span>Heat cream in saucepan over medium-high heat until small bubbles form around edge of pan. Meanwhile, whisk egg yolks and sugar until thick and lemon-coloured--about 1 to 2 minutes.</span><br><span>Once cream is hot, gradually whisk into egg yolk mixture. Stir in vanilla. Pour mixture through sieve into ramekins, dividing evenly.</span><br><span>Pour boiling water into baking dish to reach halfway up ramekins. Carefully place in oven.</span><br><span>Bake until mostly set but with a slight jiggle in the centre, about 30 to 35 minutes for taller ramekins (2 inches high), and 25 to 30 minutes for shallow ramekins (1 inch high).</span><br><span>Carefully remove ramekins from water. Cool on wire rack. When cool, cover with plastic wrap and refrigerate for least 2 hours and up to 2 days.</span><br><span>Just before serving, sprinkle sugar evenly over surface. Using a mini torch or by broiling, heat until sugar melts and caramelizes. Serve immediately, or for a firmer texture, chill up to two hours before serving.</span><br>'
+      steps: '<p>Preheat oven to 325ºF. Place four 1/2 cup ramekins or custard cups in a baking dish. Boil water in a kettle. Set aside.</p><p>Heat cream in saucepan over medium-high heat until small bubbles form around edge of pan. Meanwhile, whisk egg yolks and sugar until thick and lemon-coloured--about 1 to 2 minutes.</p><p>Once cream is hot, gradually whisk into egg yolk mixture. Stir in vanilla. Pour mixture through sieve into ramekins, dividing evenly.</p><p>Pour boiling water into baking dish to reach halfway up ramekins. Carefully place in oven.</p><p>Bake until mostly set but with a slight jiggle in the centre, about 30 to 35 minutes for taller ramekins (2 inches high), and 25 to 30 minutes for shallow ramekins (1 inch high).</p><p>Carefully remove ramekins from water. Cool on wire rack. When cool, cover with plastic wrap and refrigerate for least 2 hours and up to 2 days.</p><p>Just before serving, sprinkle sugar evenly over surface. Using a mini torch or by broiling, heat until sugar melts and caramelizes. Serve immediately, or for a firmer texture, chill up to two hours before serving.</p>'
     },
     {
       name: 'Alexander\'s Famous Pumpkin Pie',
@@ -176,7 +176,7 @@ def seed_recipes
       prep_time: 5,
       cook_time: 50,
       servings: 8,
-      steps: '<span>Preheat oven to 425ºF.</span><br><span>Whisk pumpkin, sweetened condensed milk, eggs, spices, and salt in medium bowl until smooth.</span><br><span>Pour pupkin mixture into crust and bake for 15 minutes.</span><br><span>Reduce oven temperature to 350ºF and continue baking 35 to 40 minutes or until toothpick inserted 1-inch from crust comes out clean.</span><br><span>Let cool for 2 hours before serving.</span><br>'
+      steps: '<p>Preheat oven to 425ºF.</p><p>Whisk pumpkin, sweetened condensed milk, eggs, spices, and salt in medium bowl until smooth.</p><p>Pour pupkin mixture into crust and bake for 15 minutes.</p><p>Reduce oven temperature to 350ºF and continue baking 35 to 40 minutes or until toothpick inserted 1-inch from crust comes out clean.</p><p>Let cool for 2 hours before serving.</p>'
     },
     {
       name: 'Maple Dijon Salmon',
@@ -186,7 +186,7 @@ def seed_recipes
       prep_time: 5,
       cook_time: 25,
       servings: 2,
-      steps: '<span>Preheat oven to 400ºF. Line baking sheet with aluminum foil.</span><br><span>Place salmon on prepared baking sheet. In a small bowl, combine mustard, maple syrup, olive oil, salt, paprika, and pepper. Spoon about half of this mixture over the salmon in an even layer.</span><br><span>Bake for 15 minutes. Remove from oven and spoon on the rest of the maple mustard mixture.</span><br><span>Return to oven and bake for an additional 5-10 minutes or until a thermometer reads 145ºF.</span><br>'
+      steps: '<p>Preheat oven to 400ºF. Line baking sheet with aluminum foil.</p><p>Place salmon on prepared baking sheet. In a small bowl, combine mustard, maple syrup, olive oil, salt, paprika, and pepper. Spoon about half of this mixture over the salmon in an even layer.</p><p>Bake for 15 minutes. Remove from oven and spoon on the rest of the maple mustard mixture.</p><p>Return to oven and bake for an additional 5-10 minutes or until a thermometer reads 145ºF.</p>'
     },
     {
       name: 'Almond Crusted Chicken',
@@ -196,7 +196,7 @@ def seed_recipes
       prep_time: 10,
       cook_time: 15,
       servings: 2,
-      steps: '<span>Preheat oven to 400ºF.</span><br><span>Slice almonds and mash until fine.</span><br><span>Beat eggs and set aside. In a small bowl, mix almonds, garlic powder, and oregano. In another small bowl, season bread crumbs with salt and pepper.</span><br><span>Pat chicken breasts dry with paper towel and tenderize. Cut into 1/2-inch thick strips lengthwise.</span><br><span>Dip chicken in egg, wiping away excess, and dip in bread-crumb mixture. Dredge until lightly coated.</span><br><span>Dip in egg again, and coat thoroughly with almonds.</span><br><span>Heat butter in a medium pan over medium heat. Saute chicken until nicely browned, about 3 minutes, and turn over to cook 1 minute more.</span><br><span>Transfer to oven and bake for 10 minutes, or until chicken reaches 165ºF.</span><br>'
+      steps: '<p>Preheat oven to 400ºF.</p><p>Slice almonds and mash until fine.</p><p>Beat eggs and set aside. In a small bowl, mix almonds, garlic powder, and oregano. In another small bowl, season bread crumbs with salt and pepper.</p><p>Pat chicken breasts dry with paper towel and tenderize. Cut into 1/2-inch thick strips lengthwise.</p><p>Dip chicken in egg, wiping away excess, and dip in bread-crumb mixture. Dredge until lightly coated.</p><p>Dip in egg again, and coat thoroughly with almonds.</p><p>Heat butter in a medium pan over medium heat. Saute chicken until nicely browned, about 3 minutes, and turn over to cook 1 minute more.</p><p>Transfer to oven and bake for 10 minutes, or until chicken reaches 165ºF.</p>'
     },
     {
       name: 'Chicken Yakitori Bowl',
@@ -206,7 +206,7 @@ def seed_recipes
       prep_time: 10,
       cook_time: 20,
       servings: 2,
-      steps: '<span>Peel and finely grate ginger. Cut zucchini into 1/4-inch triangles. Thinly slice green onions.</span><br><span>Pat chicken dry with paper towels and cut into 1-inch pieces. Season with Moo Shu spice and salt and pepper.</span><br><span>Heat a medium pot over medium heat. Once hot, add 1/2 tbsp oil, then rice and 1/2 tbsp ginger. Cook, stirring often, until fragrant. Add 1 1/3 cup of water. Bring to a boil over medium heat.</span><br><span>Once boiling, reduce heat and cook, covered, until liquid is absorbed, 12-14 minutes.</span><br><span>While rice cooks, add olive oil to a large pan and heat up over medium heat. Once hot add zucchini and cook, stirring often, until tender, 4-5 minutes.</span><br><span>Meanwhile, whisk together soy sauce, garlic, cornstarch, remaining ginger, sugar, and 1/2 cup water in a meduim bowl. Set aside.</span><br><span>Transfer zucchini to a plate and set aside. Add some more olive oil and chicken to the pan. Cook until golden brown and cooked through.</span><br><span>Reduce heat to medium. Add zucchini and yakitori sauce to pan with chicken and cook until sauce thickens and everything is coated, 2-3 minutes.</span><br><span>Fluff rice with a fork and stir in green onion. Season with salt.</span><br>'
+      steps: '<p>Peel and finely grate ginger. Cut zucchini into 1/4-inch triangles. Thinly slice green onions.</p><p>Pat chicken dry with paper towels and cut into 1-inch pieces. Season with Moo Shu spice and salt and pepper.</p><p>Heat a medium pot over medium heat. Once hot, add 1/2 tbsp oil, then rice and 1/2 tbsp ginger. Cook, stirring often, until fragrant. Add 1 1/3 cup of water. Bring to a boil over medium heat.</p><p>Once boiling, reduce heat and cook, covered, until liquid is absorbed, 12-14 minutes.</p><p>While rice cooks, add olive oil to a large pan and heat up over medium heat. Once hot add zucchini and cook, stirring often, until tender, 4-5 minutes.</p><p>Meanwhile, whisk together soy sauce, garlic, cornstarch, remaining ginger, sugar, and 1/2 cup water in a meduim bowl. Set aside.</p><p>Transfer zucchini to a plate and set aside. Add some more olive oil and chicken to the pan. Cook until golden brown and cooked through.</p><p>Reduce heat to medium. Add zucchini and yakitori sauce to pan with chicken and cook until sauce thickens and everything is coated, 2-3 minutes.</p><p>Fluff rice with a fork and stir in green onion. Season with salt.</p>'
     },
     {
       name: 'Pan-Seared Steak',
@@ -216,7 +216,7 @@ def seed_recipes
       prep_time: 5,
       cook_time: 15,
       servings: 2,
-      steps: '<span>Pat steak dry with paper towel. Salt both sides generously and season with steak spice.</span><br><span>Heat up olive oil in a medium pan (enough to coat the bottom) over medium high heat.</span><br><span>Once hot, place steak in pan and sear for 2-3 minutes.</span><br><span>Flip and add crushed garlic, rosemary, and butter. Baste steak in butter and oil while it cooks for another 2-3 minutes.</span><br><span>Once cooked, let steak rest for 3-5 minutes. Cover with butter and oil from pan and season with pepper.</span><br>'
+      steps: '<p>Pat steak dry with paper towel. Salt both sides generously and season with steak spice.</p><p>Heat up olive oil in a medium pan (enough to coat the bottom) over medium high heat.</p><p>Once hot, place steak in pan and sear for 2-3 minutes.</p><p>Flip and add crushed garlic, rosemary, and butter. Baste steak in butter and oil while it cooks for another 2-3 minutes.</p><p>Once cooked, let steak rest for 3-5 minutes. Cover with butter and oil from pan and season with pepper.</p>'
     },
     {
       name: 'Retro Burger',
@@ -226,7 +226,7 @@ def seed_recipes
       prep_time: 10,
       cook_time: 15,
       servings: 2,
-      steps: '<span>Peel and cut onion into 1/4-inch slices.</span><br><span>Heat a large non-stick pan over medium heat. When hot, add oil and cook onions until slightly softened. Add sugar and season with salt. Cook until dark golden-brown.</span><br><span>Remove from heat and add balsamic vinegar, stirring until absorbed. Set aside in a small bowl.</span><br><span>Meanwhile, peel and mince garlic. Combine beef, breadcrumbs, garlic, half the mustard, and some salt and pepper in a medium bowl. Form mixture into two 4-inch-wide patties.</span><br><span>Heat another large pan over medium heat, adding oil and patties once hot. Pan-fry until cooked through, 4-5 min per side.</span><br><span>Meanwhile, halve buns. Arrange on an unlined baking sheet, cut-side up. Sprinkle cheese over bottom buns. Toast in the top of the oven until cheese is melted and top buns are golden, 2-3 min.</span><br><span>Stir together mayo and remaining mustard in another small bowl and spread on top buns. Stack patties and caramelized onions on bottom buns and serve.</span><br>'
+      steps: '<p>Peel and cut onion into 1/4-inch slices.</p><p>Heat a large non-stick pan over medium heat. When hot, add oil and cook onions until slightly softened. Add sugar and season with salt. Cook until dark golden-brown.</p><p>Remove from heat and add balsamic vinegar, stirring until absorbed. Set aside in a small bowl.</p><p>Meanwhile, peel and mince garlic. Combine beef, breadcrumbs, garlic, half the mustard, and some salt and pepper in a medium bowl. Form mixture into two 4-inch-wide patties.</p><p>Heat another large pan over medium heat, adding oil and patties once hot. Pan-fry until cooked through, 4-5 min per side.</p><p>Meanwhile, halve buns. Arrange on an unlined baking sheet, cut-side up. Sprinkle cheese over bottom buns. Toast in the top of the oven until cheese is melted and top buns are golden, 2-3 min.</p><p>Stir together mayo and remaining mustard in another small bowl and spread on top buns. Stack patties and caramelized onions on bottom buns and serve.</p>'
     },
     {
       name: 'Broccoli Pesto Cavatelli',
@@ -235,7 +235,7 @@ def seed_recipes
       prep_time: 15,
       cook_time: 15,
       servings: 2,
-      steps: '<span>Cut broccoli into florets and peel stems. Roughly chop into small pieces and set aside.</span><br><span>Bring a pot of salted water to a boil and boil broccoli until soft. Drain and season generously with salt and pepper.</span><br><span>Pull apart sausage into tiny pieces. Heat oil in a small pan and add sausage with chili peppers and a clove of crushed garlic.</span><br><span>Saute another clove of crushed garlic and chili flakes in oil in a new pan for about 3 minutes. Add brocolli once steamed and mash well or blend.</span><br><span>Cook pasta in water for a couple minutes and add to broccoli. Toss with sausage to finish cooking.</span><br>'
+      steps: '<p>Cut broccoli into florets and peel stems. Roughly chop into small pieces and set aside.</p><p>Bring a pot of salted water to a boil and boil broccoli until soft. Drain and season generously with salt and pepper.</p><p>Pull apart sausage into tiny pieces. Heat oil in a small pan and add sausage with chili peppers and a clove of crushed garlic.</p><p>Saute another clove of crushed garlic and chili flakes in oil in a new pan for about 3 minutes. Add brocolli once steamed and mash well or blend.</p><p>Cook pasta in water for a couple minutes and add to broccoli. Toss with sausage to finish cooking.</p>'
     },
     {
       name: 'Creamy Chicken and Broccoli Orzo',
@@ -245,7 +245,7 @@ def seed_recipes
       prep_time: 5,
       cook_time: 20,
       servings: 2,
-      steps: '<span>Cut broccoli into florets and peel stems. Roughly chop into small pieces and set aside.</span><br><span>Fill pot with water and salt generously. Bring to a boil and add orzo. Add broccoli in last 5 minutes.</span><br><span>While orzo cooks, heat butter in a large skillet and add chicken once hot. Cook until golden brown and cooked through.</span><br><span>Mince garlic and cook with chicken until golden, 30 seconds to 1 minute.</span><br><span>Once orzo is cooked, drain and add to chicken, stirring in milk and Parmesan cheese. Add salt and pepper to taste.</span><br><span>Top with more parmesan if desired.</span><br>'
+      steps: '<p>Cut broccoli into florets and peel stems. Roughly chop into small pieces and set aside.</p><p>Fill pot with water and salt generously. Bring to a boil and add orzo. Add broccoli in last 5 minutes.</p><p>While orzo cooks, heat butter in a large skillet and add chicken once hot. Cook until golden brown and cooked through.</p><p>Mince garlic and cook with chicken until golden, 30 seconds to 1 minute.</p><p>Once orzo is cooked, drain and add to chicken, stirring in milk and Parmesan cheese. Add salt and pepper to taste.</p><p>Top with more parmesan if desired.</p>'
     },
     {
       name: 'Mac\'s Famous Mac & Cheese',
@@ -255,7 +255,7 @@ def seed_recipes
       prep_time: 5,
       cook_time: 15,
       servings: 2,
-      steps: '<span>Combine milk and 1 1/2 cups water in a saucepan and bring to a simmer.</span><br><span>Toast Panko breadcrumbs in butter while waiting for milk and water to simmer.</span><br><span>Once simmering, pour in pasta and cook over medium-low heat until all the liquid is absorbed.</span><br><span>Once breadcrumbs look golden brown, remove from heat and mix in a bowl Parmesan cheese.</span><br><span>After pasta is done cooking add American cheese with Dijon mustard, and stir until melted.</span><br><span>Add sharp cheddar and cayenne, mix, then kill the heat and cover for 5 minutes.</span><br><span>Serve topped with Parmesan breadcrumbs.</span><br>'
+      steps: '<p>Combine milk and 1 1/2 cups water in a saucepan and bring to a simmer.</p><p>Toast Panko breadcrumbs in butter while waiting for milk and water to simmer.</p><p>Once simmering, pour in pasta and cook over medium-low heat until all the liquid is absorbed.</p><p>Once breadcrumbs look golden brown, remove from heat and mix in a bowl Parmesan cheese.</p><p>After pasta is done cooking add American cheese with Dijon mustard, and stir until melted.</p><p>Add sharp cheddar and cayenne, mix, then kill the heat and cover for 5 minutes.</p><p>Serve topped with Parmesan breadcrumbs.</p>'
     },
     {
       name: 'Pasta Carbonara',
@@ -265,7 +265,7 @@ def seed_recipes
       prep_time: 10,
       cook_time: 20,
       servings: 2,
-      steps: '<span>Beat eggs and egg yolk in a measuring cup or small bowl with Parmesan. Add black pepper and beat until well incorporated.</span><br><span>Fill a pot with water and salt generously. Bring to a boil and add pasta once boiling.</span><br><span>Dump pancetta into a cold pan, and turn the heat to medium.</span><br><span>Once cooked, but not crispy, strain a small amount of fat out and return to medium-low heat. Add garlic and saute for one minute.</span><br><span>Once pasta is cooked, toss with pancetta and evenly coat in pancetta fat.</span><br><span>Dump egg mixture into pasta and mix rigorously. Add leftover pasta water as needed. Salt to taste and top with Parmesan cheese.</span><br>'
+      steps: '<p>Beat eggs and egg yolk in a measuring cup or small bowl with Parmesan. Add black pepper and beat until well incorporated.</p><p>Fill a pot with water and salt generously. Bring to a boil and add pasta once boiling.</p><p>Dump pancetta into a cold pan, and turn the heat to medium.</p><p>Once cooked, but not crispy, strain a small amount of fat out and return to medium-low heat. Add garlic and saute for one minute.</p><p>Once pasta is cooked, toss with pancetta and evenly coat in pancetta fat.</p><p>Dump egg mixture into pasta and mix rigorously. Add leftover pasta water as needed. Salt to taste and top with Parmesan cheese.</p>'
     },
     {
       name: 'Pasta with Cherry Tomato Sauce',
@@ -275,7 +275,7 @@ def seed_recipes
       prep_time: 10,
       cook_time: 20,
       servings: 2,
-      steps: '<span>Fill a pot with water and salt generously. Bring to a boil and add pasta once boiling.</span><br><span>Meanwhile, saute garlic in olive oil until garlic is softened but not browned, about 3 minutes.</span><br><span>Add tomatoes and cook, stirring, until tomatoes begin to burst. Carefully press lightly with the back of a wooden spoon as they soften to speed up the bursting.</span><br><span>Continue to cook until sauce is rich and creamy, about 5 minutes longer. Stir in basil and season to taste with salt and pepper.</span><br><span>Once pasta is cooked, drain, reserving a cup of pasta water.</span><br><span>Add pasta to sauce and increase heat to medium-high. Cook, stirring and tossing constantly, and adding pasta water as necessary to adjust consistency.</span><br><span>Remove from heat, stir in olive oil, and grate in parmesan cheese.</span><br>'
+      steps: '<p>Fill a pot with water and salt generously. Bring to a boil and add pasta once boiling.</p><p>Meanwhile, saute garlic in olive oil until garlic is softened but not browned, about 3 minutes.</p><p>Add tomatoes and cook, stirring, until tomatoes begin to burst. Carefully press lightly with the back of a wooden spoon as they soften to speed up the bursting.</p><p>Continue to cook until sauce is rich and creamy, about 5 minutes longer. Stir in basil and season to taste with salt and pepper.</p><p>Once pasta is cooked, drain, reserving a cup of pasta water.</p><p>Add pasta to sauce and increase heat to medium-high. Cook, stirring and tossing constantly, and adding pasta water as necessary to adjust consistency.</p><p>Remove from heat, stir in olive oil, and grate in parmesan cheese.</p>'
     },
     {
       name: 'Pumpkin Ravioli',
@@ -285,7 +285,7 @@ def seed_recipes
       prep_time: 40,
       cook_time: 20,
       servings: 2,
-      steps: '<span>Mound flour on a clean work surface and make well in center. Crack egg into center.</span><br><span>Beat eggs lightly with a fork. Gradually incorporate flour into eggs, starting with inner rim of well.</span><br><span>Once mixed, knead dough until smooth and elastic. Cover and let rest for 30 minutes.</span><br><span>While dough is resting, cut pumpkin into small chunks, finely chop shallot, and mince garlic.</span><br><span>Heat olive oil in a large pan over medium heat. Add the chopped pumpkin and sauté until pumpkin is tender and caramelized, about 10-15 minutes, adding shallot and garlic part way through.</span><br><span>Transfer pumpkin to a bowl to cool slightly. Once cooled, mash until smooth.</span><br><span>In a medium bowl, mix pumpkin with parmesan cheese, salt, pepper, nutmeg, and allspice.</span><br><span>Once dough is ready, roll into a thin sheet over a lightly floured surface.</span><br><span>Scoop pumpkin filling out onto dough spaced 1-2 inches apart on the top half of the dough. Fold in half and press put air bubbles to seal in filling. Trim edges with a pasta cutter.</span><br><span>Bring pot of salted water to a boil. Gently add ravioli to the pot and cook for 3-4 minutes, or until they float to the surface.</span><br><span>Meanwhile, melt butter in a small saucepan over medium heat. Add 1/4 cup of water and cornstarch, stirring until the mixture thickens. Season with salt. Crumble biscuits into sauce and mix well.</span><br><span>Remove ravioli and drizzle with butter sauce and some extra Parmesan cheese to taste.</span><br>'
+      steps: '<p>Mound flour on a clean work surface and make well in center. Crack egg into center.</p><p>Beat eggs lightly with a fork. Gradually incorporate flour into eggs, starting with inner rim of well.</p><p>Once mixed, knead dough until smooth and elastic. Cover and let rest for 30 minutes.</p><p>While dough is resting, cut pumpkin into small chunks, finely chop shallot, and mince garlic.</p><p>Heat olive oil in a large pan over medium heat. Add the chopped pumpkin and sauté until pumpkin is tender and caramelized, about 10-15 minutes, adding shallot and garlic part way through.</p><p>Transfer pumpkin to a bowl to cool slightly. Once cooled, mash until smooth.</p><p>In a medium bowl, mix pumpkin with parmesan cheese, salt, pepper, nutmeg, and allspice.</p><p>Once dough is ready, roll into a thin sheet over a lightly floured surface.</p><p>Scoop pumpkin filling out onto dough spaced 1-2 inches apart on the top half of the dough. Fold in half and press put air bubbles to seal in filling. Trim edges with a pasta cutter.</p><p>Bring pot of salted water to a boil. Gently add ravioli to the pot and cook for 3-4 minutes, or until they float to the surface.</p><p>Meanwhile, melt butter in a small saucepan over medium heat. Add 1/4 cup of water and cornstarch, stirring until the mixture thickens. Season with salt. Crumble biscuits into sauce and mix well.</p><p>Remove ravioli and drizzle with butter sauce and some extra Parmesan cheese to taste.</p>'
     },
     {
       name: 'Broccoli and Cheese Baked Potato',
@@ -295,7 +295,7 @@ def seed_recipes
       prep_time: 10,
       cook_time: 50,
       servings: 2,
-      steps: '<span>Preheat oven to 400ºF.</span><br><span>Cut broccoli into florets and peel stems. Roughly chop into small pieces and set aside.,</span><br><span>Wash and dry potatoes and pierce each potato several times with a fork. Cover each potato in oil on a baking sheet. Place potatoes in oven and bake until potatoes are tender, about 45 minutes to 1 hour.</span><br><span>As potatoes bake, add butter and milk to a medium saucepan and bring to a simmer over medium heat. Whisk together as butter melts and the mixture thickens.</span><br><span>Once thick enough to coat a spoon, turn heat to low. Season with garlic powder, salt, and pepper.</span><br><span>Add shredded cheddar to sauce by the handful, whisking until fully melted before adding each handful. Once all cheddar is melted into the sauce, stir in chopped broccoli. Leave over low flame, stirring occasionally.</span><br><span>When potatoes are finished baking, carefully cut them open. Use a fork to slightly mash the insides of the potatoes.</span><br><span>Once ready to serve, place each potato on a plate and ladle broccoli cheese sauce over each one. Garnish with extra shredded cheddar, if desired.</span><br>'
+      steps: '<p>Preheat oven to 400ºF.</p><p>Cut broccoli into florets and peel stems. Roughly chop into small pieces and set aside.,</p><p>Wash and dry potatoes and pierce each potato several times with a fork. Cover each potato in oil on a baking sheet. Place potatoes in oven and bake until potatoes are tender, about 45 minutes to 1 hour.</p><p>As potatoes bake, add butter and milk to a medium saucepan and bring to a simmer over medium heat. Whisk together as butter melts and the mixture thickens.</p><p>Once thick enough to coat a spoon, turn heat to low. Season with garlic powder, salt, and pepper.</p><p>Add shredded cheddar to sauce by the handful, whisking until fully melted before adding each handful. Once all cheddar is melted into the sauce, stir in chopped broccoli. Leave over low flame, stirring occasionally.</p><p>When potatoes are finished baking, carefully cut them open. Use a fork to slightly mash the insides of the potatoes.</p><p>Once ready to serve, place each potato on a plate and ladle broccoli cheese sauce over each one. Garnish with extra shredded cheddar, if desired.</p>'
     },
     {
       name: 'Garlic Roasted Potatoes',
@@ -305,7 +305,7 @@ def seed_recipes
       prep_time: 10,
       cook_time: 50,
       servings: 2,
-      steps: '<span>Preheat oven to 400ºF.</span><br><span>Cut potatoes into 1-inch cubes and place in a bowl with a drizzle with oil, salt, pepper, and garlic; Toss until well coated.</span><br><span>Transfer potatoes to a baking sheet and spread out evenly. Roast in the oven for 50 minutes while flipping occasionally, until crisp and golden.</span><br><span>Remove potatoes from the oven and season with extra salt and pepper to taste. Sprinkle with parsley.</span><br>'
+      steps: '<p>Preheat oven to 400ºF.</p><p>Cut potatoes into 1-inch cubes and place in a bowl with a drizzle with oil, salt, pepper, and garlic; Toss until well coated.</p><p>Transfer potatoes to a baking sheet and spread out evenly. Roast in the oven for 50 minutes while flipping occasionally, until crisp and golden.</p><p>Remove potatoes from the oven and season with extra salt and pepper to taste. Sprinkle with parsley.</p>'
     },
     {
       name: 'Mashed Potatoes',
@@ -315,7 +315,7 @@ def seed_recipes
       prep_time: 5,
       cook_time: 15,
       servings: 2,
-      steps: '<span>Peel and cut potatoes into 1-inch pieces.</span><br><span>Combine potatoes, 2 tsp salt, and enough water to cover in a large pot. Cover and bring to a boil over high heat.</span><br><span>Once boiling, reduce to medium heat and simmer, uncovered, until fork-tender, 12-14 minutes.</span><br><span>Meanwhile, thinly slice chives and set aside.</span><br><span>Once potatoes are fork-tender, drain and remove from heat. Mash in sour cream, butter, and chives until smooth. Season with salt and pepper.</span><br>'
+      steps: '<p>Peel and cut potatoes into 1-inch pieces.</p><p>Combine potatoes, 2 tsp salt, and enough water to cover in a large pot. Cover and bring to a boil over high heat.</p><p>Once boiling, reduce to medium heat and simmer, uncovered, until fork-tender, 12-14 minutes.</p><p>Meanwhile, thinly slice chives and set aside.</p><p>Once potatoes are fork-tender, drain and remove from heat. Mash in sour cream, butter, and chives until smooth. Season with salt and pepper.</p>'
     },
     {
       name: 'Parmesan Green Beans',
@@ -325,7 +325,7 @@ def seed_recipes
       prep_time: 10,
       cook_time: 20,
       servings: 2,
-      steps: '<span>Preheat the oven to 425ºF. Lightly spray a baking sheet or tray with cooking oil spray.</span><br><span>Wash beans and place in a bowl with a drizzle with oil, salt, pepper, Parmesan, and garlic; Toss until well coated.</span><br><span>Roast in the oven for 20-25 minutes, tossing halfway through cooking time, until fork tender.</span><br><span>Remove from oven, season with extra salt and pepper to taste. Sprinkle over with parsley.</span><br>'
+      steps: '<p>Preheat the oven to 425ºF. Lightly spray a baking sheet or tray with cooking oil spray.</p><p>Wash beans and place in a bowl with a drizzle with oil, salt, pepper, Parmesan, and garlic; Toss until well coated.</p><p>Roast in the oven for 20-25 minutes, tossing halfway through cooking time, until fork tender.</p><p>Remove from oven, season with extra salt and pepper to taste. Sprinkle over with parsley.</p>'
     },
     {
       name: 'Sweet Potato Casserole',
@@ -335,7 +335,7 @@ def seed_recipes
       prep_time: 15,
       cook_time: 45,
       servings: 4,
-      steps: '<span>Preheat oven to 350ºF.</span><br><span>Peel and cut sweet potatoes into 1-inch pieces.</span><br><span>Place sweet potatoes in a large saucepan with enough water to cover. Bring to a boil, and cook until tender, about 15 minutes. Remove from heat, drain, and mash.</span><br><span>Place mashed sweet potatoes in large bowl, and use an electric mixer to blend with butter, brown sugar, orange juice, and cinnamon. Spread evenly into a 5x7-inch baking dish. Top with miniature marshmallows.</span><br><span>Bake for 25 to 30 minutes, until heated through and marshmallows are puffed and golden brown.</span><br>'
+      steps: '<p>Preheat oven to 350ºF.</p><p>Peel and cut sweet potatoes into 1-inch pieces.</p><p>Place sweet potatoes in a large saucepan with enough water to cover. Bring to a boil, and cook until tender, about 15 minutes. Remove from heat, drain, and mash.</p><p>Place mashed sweet potatoes in large bowl, and use an electric mixer to blend with butter, brown sugar, orange juice, and cinnamon. Spread evenly into a 5x7-inch baking dish. Top with miniature marshmallows.</p><p>Bake for 25 to 30 minutes, until heated through and marshmallows are puffed and golden brown.</p>'
     },
     {
       name: 'Caldo Verde',
@@ -345,7 +345,7 @@ def seed_recipes
       prep_time: 10,
       cook_time: 35,
       servings: 8,
-      steps: '<span>Peel and cut potatoes into 1-inch pieces. Mince garlic and onion.</span><br><span>In a large pot over medium heat, cook onion and garlic in olive oil for 3 minutes.</span><br><span>Stir in potatoes and cook, stirring constantly, for 3 minutes more. Pour in chicken stock and 2 cups water, bring to a boil, and let boil gently for 20 minutes, until potatoes are soft.</span><br><span>Puree potatoes until no large chunks remain.</span><br><span>Add kale to soup and simmer until kale is tender and jade green, 5 minutes.</span><br><span>Stir in sliced chouriço and add salt and pepper to taste.</span><br>'
+      steps: '<p>Peel and cut potatoes into 1-inch pieces. Mince garlic and onion.</p><p>In a large pot over medium heat, cook onion and garlic in olive oil for 3 minutes.</p><p>Stir in potatoes and cook, stirring constantly, for 3 minutes more. Pour in chicken stock and 2 cups water, bring to a boil, and let boil gently for 20 minutes, until potatoes are soft.</p><p>Puree potatoes until no large chunks remain.</p><p>Add kale to soup and simmer until kale is tender and jade green, 5 minutes.</p><p>Stir in sliced chouriço and add salt and pepper to taste.</p>'
     }
   ])
 end
