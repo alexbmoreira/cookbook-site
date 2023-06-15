@@ -1,13 +1,14 @@
 class AuthenticationController < ApplicationController
+  skip_before_action :authorize, only: [:register, :login, :logout]
+
   def register
     ActiveRecord::Base.transaction do
       user = User.create(user_params)
       if user.save
         token = encode_token({ user_id: user.id })
-        render json: { user:, token: }, status: :created
-      else
-        render json: { errors: user.errors.full_messages }, status: :unprocessable_entity
+        cookies.signed[:jwt] = {value:  token, httponly: true, same_site: :strict}
       end
+      render_resource(user, status: :created)
     end
   end
 
@@ -17,11 +18,17 @@ class AuthenticationController < ApplicationController
 
       if user&.authenticate(params[:password])
         token = encode_token({ user_id: user.id })
-        render json: { user:, token: }, status: :ok
+        cookies.signed[:jwt] = {value:  token, httponly: true, same_site: :strict}
+        render_resource(user, status: :ok)
       else
-        render json: { error: 'Invalid credentials' }, status: :unauthorized
+        render_resource({ error: 'Invalid credentials' }, status: :unauthorized)
       end
     end
+  end
+
+  def logout
+    cookies.delete(:jwt)
+    render_resource({ message: 'Logged out' }, status: :accepted)
   end
 
   private

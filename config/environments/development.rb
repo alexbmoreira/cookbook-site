@@ -2,6 +2,15 @@ require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
+  config.middleware.insert_before 0, Rack::Cors do
+    allow do
+      origins 'localhost:3001'
+      resource '*',
+        headers: :any,
+        methods: [:get, :post, :put, :patch, :delete, :options, :head],
+        credentials: true
+    end
+  end
 
   # In the development environment your application's code is reloaded any time
   # it changes. This slows down response time but is perfect for development
