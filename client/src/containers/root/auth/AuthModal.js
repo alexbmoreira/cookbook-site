@@ -12,6 +12,7 @@ const AuthModal = observer(({isOpen, onClose}) => {
   const [password, setPassword] = useState('');
   const [passwordConfirmation, setPasswordConfirmation] = useState('');
   const [formErrors, setFormErrors] = useState({});
+  const [viewPassword, setViewPassword] = useState(false);
 
   const handleSubmit = async () => {
     setFormErrors({});
@@ -58,14 +59,16 @@ const AuthModal = observer(({isOpen, onClose}) => {
           errorMessage={formErrors.email}
         />}
         <Input
-          type='password'
+          type={viewPassword ? 'text' : 'password'}
           placeholder='Password'
           value={password}
           onChange={(value) => setPassword(value)}
+          actionIconClass={`fa-solid ${viewPassword ? 'fa-eye-slash' : 'fa-eye'}`}
+          onAction={() => setViewPassword(!viewPassword)}
           errorMessage={formErrors.password}
         />
         {formType === 'register' && <Input
-          type='password'
+          type={viewPassword ? 'text' : 'password'}
           value={passwordConfirmation}
           placeholder='Confirm Password'
           onChange={(value) => setPasswordConfirmation(value)}
