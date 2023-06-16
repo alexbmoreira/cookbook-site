@@ -7,5 +7,5 @@ Rails.application.routes.draw do
     get 'user_notes', to: 'notes#user_notes'
   end
 
-  resources :notes, only: [:create, :update, :destroy]
+  resources :notes, only: [:create, :update]
 end
