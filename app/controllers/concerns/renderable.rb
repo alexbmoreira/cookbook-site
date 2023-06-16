@@ -5,7 +5,7 @@ module Renderable
 
   def render_resource(resource, **options)
     if request.method == 'GET' || resource.is_a?(Hash) || resource.errors.empty?
-      render(json: resource, **options)
+      render(json: resource || {}, **options)
     else
       render json: { errors: serialized_errors(resource.errors) }, status: :unprocessable_entity
     end
