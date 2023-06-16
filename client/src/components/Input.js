@@ -6,7 +6,7 @@ const Input = observer(({value, onChange, iconClass, errorMessage, ...rest}) => 
   return (
     <div className='relative mb-2'>
       {iconClass && <span className='absolute text-silver left-2 bottom-2'>
-        <FontAwesomeIcon icon={iconClass} />
+        <FontAwesomeIcon icon={iconClass}/>
       </span>}
       <input
         {...rest}
@@ -15,7 +15,7 @@ const Input = observer(({value, onChange, iconClass, errorMessage, ...rest}) => 
         onChange={(e) => onChange(e.target.value)}
       />
       {errorMessage && <div className='text-crimson text-xs space-x-1 mt-1'>
-        <FontAwesomeIcon icon='fa-solid fa-circle-exclamation' />
+        <FontAwesomeIcon icon='fa-solid fa-circle-exclamation'/>
         <span>{errorMessage}</span>
       </div>}
     </div>
