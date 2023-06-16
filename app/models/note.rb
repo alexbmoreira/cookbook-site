@@ -19,9 +19,10 @@ end
 #
 # Indexes
 #
-#  index_notes_on_deleted_at  (deleted_at)
-#  index_notes_on_recipe_id   (recipe_id)
-#  index_notes_on_user_id     (user_id)
+#  index_notes_on_deleted_at             (deleted_at)
+#  index_notes_on_recipe_id              (recipe_id)
+#  index_notes_on_user_id                (user_id)
+#  index_notes_on_user_id_and_recipe_id  (user_id,recipe_id) UNIQUE WHERE (deleted_at IS NULL)
 #
 # Foreign Keys
 #

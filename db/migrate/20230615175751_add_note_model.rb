@@ -8,5 +8,6 @@ class AddNoteModel < ActiveRecord::Migration[7.0]
       t.datetime :deleted_at, index: true
       t.timestamps
     end
+    add_index :notes, [:user_id, :recipe_id], unique: true, where: 'deleted_at IS NULL'
   end
 end

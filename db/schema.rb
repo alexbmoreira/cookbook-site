@@ -31,6 +31,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_15_175751) do
     t.datetime "updated_at", null: false
     t.index ["deleted_at"], name: "index_notes_on_deleted_at"
     t.index ["recipe_id"], name: "index_notes_on_recipe_id"
+    t.index ["user_id", "recipe_id"], name: "index_notes_on_user_id_and_recipe_id", unique: true, where: "(deleted_at IS NULL)"
     t.index ["user_id"], name: "index_notes_on_user_id"
   end
 
