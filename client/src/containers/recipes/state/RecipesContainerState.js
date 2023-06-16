@@ -1,7 +1,7 @@
 import { makeObservable, observable, action, computed } from 'mobx';
 import { matchPath } from 'react-router';
 import { Recipe, Note, authStore } from '../../../store';
-import { fetchData, postData } from '../../../api/api.service'
+import { fetchData, postData, patchData } from '../../../api/api.service'
 import _ from 'lodash';
 
 class RecipesContainerState {
@@ -44,7 +44,9 @@ class RecipesContainerState {
   }
 
   async saveNotes() {
-    const {model} = await postData('/notes', _.merge(this.notes, {recipe: this.recipe}))
+    const {model} = this.notes.isNew ?
+      await postData('/notes', _.merge(this.notes, {recipe: this.recipe})) :
+      await patchData(`/notes/${this.notes.id}`, this.notes)
 
     this.notes = new Note(model);
     this.notesEdited = false;

@@ -50,6 +50,23 @@ export const postData = async (url, payload) => {
   }
 };
 
+export const patchData = async (url, payload) => {
+  try {
+    const response = await api.patch(url, payload);
+    return {model: response.data};
+  } catch (error) {
+    console.error(`Error posting data to ${url}: ${error}`);
+
+    const status = _.get(error, 'response.status');
+    switch (status) {
+      case 422:
+        return error.response.data
+      default:
+        throw error;
+    }
+  }
+};
+
 export const deleteData = async (url) => {
   try {
     const response = await api.delete(url);
