@@ -1,18 +1,25 @@
 import { makeObservable, observable, action, computed } from 'mobx';
 import { matchPath } from 'react-router';
-import { Recipe } from '../../../store';
-import { fetchData } from '../../../api/api.service'
+import { Recipe, Note, authStore } from '../../../store';
+import { fetchData, postData } from '../../../api/api.service'
+import _ from 'lodash';
 
 class RecipesContainerState {
   recipe = {};
   servings = 0;
+  notes = {};
+  notesEdited = false;
 
   constructor() {
     makeObservable(this, {
       recipe: observable,
       servings: observable,
+      notes: observable,
+      notesEdited: observable,
       load: action,
       updateServings: action,
+      updateNotesBody: action,
+      saveNotes: action,
       relativeServings: computed
     });
   }
@@ -20,13 +27,27 @@ class RecipesContainerState {
   async load() {
     const slug = matchPath({ path: "/recipes/:slug" }, window.location.pathname).params.slug;
     const recipe = await fetchData(`/recipes/${slug}`);
+    const notes = authStore.isLoggedIn ? await fetchData(`/recipes/${slug}/user_notes`) : {};
 
     this.recipe = new Recipe(recipe);
     this.servings = this.recipe.servings;
+    this.notes = new Note(notes);
   }
 
   updateServings(servings) {
     this.servings = servings;
+  }
+
+  updateNotesBody(value) {
+    _.merge(this.notes, { body: value })
+    this.notesEdited = true;
+  }
+
+  async saveNotes() {
+    const {model} = await postData('/notes', _.merge(this.notes, {recipe: this.recipe}))
+
+    this.notes = new Note(model);
+    this.notesEdited = false;
   }
 
   get relativeServings() {

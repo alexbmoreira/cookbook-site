@@ -6,6 +6,7 @@ import RecipesContainerState from '../state/RecipesContainerState';
 import RecipeInfo from './RecipeInfo';
 import Ingredients from './Ingredients';
 import Instructions from './Instructions';
+import { Notes } from './notes';
 import { observer } from 'mobx-react';
 
 const RecipesContainer = observer(({uiState}) => {
@@ -24,6 +25,7 @@ const RecipesContainer = observer(({uiState}) => {
         <Ingredients ingredients={recipe.ingredients} relativeServings={relativeServings}/>
         <BlockHeader title={'recipes.Instructions'}/>
         <Instructions steps={recipe.steps}/>
+        <Notes uiState={uiState}/>
       </Container>
     </div>
   );

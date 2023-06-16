@@ -5,6 +5,7 @@ import Input from './Input';
 import LoadingIcon from './LoadingIcon';
 import Modal from './Modal';
 import NumberInput from './number_input/NumberInput'
+import TextArea from './TextArea';
 
 export {
   Button,
@@ -13,5 +14,6 @@ export {
   Input,
   LoadingIcon,
   Modal,
-  NumberInput
+  NumberInput,
+  TextArea
 };

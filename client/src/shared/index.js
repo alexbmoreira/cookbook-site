@@ -1,4 +1,5 @@
 import withState from './withState';
+import dateFormatter from './dateFormatter';
 import timeFormatter from './timeFormatter';
 
 const imageUrl = (category, filename) => {
@@ -8,5 +9,6 @@ const imageUrl = (category, filename) => {
 export {
   imageUrl,
   withState,
+  dateFormatter,
   timeFormatter
 };

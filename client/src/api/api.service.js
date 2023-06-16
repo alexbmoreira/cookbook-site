@@ -36,7 +36,7 @@ export const fetchData = async (url) => {
 export const postData = async (url, payload) => {
   try {
     const response = await api.post(url, payload);
-    return response.data;
+    return {model: response.data};
   } catch (error) {
     console.error(`Error posting data to ${url}: ${error}`);
 

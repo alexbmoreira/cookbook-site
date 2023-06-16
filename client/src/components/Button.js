@@ -7,7 +7,7 @@ const classesForTrait = (trait) => {
     case 'primary':
       return 'bg-carolina hover:bg-carolina-hover active:bg-carolina-active text-white'
     default:
-      return 'hover:bg-powder active:bg-powder-active'
+      return 'border-silver border hover:bg-powder active:bg-powder-active'
   }
 };
 
@@ -33,7 +33,7 @@ const Button = observer(({onClick, trait, className, ...rest}) => {
   return (
     <button
       {...rest}
-      className={`border-silver border rounded p-2 w-full transition ease-in-out duration-200 ${classesForTrait(trait)} ${className ? className : ''}`}
+      className={`rounded p-2 w-full transition ease-in-out duration-200 ${classesForTrait(trait)} ${className ? className : ''}`}
       onClick={async (e) => _onClick(e, onClick)}
     />
   );
