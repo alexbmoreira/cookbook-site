@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { AuthModal } from './auth';
@@ -35,7 +35,7 @@ const Footer = () => {
 };
 
 const Root = observer(() => {
-  const [loginModalOpen, setLoginModalOpen] = React.useState(false);
+  const [loginModalOpen, setLoginModalOpen] = useState(false);
 
   const handleLogout = async () => {
     deleteData('/logout')
