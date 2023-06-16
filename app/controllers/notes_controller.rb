@@ -10,9 +10,11 @@ class NotesController < ApplicationController
     render_resource(note)
   end
 
-  def destroy
-    Note.find(params[:id]).destroy!
-    head :no_content
+  def update
+    note = Note.find(params[:id])
+    note.update!(body: note_params[:body])
+
+    render_resource(note)
   end
 
   private
