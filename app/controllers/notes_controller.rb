@@ -1,7 +1,7 @@
 class NotesController < ApplicationController
   def user_notes
     render_resource(
-      Note.includes(:recipe).where(recipe: { slug: params[:recipe_slug] }, user: @user)
+      Note.includes(:recipe).find_by(recipe: { slug: params[:recipe_slug] }, user: @user)
     )
   end
 
