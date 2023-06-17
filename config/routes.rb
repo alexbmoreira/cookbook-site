@@ -3,5 +3,9 @@ Rails.application.routes.draw do
   post '/login', to: 'authentication#login'
   delete '/logout', to: 'authentication#logout'
 
-  resources :recipes, only: [:index, :show], param: :slug
+  resources :recipes, only: [:index, :show], param: :slug do
+    get 'user_notes', to: 'notes#user_notes'
+  end
+
+  resources :notes, only: [:create, :update]
 end

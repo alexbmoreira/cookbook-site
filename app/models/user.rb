@@ -1,6 +1,8 @@
 class User < ApplicationRecord
   has_secure_password
 
+  has_many :notes, dependent: :destroy
+
   validates :password, length: { minimum: 8 }, if: :password
   validates :password, confirmation: true, if: :password
   validates :password_confirmation, presence: true, if: :password
