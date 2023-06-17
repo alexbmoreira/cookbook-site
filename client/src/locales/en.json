@@ -18,6 +18,10 @@
   "recipes.cook_info.rest": "REST",
   "recipes.cook_info.total": "TOTAL",
   "recipes.cook_info.servings": "SERVINGS",
+  "recipes.Notes": "Notes",
+  "recipes.notes.Add a note...": "Add a note...",
+  "recipes.notes.NOTES_UPDATED": "Last updated: {date}",
+  "recipes.notes.Save": "Save",
   "recipe_list.Search...": "Search...",
   "time": "{hours, plural, =0 {} other {{hours} h }}{minutes, plural, =0 {} other {{minutes} mins}}"
 }

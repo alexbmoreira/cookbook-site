@@ -1,5 +1,4 @@
 import axios from 'axios';
-import { authStore } from '../store';
 import _ from 'lodash';
 
 const api = axios.create({
@@ -10,18 +9,6 @@ const api = axios.create({
     'Content-Type': 'application/json'
   }
 });
-
-api.interceptors.request.use(
-  (config) => {
-    if (authStore.token) {
-      config.headers.Authorization = `Bearer ${authStore.token}`;
-    }
-    return config;
-  },
-  (error) => {
-    return Promise.reject(error);
-  }
-);
 
 export const fetchData = async (url) => {
   try {
@@ -36,7 +23,24 @@ export const fetchData = async (url) => {
 export const postData = async (url, payload) => {
   try {
     const response = await api.post(url, payload);
-    return response.data;
+    return {model: response.data};
+  } catch (error) {
+    console.error(`Error posting data to ${url}: ${error}`);
+
+    const status = _.get(error, 'response.status');
+    switch (status) {
+      case 422:
+        return error.response.data
+      default:
+        throw error;
+    }
+  }
+};
+
+export const patchData = async (url, payload) => {
+  try {
+    const response = await api.patch(url, payload);
+    return {model: response.data};
   } catch (error) {
     console.error(`Error posting data to ${url}: ${error}`);
 
