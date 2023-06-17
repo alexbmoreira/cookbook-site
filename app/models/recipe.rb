@@ -16,6 +16,19 @@ class Recipe < ApplicationRecord
   validates :cook_time, :prep_time, :servings, presence: true, numericality: {
     greater_than_or_equal_to: 0
   }
+
+  def self.create_recipe!(attrs)
+    ActiveRecord::Base.transaction do
+      recipe_ingredients = attrs.delete(:ingredients)
+      recipe = Recipe.create!(attrs)
+      recipe_ingredients.map do |recipe_ingredient|
+        ingredient = Ingredient.find_or_create_by!(name: recipe_ingredient.delete(:name))
+        RecipeIngredient.create!(**recipe_ingredient, ingredient: ingredient, recipe: recipe)
+      end
+
+      recipe
+    end
+  end
 end
 
 # == Schema Information
@@ -29,6 +42,7 @@ end
 #  image      :string
 #  name       :string           not null
 #  prep_time  :integer          not null
+#  rest_time  :integer
 #  servings   :integer
 #  slug       :string           not null
 #  steps      :text             not null
