@@ -1,7 +1,7 @@
 import { makeObservable, observable, action, computed } from 'mobx';
 import { matchPath } from 'react-router';
 import { Recipe, Note, authStore } from '../../../store';
-import { fetchData, postData, patchData } from '../../../api/api.service'
+import { fetchData, postData, patchData, deleteData } from '../../../api/api.service'
 import _ from 'lodash';
 
 class RecipesContainerState {
@@ -49,6 +49,12 @@ class RecipesContainerState {
       await patchData(`/notes/${this.notes.id}`, this.notes)
 
     this.notes = new Note(model);
+    this.notesEdited = false;
+  }
+
+  async deleteNotes() {
+    await deleteData(`/notes/${this.notes.id}`)
+    this.notes = new Note();
     this.notesEdited = false;
   }
 

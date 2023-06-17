@@ -5,6 +5,7 @@ import { Button, TextArea } from '../../../../components';
 import { authStore } from '../../../../store';
 import { FormattedMessage } from 'react-intl';
 import { dateFormatter } from '../../../../shared';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Notes = observer(({uiState}) => {
   const {notes} = uiState;
@@ -31,6 +32,9 @@ const Notes = observer(({uiState}) => {
             </Button>
           </div>}
         </div>
+        {!notes.isNew && <div className='absolute text-silver right-2 top-1 cursor-pointer' onClick={() => uiState.deleteNotes()}>
+          <FontAwesomeIcon icon='fa-solid fa-trash'/>
+        </div>}
       </div>
     </React.Fragment>
   );
