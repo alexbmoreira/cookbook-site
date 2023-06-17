@@ -17,6 +17,11 @@ class NotesController < ApplicationController
     render_resource(note)
   end
 
+  def destroy
+    Note.find(params[:id]).destroy!
+    head :no_content
+  end
+
   private
 
   def note_params
