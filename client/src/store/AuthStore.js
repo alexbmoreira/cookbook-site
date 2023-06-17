@@ -11,11 +11,13 @@ class AuthStore {
   login = () => {
     Cookies.set('isLoggedIn', 'true');
     this.isLoggedIn = true;
+    window.location.reload()
   }
 
   logout = () => {
     Cookies.remove('isLoggedIn');
     this.isLoggedIn = false;
+    window.location.reload()
   }
 }
 
