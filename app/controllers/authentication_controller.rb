@@ -6,7 +6,7 @@ class AuthenticationController < ApplicationController
       user = User.new(user_params)
       if user.save
         token = encode_token({ user_id: user.id })
-        cookies.signed[:jwt] = {value:  token, httponly: true, same_site: :strict}
+        set_jwt_token(token)
       end
       render_resource(user, status: :created)
     end
@@ -18,7 +18,7 @@ class AuthenticationController < ApplicationController
 
       if user&.authenticate(params[:password])
         token = encode_token({ user_id: user.id })
-        cookies.signed[:jwt] = {value:  token, httponly: true, same_site: :strict}
+        set_jwt_token(token)
         render_resource(user, status: :ok)
       else
         render_resource({ error: 'Invalid credentials' }, status: :unauthorized)
@@ -35,5 +35,14 @@ class AuthenticationController < ApplicationController
 
   def user_params
     params.permit(:username, :email, :password, :password_confirmation)
+  end
+
+  def set_jwt_token(token)
+    cookies.signed[:jwt] = {
+      value:  token,
+      httponly: true,
+      secure: Rails.env.production?,
+      same_site: :none
+    }
   end
 end
