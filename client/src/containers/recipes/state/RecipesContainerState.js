@@ -20,6 +20,7 @@ class RecipesContainerState {
       updateServings: action,
       updateNotesBody: action,
       saveNotes: action,
+      deleteNotes: action,
       relativeServings: computed
     });
   }

@@ -39,6 +39,7 @@ gem 'jwt'
 gem 'bcrypt', '~> 3.1.7'
 gem 'olive_branch'
 gem 'active_model_serializers', '~> 0.10.0'
+gem 'google-cloud-storage'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
