@@ -19,10 +19,10 @@ class Recipe < ApplicationRecord
 
   def self.create_recipe!(attrs)
     ActiveRecord::Base.transaction do
-      recipe_ingredients = attrs.delete(:ingredients)
+      recipe_ingredients = attrs.delete('ingredients')
       recipe = Recipe.create!(attrs)
       recipe_ingredients.map do |recipe_ingredient|
-        ingredient = Ingredient.find_or_create_by!(name: recipe_ingredient.delete(:name))
+        ingredient = Ingredient.find_or_create_by!(name: recipe_ingredient.delete('name'))
         RecipeIngredient.create!(**recipe_ingredient, ingredient: ingredient, recipe: recipe)
       end
 
