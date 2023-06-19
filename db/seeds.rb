@@ -6,9 +6,7 @@ ActiveRecord::Base.transaction do
 
   storage = Google::Cloud::Storage.new(
     project_id: 'dazzling-rain-372001',
-    credentials: JSON.parse(Base64.decode64(
-      Rails.application.credentials[Rails.env.to_sym][:google_cloud_keyfile]
-    ))
+    credentials: JSON.parse(Base64.decode64(ENV['GOOGLE_CLOUD_KEYFILE']))
   )
 
   files = storage.bucket('twos-company-cookbook').files(prefix: 'recipes/')
