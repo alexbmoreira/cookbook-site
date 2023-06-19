@@ -1,6 +1,7 @@
 require 'google/cloud/storage'
 
 ActiveRecord::Base.transaction do
+  debugger
   storage = Google::Cloud::Storage.new(
     project_id: 'dazzling-rain-372001',
     credentials: JSON.parse(Base64.decode64(
