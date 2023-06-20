@@ -12,9 +12,14 @@ class NotesController < ApplicationController
 
   def update
     note = Note.find(params[:id])
-    note.update!(body: note_params[:body])
+    if note_params[:body].blank?
+      note.destroy!
+      head :no_content
+    else
+      note.update!(body: note_params[:body])
+      render_resource(note)
+    end
 
-    render_resource(note)
   end
 
   def destroy
