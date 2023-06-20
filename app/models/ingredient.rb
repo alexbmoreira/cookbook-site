@@ -15,4 +15,5 @@ end
 # Indexes
 #
 #  index_ingredients_on_deleted_at  (deleted_at)
+#  index_ingredients_on_name        (name) UNIQUE
 #

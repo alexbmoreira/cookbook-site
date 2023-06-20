@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_17_050059) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_20_151343) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -20,6 +20,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_17_050059) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["deleted_at"], name: "index_ingredients_on_deleted_at"
+    t.index ["name"], name: "index_ingredients_on_name", unique: true
   end
 
   create_table "notes", force: :cascade do |t|
@@ -43,7 +44,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_17_050059) do
     t.datetime "deleted_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "order", null: false
     t.index ["deleted_at"], name: "index_recipe_ingredients_on_deleted_at"
+    t.index ["ingredient_id", "recipe_id"], name: "index_recipe_ingredients_on_ingredient_id_and_recipe_id", unique: true, where: "(deleted_at IS NULL)"
     t.index ["ingredient_id"], name: "index_recipe_ingredients_on_ingredient_id"
     t.index ["recipe_id"], name: "index_recipe_ingredients_on_recipe_id"
   end
