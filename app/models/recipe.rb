@@ -10,7 +10,7 @@ class Recipe < ApplicationRecord
     dessert: 8
   }
 
-  has_many :recipe_ingredients, dependent: :destroy
+  has_many :recipe_ingredients, -> { order(:order) }, dependent: :destroy
 
   validates :name, presence: true
   validates :cook_time, :prep_time, :servings, presence: true, numericality: {
