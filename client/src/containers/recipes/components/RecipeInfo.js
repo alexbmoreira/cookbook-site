@@ -23,9 +23,9 @@ const RecipeInfo = observer(({uiState}) => {
 
   return (
     <div className='space-y-1 text-sm'>
-      {prepTime && <InfoLine title='prep' value={prepTime} isTime/>}
-      {cookTime && <InfoLine title='cook' value={cookTime} isTime/>}
-      {restTime && <InfoLine title='rest' value={restTime} isTime/>}
+      {prepTime > 0 && <InfoLine title='prep' value={prepTime} isTime/>}
+      {cookTime > 0 && <InfoLine title='cook' value={cookTime} isTime/>}
+      {restTime > 0 && <InfoLine title='rest' value={restTime} isTime/>}
       {servings && <React.Fragment>
         <div className='border-b'/>
         <div className='flex justify-between'>
