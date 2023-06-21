@@ -1,7 +1,8 @@
 import { makeObservable, observable, action, computed } from 'mobx';
 import { matchPath } from 'react-router';
 import { Recipe, Note, authStore } from '../../../store';
-import { fetchData, postData, patchData, deleteData } from '../../../api/api.service'
+import { fetchData, postData, patchData, deleteData } from '../../../api/api.service';
+import { toast } from 'react-toastify';
 import _ from 'lodash';
 
 class RecipesContainerState {
@@ -61,6 +62,18 @@ class RecipesContainerState {
 
   get relativeServings() {
     return this.servings / this.recipe.servings;
+  }
+
+  async shareRecipe() {
+    if (navigator.share) {
+      await navigator.share({
+        title: this.recipe.name,
+        url: window.location.href,
+      });
+    } else {
+      await navigator.clipboard.writeText(window.location.href)
+      toast('Copied to clipboard!')
+    }
   }
 }
 

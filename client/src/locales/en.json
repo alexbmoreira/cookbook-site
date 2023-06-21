@@ -5,6 +5,7 @@
   "auth.Password": "Password",
   "recipes.Ingredients": "Ingredients",
   "recipes.Instructions": "Instructions",
+  "recipes.Copied to clipboard!": "Copied to clipboard!",
   "recipes.categories.breakfast": "Breakfast",
   "recipes.categories.soup": "Soups",
   "recipes.categories.side": "Sides",
