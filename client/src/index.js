@@ -9,6 +9,7 @@ import { IntlProvider } from 'react-intl';
 import English from './locales/en.json';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons'
+import 'react-toastify/dist/ReactToastify.css';
 
 library.add(fas)
 

@@ -23,7 +23,7 @@ const RecipeInfo = ({recipe}) => {
           <FormattedMessage id={`recipes.categories.${recipe.category}`}/>
         </div>
         <div className='space-x-1 opacity-50 text-sm'>
-          <FontAwesomeIcon icon="fa-solid fa-clock"/>
+          <FontAwesomeIcon icon='fa-solid fa-clock'/>
           <span>
             <FormattedMessage id='time' values={timeFormatter(recipe.timeEstimate)}/>
           </span>
