@@ -5,6 +5,7 @@ class RecipeSerializer < ActiveModel::Serializer
     :slug,
     :prep_time,
     :cook_time,
+    :rest_time,
     :servings,
     :steps,
     :category
