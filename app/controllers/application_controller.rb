@@ -41,4 +41,28 @@ class ApplicationController < ActionController::API
   def authorize
     render json: { message: 'Please log in' }, status: :unauthorized unless logged_in?
   end
+
+  def ensure_admin
+    render json: { message: 'Must be an admin' }, status: :unauthorized unless logged_in_user.admin?
+  end
+
+  def deserialized_params
+    camel_to_snake(params.permit!.to_h[:data])
+  end
+
+  private
+
+  def camel_to_snake(hash)
+    hash.each_with_object({}) do |(key, value), result|
+      new_value = case value
+                  when Hash
+                    camel_to_snake(value)
+                  when Array
+                    value.map { camel_to_snake(_1) }
+                  else
+                    value
+                  end
+      result[key.underscore.to_sym] = new_value
+    end
+  end
 end
