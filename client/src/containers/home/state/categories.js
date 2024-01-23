@@ -1,5 +1,4 @@
 const CATEGORIES = [
-  { value: 'all', label: 'All' },
   { value: 'breakfast', label: 'Breakfast' },
   { value: 'soup', label: 'Soups' },
   { value: 'side', label: 'Sides' },

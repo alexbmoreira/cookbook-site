@@ -11,6 +11,8 @@ class Recipe < ApplicationRecord
   }
 
   has_many :recipe_ingredients, -> { order(:order) }, dependent: :destroy
+  has_one :image, dependent: :destroy
+  belongs_to :created_by_user, class_name: 'User'
 
   validates :name, presence: true
   validates :cook_time, :prep_time, :servings, presence: true, numericality: {
@@ -35,22 +37,26 @@ end
 #
 # Table name: recipes
 #
-#  id         :bigint           not null, primary key
-#  category   :integer          default(NULL), not null
-#  cook_time  :integer          not null
-#  deleted_at :datetime
-#  image      :string
-#  name       :string           not null
-#  prep_time  :integer          not null
-#  rest_time  :integer
-#  servings   :integer
-#  slug       :string           not null
-#  steps      :text             not null
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
+#  id                 :bigint           not null, primary key
+#  category           :integer          default(NULL), not null
+#  cook_time          :integer          not null
+#  deleted_at         :datetime
+#  name               :string           not null
+#  prep_time          :integer          not null
+#  rest_time          :integer
+#  servings           :integer
+#  slug               :string           not null
+#  steps              :text             not null
+#  created_at         :datetime         not null
+#  updated_at         :datetime         not null
+#  created_by_user_id :integer
 #
 # Indexes
 #
 #  index_recipes_on_deleted_at  (deleted_at)
 #  index_recipes_on_slug        (slug) UNIQUE
+#
+# Foreign Keys
+#
+#  fk_rails_...  (created_by_user_id => users.id)
 #

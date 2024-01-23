@@ -8,7 +8,9 @@ class RecipeSerializer < ActiveModel::Serializer
     :rest_time,
     :servings,
     :steps,
-    :category
+    :category,
+    :created_by_user_id
 
   has_many :recipe_ingredients, key: :ingredients, serializer: ::RecipeIngredientSerializer
+  has_one :image, serializer: ::ImageSerializer
 end
