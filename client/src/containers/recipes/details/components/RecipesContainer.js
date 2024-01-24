@@ -27,7 +27,7 @@ const RecipesContainer = observer(({uiState}) => {
         <BlockHeader title={recipe.name} size='lg' translateTitle={false}/>
         <RecipeInfo uiState={uiState}/>
         <BlockHeader title={'recipes.Ingredients'}/>
-        <Ingredients ingredients={recipe.ingredients} relativeServings={relativeServings}/>
+        <Ingredients ingredients={recipe.recipeIngredients} relativeServings={relativeServings}/>
         <BlockHeader title={'recipes.Instructions'}/>
         <Instructions steps={recipe.steps}/>
         <Notes uiState={uiState}/>

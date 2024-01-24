@@ -4,9 +4,9 @@ class RecipesController < ApplicationController
 
   def show
     render_resource(
-      Recipe.includes(recipe_ingredients: :ingredient).find_by(slug: params[:slug]),
-      include: [:ingredients, :image],
-      status: :ok
+      Recipe.find_by(slug: params[:slug]),
+      serializer: ::RecipeSerializer,
+      include: [:recipe_ingredients, :image]
     )
   end
 

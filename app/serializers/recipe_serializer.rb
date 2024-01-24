@@ -11,6 +11,6 @@ class RecipeSerializer < ActiveModel::Serializer
     :category,
     :created_by_user_id
 
-  has_many :recipe_ingredients, key: :ingredients, serializer: ::RecipeIngredientSerializer
+  has_many :recipe_ingredients, serializer: ::RecipeIngredientSerializer
   has_one :image, serializer: ::ImageSerializer
 end
