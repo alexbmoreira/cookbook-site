@@ -14,12 +14,16 @@
     "Copied to clipboard!": "Copied to clipboard!",
     "categories": {
       "breakfast": "Breakfast",
+      "snack": "Snack",
       "soup": "Soups",
+      "salad": "Salads",
       "side": "Sides",
-      "meat_and_poultry": "Meat & Poultry",
-      "fish": "Fish",
       "pasta": "Pasta",
+      "meat_and_poultry": "Meat & Poultry",
+      "seafood": "Seafood",
+      "vegetarian": "Vegetarian",
       "dessert": "Dessert",
+      "drink": "Drink",
       "misc": "Odds & Ends"
     },
     "cook_info": {

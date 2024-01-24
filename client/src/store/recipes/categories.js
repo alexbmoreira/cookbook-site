@@ -1,6 +1,6 @@
 const CATEGORIES = [
   { value: 'breakfast', label: 'Breakfast' },
-  { value: 'snack', label: 'Hors-d\'œuvre' },
+  { value: 'snack', label: 'Snack' },
   { value: 'soup', label: 'Soups' },
   { value: 'salad', label: 'Salads' },
   { value: 'side', label: 'Sides' },
