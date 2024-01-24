@@ -30,10 +30,10 @@ class NotesController < ApplicationController
   private
 
   def note_params
-    input_params = params.slice(:body, :recipe)
+    input_params = deserialized_params.slice(:body, :recipe)
     input_params[:recipe_id] = input_params.dig(:recipe, :id)
     input_params.delete(:recipe)
 
-    input_params.permit!
+    input_params
   end
 end
