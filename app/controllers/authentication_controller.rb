@@ -14,9 +14,9 @@ class AuthenticationController < ApplicationController
 
   def login
     ActiveRecord::Base.transaction do
-      user = User.find_by(username: params[:username])
+      user = User.find_by(username: user_params[:username])
 
-      if user&.authenticate(params[:password])
+      if user&.authenticate(user_params[:password])
         token = encode_token({ user_id: user.id })
         set_jwt_token(token)
         render_resource(user, status: :ok)
@@ -34,7 +34,7 @@ class AuthenticationController < ApplicationController
   private
 
   def user_params
-    params.permit(:username, :email, :password, :password_confirmation)
+    deserialized_params
   end
 
   def set_jwt_token(token)

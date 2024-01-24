@@ -1,5 +1,5 @@
 import { makeAutoObservable } from 'mobx';
-import { Recipe } from '../../../store';
+import { Recipe } from '../../../store/recipes';
 import { fetchData } from '../../../api/api.service'
 
 

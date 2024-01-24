@@ -12,14 +12,13 @@ module Recipes
     integer :prep_time
     integer :cook_time, default: nil
     integer :rest_time, default: nil
-    string :directions
+    string :steps
     integer :servings
-    string :original_recipe_url, default: nil
     integer :created_by_user_id
     array :recipe_ingredients, default: [] do
       hash do
         string :quantity, default: nil
-        string :unit, default: nil
+        string :measurement, default: nil
         string :name
       end
     end
@@ -34,9 +33,8 @@ module Recipes
           :prep_time,
           :cook_time,
           :rest_time,
-          :directions,
+          :steps,
           :servings,
-          :original_recipe_url,
           :created_by_user_id
         )
       )
@@ -45,7 +43,7 @@ module Recipes
         ingredient_name = recipe_ingredient.delete(:name).downcase
         ingredient = Ingredient.find_or_initialize_by(name: ingredient_name)
         recipe_ingredient[:ingredient] = ingredient
-        recipe_ingredient[:unit]&.downcase!
+        recipe_ingredient[:measurement]&.downcase!
 
         recipe_ingredient
       end

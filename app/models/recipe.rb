@@ -2,15 +2,19 @@ class Recipe < ApplicationRecord
   enum category: {
     misc: 1,
     breakfast: 2,
-    soup: 3,
-    side: 4,
-    pasta: 5,
-    meat_and_poultry: 6,
-    fish: 7,
-    dessert: 8
+    snack: 3,
+    soup: 4,
+    salad: 5,
+    side: 6,
+    pasta: 7,
+    meat_and_poultry: 8,
+    seafood: 9,
+    vegetarian: 10,
+    dessert: 11,
+    drink: 12
   }
 
-  has_many :recipe_ingredients, -> { order(:order) }, dependent: :destroy
+  has_many :recipe_ingredients, dependent: :destroy
   has_one :image, dependent: :destroy
   belongs_to :created_by_user, class_name: 'User'
 
@@ -18,6 +22,19 @@ class Recipe < ApplicationRecord
   validates :cook_time, :prep_time, :servings, presence: true, numericality: {
     greater_than_or_equal_to: 0
   }
+
+  before_validation :generate_slug
+
+  accepts_nested_attributes_for :recipe_ingredients, allow_destroy: true
+  accepts_nested_attributes_for :image, allow_destroy: true
+
+  private
+
+  def generate_slug
+    return unless will_save_change_to_name?
+
+    self.slug = name.parameterize
+  end
 
   def self.create_recipe!(attrs)
     ActiveRecord::Base.transaction do

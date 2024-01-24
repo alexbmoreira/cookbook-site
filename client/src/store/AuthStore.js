@@ -1,23 +1,36 @@
 import { makeAutoObservable } from 'mobx';
 import Cookies from 'js-cookie';
+import _ from 'lodash';
 
 class AuthStore {
-  isLoggedIn = !!Cookies.get('isLoggedIn');
+  currentUser = !!Cookies.get('currentUser') ? JSON.parse(Cookies.get('currentUser')) : {};
 
   constructor() {
     makeAutoObservable(this);
   }
 
-  login = () => {
-    Cookies.set('isLoggedIn', 'true');
-    this.isLoggedIn = true;
-    window.location.reload()
+  login = (currentUser) => {
+    Cookies.set('currentUser', JSON.stringify(currentUser));
+    this.currentUser = currentUser;
+    window.location.reload();
   }
 
   logout = () => {
-    Cookies.remove('isLoggedIn');
-    this.isLoggedIn = false;
-    window.location.reload()
+    Cookies.remove('currentUser');
+    this.currentUser = {};
+    window.location.reload();
+  }
+
+  get isLoggedIn() {
+    return !_.isEmpty(this.currentUser);
+  }
+
+  get isAdmin() {
+    return this.currentUser.admin;
+  }
+
+  get adminIsActive() {
+    return this.isLoggedIn && this.isAdmin;
   }
 }
 
