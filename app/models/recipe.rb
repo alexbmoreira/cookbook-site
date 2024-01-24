@@ -14,7 +14,7 @@ class Recipe < ApplicationRecord
     drink: 12
   }
 
-  has_many :recipe_ingredients, dependent: :destroy
+  has_many :recipe_ingredients, -> { order(:created_at) }, dependent: :destroy
   has_one :image, dependent: :destroy
   belongs_to :created_by_user, class_name: 'User'
 
