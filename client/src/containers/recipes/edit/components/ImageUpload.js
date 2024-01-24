@@ -9,7 +9,7 @@ import { LoadingIcon } from '../../../../components';
 const DragAndDropField = observer(({ onChange, loading }) => {
   const onDrop = useCallback(acceptedFiles => {
     onChange(acceptedFiles[0]);
-  }, []);
+  }, [onChange]);
 
   const {getRootProps, getInputProps} = useDropzone({
     onDrop,
