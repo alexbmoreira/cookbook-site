@@ -4,7 +4,7 @@ import { Container, Input, LoadingIcon, Select } from '../../../components';
 import { withState } from '../../../shared';
 import HomeContainerState from '../state/HomeContainerState';
 import RecipeLink from './RecipeLink';
-import CATEGORIES from '../state/categories';
+import { CATEGORIES } from '../../../store/recipes';
 
 const SearchBar = observer(({ uiState }) => {
   return (

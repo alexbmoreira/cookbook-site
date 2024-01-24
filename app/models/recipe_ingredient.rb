@@ -2,9 +2,27 @@ class RecipeIngredient < ApplicationRecord
   belongs_to :recipe
   belongs_to :ingredient
 
-  validates :order, presence: true, numericality: {
-    greater_than_or_equal_to: 0
-  }
+  validate :quantity_is_valid, if: -> { quantity.present? }
+
+  private
+
+  def quantity_is_valid
+    return if quantity_as_fraction.present? && quantity_as_fraction.to_f.positive?
+
+    errors.add(:quantity, 'is invalid')
+  end
+
+  def quantity_as_fraction
+    case quantity
+    when /^\d+\s\d+\/\d+$/
+      whole, fraction = quantity.split
+      whole.to_i + fraction.to_r
+    when /^\d+\/\d+$/
+      quantity.to_r
+    when /^\d*\.?\d+$/
+      quantity.to_r
+    end
+  end
 end
 
 # == Schema Information
@@ -14,7 +32,6 @@ end
 #  id            :bigint           not null, primary key
 #  deleted_at    :datetime
 #  measurement   :string
-#  order         :integer          not null
 #  quantity      :string
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null

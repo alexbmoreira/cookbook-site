@@ -5,9 +5,13 @@ import { observer } from 'mobx-react';
 const classesForTrait = (trait) => {
   switch (trait) {
     case 'primary':
-      return 'bg-carolina hover:bg-carolina-hover active:bg-carolina-active text-white'
+      return 'rounded p-2 w-full bg-carolina hover:bg-carolina-hover active:bg-carolina-active text-white'
+    case 'silver':
+      return 'flex justify-center items-center bg-powder hover:bg-silver';
+    case 'default':
+      return 'flex justify-center items-center hover:bg-powder active:bg-powder-active';
     default:
-      return 'border-silver border hover:bg-powder active:bg-powder-active'
+      throw `${trait} is not a valid trait for Button`;
   }
 };
 
@@ -33,7 +37,7 @@ const Button = observer(({onClick, trait, className, ...rest}) => {
   return (
     <button
       {...rest}
-      className={`rounded p-2 w-full transition ease-in-out duration-200 ${classesForTrait(trait)} ${className ? className : ''}`}
+      className={`transition ease-in-out duration-200 ${classesForTrait(trait)} ${className ? className : ''}`}
       onClick={async (e) => _onClick(e, onClick)}
     />
   );
@@ -42,6 +46,7 @@ const Button = observer(({onClick, trait, className, ...rest}) => {
 Button.propTypes = {
   trait: PropTypes.oneOf([
     'primary',
+    'silver',
     'default'
   ])
 };

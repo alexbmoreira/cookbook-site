@@ -1,8 +1,8 @@
 import { observer } from 'mobx-react';
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
-import { timeFormatter } from '../../../shared';
-import { NumberInput } from '../../../components';
+import { timeFormatter } from '../../../../shared';
+import { NumberInput } from '../../../../components';
 
 const InfoLine = ({title, value, isTime}) => {
   return (
@@ -31,7 +31,7 @@ const RecipeInfo = observer(({uiState}) => {
         <div className='flex justify-between'>
           <span className='bold text-lapis'><FormattedMessage id='recipes.cook_info.servings'/></span>
           <span className='font-serif justify-end'>
-            <NumberInput value={servings} step={recipe.servings} min={recipe.servings} onChange={(value) => uiState.updateServings(value)}/>
+            <NumberInput size='sm' value={servings} step={recipe.servings} min={recipe.servings} onChange={(value) => uiState.updateServings(value)}/>
           </span>
         </div>
       </React.Fragment>}
