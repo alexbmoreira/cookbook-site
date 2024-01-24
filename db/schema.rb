@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_12_27_005510) do
+ActiveRecord::Schema[7.0].define(version: 2024_01_24_030353) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -56,7 +56,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_27_005510) do
     t.datetime "deleted_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "order", null: false
     t.index ["deleted_at"], name: "index_recipe_ingredients_on_deleted_at"
     t.index ["ingredient_id", "recipe_id"], name: "index_recipe_ingredients_on_ingredient_id_and_recipe_id", unique: true, where: "(deleted_at IS NULL)"
     t.index ["ingredient_id"], name: "index_recipe_ingredients_on_ingredient_id"
@@ -87,6 +86,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_27_005510) do
     t.datetime "deleted_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "admin", default: false, null: false
     t.index ["deleted_at"], name: "index_users_on_deleted_at"
   end
 

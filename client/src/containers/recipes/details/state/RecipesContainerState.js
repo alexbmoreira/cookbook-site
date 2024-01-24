@@ -1,7 +1,8 @@
 import { makeObservable, observable, action, computed } from 'mobx';
 import { matchPath } from 'react-router';
-import { Recipe, Note, authStore } from '../../../store';
-import { fetchData, postData, patchData, deleteData } from '../../../api/api.service';
+import { Recipe, Note } from '../../../../store/recipes';
+import { authStore } from '../../../../store';
+import { fetchData, postData, patchData, deleteData } from '../../../../api/api.service';
 import { toast } from 'react-toastify';
 import _ from 'lodash';
 

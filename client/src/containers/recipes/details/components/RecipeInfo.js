@@ -1,8 +1,8 @@
 import { observer } from 'mobx-react';
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
-import { timeFormatter } from '../../../shared';
-import { NumberInput } from '../../../components';
+import { timeFormatter } from '../../../../shared';
+import { NumberInput } from '../../../../components';
 
 const InfoLine = ({title, value, isTime}) => {
   return (

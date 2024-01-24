@@ -1,8 +1,8 @@
 import React from 'react';
 import { observer } from 'mobx-react';
-import { imageUrl, withState } from '../../../shared';
+import { withState } from '../../../../shared';
 import { ToastContainer, Slide } from 'react-toastify';
-import { Container } from '../../../components';
+import { Container } from '../../../../components';
 import BlockHeader from './BlockHeader';
 import RecipesContainerState from '../state/RecipesContainerState';
 import RecipeInfo from './RecipeInfo';
@@ -18,7 +18,7 @@ const RecipesContainer = observer(({uiState}) => {
     <div>
       {recipe.image && <div
         className='relative bg-cover bg-center h-48 overflow-hidden bg-gray-600'
-        style={{backgroundImage: `url(${imageUrl(recipe.category, recipe.image)})`}}
+        style={{backgroundImage: `url(${recipe.image.path})`}}
       >
         <div
           className='flex absolute top-2 right-2 h-8 w-8 rounded-full bg-eerie-black-clear text-white justify-center items-center'

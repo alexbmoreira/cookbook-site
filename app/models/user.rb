@@ -38,6 +38,7 @@ end
 # Table name: users
 #
 #  id              :bigint           not null, primary key
+#  admin           :boolean          default(FALSE), not null
 #  deleted_at      :datetime
 #  email           :string
 #  password_digest :string
