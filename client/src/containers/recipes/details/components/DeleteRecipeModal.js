@@ -10,12 +10,12 @@ const DeleteRecipeModal = observer(({isOpen, onClose, uiState}) => {
       onClose={onClose}
     >
       <div className='font-serif text-2xl mb-4 text-center'>
-        <FormattedMessage id='recipes.details.Delete Recipe?'/>
+        <FormattedMessage id='recipes.Delete Recipe?'/>
       </div>
-      <FormattedMessage id='recipes.details.This action cannot be undone.'/>
+      <FormattedMessage id='recipes.This action cannot be undone.'/>
       <div className='mt-4'>
         <Button onClick={() => uiState.deleteRecipe()} trait='primary'>
-          <FormattedMessage id='recipes.details.Delete'/>
+          <FormattedMessage id='recipes.Delete'/>
         </Button>
       </div>
     </Modal>

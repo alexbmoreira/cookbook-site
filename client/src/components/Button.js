@@ -46,6 +46,7 @@ const Button = observer(({onClick, trait, className, ...rest}) => {
 Button.propTypes = {
   trait: PropTypes.oneOf([
     'primary',
+    'silver',
     'default'
   ])
 };

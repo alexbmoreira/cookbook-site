@@ -10,6 +10,7 @@ import Ingredients from './Ingredients';
 import Instructions from './Instructions';
 import { Notes } from './notes';
 import ActionButtons from './ActionButtons';
+import DeleteRecipeModal from './DeleteRecipeModal';
 
 const RecipesContainer = observer(({uiState}) => {
   const { recipe, relativeServings } = uiState;
@@ -17,12 +18,12 @@ const RecipesContainer = observer(({uiState}) => {
   return (
     <div>
       {recipe.image && <div
-        className='relative bg-cover bg-center h-48 overflow-hidden bg-gray-600'
+        className='relative bg-cover bg-center h-48 overflow-hidden bg-gray-600 p-2'
         style={{backgroundImage: `url(${recipe.image.path})`}}
       >
+        <ActionButtons uiState={uiState}/>
       </div>}
       <Container className='space-y-2 z-50'>
-        <ActionButtons uiState={uiState}/>
         <BlockHeader title={recipe.name} size='lg' translateTitle={false}/>
         <RecipeInfo uiState={uiState}/>
         <BlockHeader title={'recipes.Ingredients'}/>
@@ -31,6 +32,7 @@ const RecipesContainer = observer(({uiState}) => {
         <Instructions steps={recipe.steps}/>
         <Notes uiState={uiState}/>
       </Container>
+      <DeleteRecipeModal isOpen={uiState.deleteRecipeModalOpen} onClose={() => uiState.closeDeleteRecipeModal()} uiState={uiState}/>
       <ToastContainer
         className='bg-transparent'
         toastStyle={{ backgroundColor: 'transparent', boxShadow: '0 0 #0000' }}
