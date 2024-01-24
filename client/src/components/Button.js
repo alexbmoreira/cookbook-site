@@ -6,6 +6,8 @@ const classesForTrait = (trait) => {
   switch (trait) {
     case 'primary':
       return 'rounded p-2 w-full bg-carolina hover:bg-carolina-hover active:bg-carolina-active text-white'
+    case 'silver':
+      return 'flex justify-center items-center bg-powder hover:bg-silver';
     case 'default':
       return 'flex justify-center items-center hover:bg-powder active:bg-powder-active';
     default:
@@ -44,6 +46,7 @@ const Button = observer(({onClick, trait, className, ...rest}) => {
 Button.propTypes = {
   trait: PropTypes.oneOf([
     'primary',
+    'silver',
     'default'
   ])
 };

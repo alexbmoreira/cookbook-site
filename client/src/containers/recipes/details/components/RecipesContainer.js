@@ -9,7 +9,8 @@ import RecipeInfo from './RecipeInfo';
 import Ingredients from './Ingredients';
 import Instructions from './Instructions';
 import { Notes } from './notes';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import ActionButtons from './ActionButtons';
+import DeleteRecipeModal from './DeleteRecipeModal';
 
 const RecipesContainer = observer(({uiState}) => {
   const { recipe, relativeServings } = uiState;
@@ -17,15 +18,10 @@ const RecipesContainer = observer(({uiState}) => {
   return (
     <div>
       {recipe.image && <div
-        className='relative bg-cover bg-center h-48 overflow-hidden bg-gray-600'
+        className='relative bg-cover bg-center h-48 overflow-hidden bg-gray-600 p-2'
         style={{backgroundImage: `url(${recipe.image.path})`}}
       >
-        <div
-          className='flex absolute top-2 right-2 h-8 w-8 rounded-full bg-eerie-black-clear text-white justify-center items-center'
-          onClick={() => uiState.shareRecipe()}
-        >
-          <FontAwesomeIcon icon='fa-solid fa-share-nodes'/>
-        </div>
+        <ActionButtons uiState={uiState}/>
       </div>}
       <Container className='space-y-2 z-50'>
         <BlockHeader title={recipe.name} size='lg' translateTitle={false}/>
@@ -36,6 +32,7 @@ const RecipesContainer = observer(({uiState}) => {
         <Instructions steps={recipe.steps}/>
         <Notes uiState={uiState}/>
       </Container>
+      <DeleteRecipeModal isOpen={uiState.deleteRecipeModalOpen} onClose={() => uiState.closeDeleteRecipeModal()} uiState={uiState}/>
       <ToastContainer
         className='bg-transparent'
         toastStyle={{ backgroundColor: 'transparent', boxShadow: '0 0 #0000' }}

@@ -33,6 +33,11 @@
       "total": "TOTAL",
       "servings": "SERVINGS"
     },
+    "Edit": "Edit",
+    "Share": "Share",
+    "Delete Recipe?": "Delete Recipe?",
+    "This action cannot be undone.": "This action cannot be undone.",
+    "Delete": "Delete",
     "Notes": "Notes",
     "notes": {
       "Add a note...": "Add a note...",

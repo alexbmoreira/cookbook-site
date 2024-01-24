@@ -3,6 +3,7 @@ import BasicInput from './BasicInput';
 import Button from './Button';
 import Container from './Container';
 import HtmlRender from './HtmlRender';
+import IconButton from './IconButton';
 import Input from './Input';
 import LoadingIcon from './LoadingIcon';
 import Modal from './Modal';
@@ -17,6 +18,7 @@ export {
   Button,
   Container,
   HtmlRender,
+  IconButton,
   Input,
   LoadingIcon,
   Modal,

@@ -16,6 +16,11 @@ const router = createBrowserRouter([
         element: <RecipeEditContainer/>
       },
       {
+        path: '/recipes/:slug/edit',
+        loader: () => !authStore.adminIsActive ? redirect('/') : null,
+        element: <RecipeEditContainer/>
+      },
+      {
         path: 'recipes/:slug',
         element: <RecipesContainer/>
       },
