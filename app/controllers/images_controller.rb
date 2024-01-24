@@ -7,7 +7,7 @@ class ImagesController < ApplicationController
     uploaded_file = params[:image]
     key = SecureRandom.uuid
     cloud_file = bucket.create_file(
-      uploaded_file.path, "images/recipes/#{SecureRandom.uuid}-#{uploaded_file.original_filename}"
+      uploaded_file.path, "images/recipes/#{key}-#{uploaded_file.original_filename}"
     )
 
     image = Image.new(
