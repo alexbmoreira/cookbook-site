@@ -1,4 +1,4 @@
-import { makeObservable, observable, action, computed } from 'mobx';
+import { makeAutoObservable } from 'mobx';
 import { matchPath } from 'react-router';
 import { Recipe, Note } from '../../../../store/recipes';
 import { authStore } from '../../../../store';
@@ -12,19 +12,10 @@ class RecipesContainerState {
   notes = {};
   notesEdited = false;
 
+  deleteRecipeModalOpen = false;
+
   constructor() {
-    makeObservable(this, {
-      recipe: observable,
-      servings: observable,
-      notes: observable,
-      notesEdited: observable,
-      load: action,
-      updateServings: action,
-      updateNotesBody: action,
-      saveNotes: action,
-      deleteNotes: action,
-      relativeServings: computed
-    });
+    makeAutoObservable(this);
   }
 
   async load() {
@@ -44,6 +35,20 @@ class RecipesContainerState {
   updateNotesBody(value) {
     _.merge(this.notes, { body: value })
     this.notesEdited = true;
+  }
+
+  openDeleteRecipeModal() {
+    this.deleteRecipeModalOpen = true;
+  }
+
+  closeDeleteRecipeModal() {
+    this.deleteRecipeModalOpen = false;
+  }
+
+  async deleteRecipe() {
+    await deleteData(`recipes/${this.recipe.id}`);
+    this.closeDeleteRecipeModal();
+    window.location = '/';
   }
 
   async saveNotes() {
@@ -75,6 +80,14 @@ class RecipesContainerState {
       await navigator.clipboard.writeText(window.location.href)
       toast('Copied to clipboard!')
     }
+  }
+
+  get canEditRecipe() {
+    return authStore.adminIsActive && authStore.currentUser.id === this.recipe.createdByUserId;
+  }
+
+  goToEditRecipe() {
+    window.location = `/recipes/${this.recipe.slug}/edit`;
   }
 }
 

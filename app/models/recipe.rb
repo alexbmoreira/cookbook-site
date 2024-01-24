@@ -2,12 +2,16 @@ class Recipe < ApplicationRecord
   enum category: {
     misc: 1,
     breakfast: 2,
-    soup: 3,
-    side: 4,
-    pasta: 5,
-    meat_and_poultry: 6,
-    fish: 7,
-    dessert: 8
+    snack: 3,
+    soup: 4,
+    salad: 5,
+    side: 6,
+    pasta: 7,
+    meat_and_poultry: 8,
+    seafood: 9,
+    vegetarian: 10,
+    dessert: 11,
+    drink: 12
   }
 
   has_many :recipe_ingredients, dependent: :destroy
