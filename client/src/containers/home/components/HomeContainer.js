@@ -1,11 +1,10 @@
 import React from 'react';
 import { observer } from 'mobx-react';
-import Select from 'react-select'
-import { Container, Input, LoadingIcon } from '../../../components';
+import { Container, Input, LoadingIcon, Select } from '../../../components';
 import { withState } from '../../../shared';
 import HomeContainerState from '../state/HomeContainerState';
 import RecipeLink from './RecipeLink';
-import CATEGORIES from '../state/categories';
+import { CATEGORIES } from '../../../store/recipes';
 
 const SearchBar = observer(({ uiState }) => {
   return (
@@ -24,9 +23,10 @@ const CatgoriesDropdown = observer(({ uiState }) => {
   return (
     <Select
       options={CATEGORIES}
-      defaultValue={CATEGORIES[0]}
       value={uiState.category}
-      onChange={(option) => uiState.updateCategory(option)}
+      isClearable
+      placeholder='Select category'
+      onChange={(option) => uiState.updateCategory(option ? option.value : '')}
       isSearchable={false}
       className='mb-4'
     />
@@ -48,13 +48,13 @@ const RecipesList = observer(({ fetchingRecipes, recipes }) => {
 });
 
 const HomeContainer = observer(({ uiState }) => {
-  const { fetchingRecipes, searchedRecipes } = uiState;
+  const { fetchingRecipes, recipes } = uiState;
 
   return (
     <Container>
       <SearchBar uiState={uiState}/>
       <CatgoriesDropdown uiState={uiState}/>
-      <RecipesList fetchingRecipes={fetchingRecipes} recipes={searchedRecipes}/>
+      <RecipesList fetchingRecipes={fetchingRecipes} recipes={recipes}/>
     </Container>
   );
 });

@@ -1,10 +1,10 @@
 import React from 'react';
 import { observer } from 'mobx-react';
 import BlockHeader from '../BlockHeader';
-import { Button, TextArea } from '../../../../components';
-import { authStore } from '../../../../store';
+import { Button, TextArea } from '../../../../../components';
+import { authStore } from '../../../../../store';
 import { FormattedMessage } from 'react-intl';
-import { dateFormatter } from '../../../../shared';
+import { dateFormatter } from '../../../../../shared';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Notes = observer(({uiState}) => {

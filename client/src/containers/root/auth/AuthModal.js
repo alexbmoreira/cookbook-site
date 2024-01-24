@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { observer } from 'mobx-react';
 import { authStore } from '../../../store';
-import { Button, Input, Modal } from '../../../components';
+import { ActionLink, Button, Input, Modal } from '../../../components';
 import { FormattedMessage } from 'react-intl';
 import { postData } from '../../../api/api.service'
 
@@ -16,15 +16,14 @@ const AuthModal = observer(({isOpen, onClose}) => {
 
   const handleSubmit = async () => {
     setFormErrors({});
-    const {errors} = await postData(
+    const {model, errors} = await postData(
       `/${formType}`,
       { username, email, password, passwordConfirmation }
     )
+    setFormErrors(errors);
 
-    if (errors) {
-      setFormErrors(errors);
-    } else {
-      authStore.login();
+    if (model) {
+      authStore.login(model);
       onClose();
       _clearFields();
     }
@@ -79,12 +78,12 @@ const AuthModal = observer(({isOpen, onClose}) => {
             <FormattedMessage id={`auth.${formType === 'login' ? 'Log In' : 'Register'}`}/>
           </Button>
         </div>
-        <div
-          className={'text-carolina text-center w-full mt-2 cursor-pointer'}
+        <ActionLink
+          className='w-full mt-2'
           onClick={() => formType === 'login' ? setFormType('register') : setFormType('login')}
         >
           <FormattedMessage id={`auth.${formType === 'login' ? 'Register' : 'Log In'}`}/>
-        </div>
+        </ActionLink>
       </div>
     </Modal>
   );

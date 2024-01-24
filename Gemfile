@@ -39,6 +39,7 @@ gem 'jwt'
 gem 'bcrypt', '~> 3.1.7'
 gem 'olive_branch'
 gem 'active_model_serializers', '~> 0.10.0'
+gem 'active_interaction', '~> 5.3'
 gem 'google-cloud-storage'
 
 group :development, :test do

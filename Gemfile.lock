@@ -46,6 +46,9 @@ GEM
       erubi (~> 1.4)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.1, >= 1.2.0)
+    active_interaction (5.3.0)
+      activemodel (>= 5.2, < 8)
+      activesupport (>= 5.2, < 8)
     active_model_serializers (0.10.13)
       actionpack (>= 4.1, < 7.1)
       activemodel (>= 4.1, < 7.1)
@@ -267,6 +270,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  active_interaction (~> 5.3)
   active_model_serializers (~> 0.10.0)
   annotate
   bcrypt (~> 3.1.7)

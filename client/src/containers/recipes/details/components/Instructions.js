@@ -1,5 +1,5 @@
 import React from 'react';
-import { HtmlRender } from '../../../components';
+import { HtmlRender } from '../../../../components';
 
 const Instructions = ({steps}) => {
   if (!steps) return null;
