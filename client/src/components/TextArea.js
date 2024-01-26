@@ -25,7 +25,7 @@ const TextArea = observer(({value, label, onChange, errorMessage, className}) =>
 
   return (
     <div className={className || ''}>
-      {label && <label className='block text-black-bean'>
+      {label && <label className='block'>
         <FormattedMessage id={label}/>
       </label>}
       <ReactQuill

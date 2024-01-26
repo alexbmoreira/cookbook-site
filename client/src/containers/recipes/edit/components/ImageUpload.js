@@ -59,7 +59,7 @@ const ImageUpload = observer(({ value, label, onChange, loading, className }) =>
 
   return (
     <div className={className || ''}>
-      {label && <label className='block text-black-bean'>
+      {label && <label className='block'>
         <FormattedMessage id={label}/>
       </label>}
       {_.isEmpty(value) && <DragAndDropField onChange={(file) => onChange(file)} loading={loading}/>}
