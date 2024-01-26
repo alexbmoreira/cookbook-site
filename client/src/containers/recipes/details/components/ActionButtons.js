@@ -7,7 +7,7 @@ import { IconButton } from '../../../../components';
 const ActionItem = observer(({ label, icon, onClick }) => {
   return (
     <div
-      className='flex justify-between items-center space-x-4 p-2 cursor-pointer rounded transition ease-in-out duration-200 hover:bg-powder-hover active:bg-powder-active'
+      className='flex justify-between items-center space-x-4 p-2 cursor-pointer rounded transition ease-in-out duration-200 hover:bg-powder-hover hover:text-lapis active:bg-powder-active active:text-lapis-active'
       onClick={() => onClick()}
     >
       <div>
