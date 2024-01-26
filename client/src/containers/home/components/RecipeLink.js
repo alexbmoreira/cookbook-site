@@ -6,7 +6,7 @@ import { timeFormatter } from '../../../shared';
 
 const Card = ({children}) => {
   return (
-    <div className='drop-shadow bg-powder active:drop-shadow-none'>
+    <div className='drop-shadow bg-powder hover:bg-powder-hover active:bg-powder-active active:drop-shadow-none'>
       {children}
     </div>
   );
@@ -14,7 +14,7 @@ const Card = ({children}) => {
 
 const RecipeInfo = ({recipe}) => {
   return (
-    <div className='p-2 text-eerie-black'>
+    <div className='p-2 text-night'>
       <div className='font-serif text-2xl mb-1'>
         {recipe.name}
       </div>

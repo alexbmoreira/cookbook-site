@@ -23,7 +23,7 @@ const IconButton = observer(({onClick, size, className, children, ...rest}) => {
   return (
     <button
       {...rest}
-      className={`flex h-7 w-7 rounded-full bg-eerie-black-clear justify-center items-center cursor-pointer transition ease-in-out duration-200 hover:bg-eerie-black-hover active:bg-eerie-black-active ${className || ''}`}
+      className={`flex h-7 w-7 rounded-full bg-night-clear justify-center items-center cursor-pointer transition ease-in-out duration-200 hover:bg-night-hover active:bg-night-active ${className || ''}`}
       onClick={async (e) => _onClick(e, onClick)}
     >
       {children}

@@ -1,3 +1,5 @@
+const colors = require('tailwindcss/colors');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./src/**/*.js'],
@@ -15,15 +17,32 @@ module.exports = {
         },
         'powder': {
           'DEFAULT': '#F3F4F6',
-          'active': '#E8EAED'
+          'hover': '#E8EAED',
+          'active': '#DCDFE5'
         },
-        'lapis': '#075985',
-        'silver': '#CCCCCC',
-        'eerie-black': {
+        'white': {
+          'DEFAULT': colors.white,
+          'hover': '#F5F5F5',
+          'active': '#EBEBEB'
+        },
+        'lapis': {
+          'DEFAULT': '#075985',
+          'hover': '#08689B',
+          'active': '#0975AE'
+        },
+        'silver': {
+          'DEFAULT': '#CCCCCC',
+          'hover': '#C2C2C2',
+          'active': '#B8B8B8'
+        },
+        'night': {
           'DEFAULT': '#151515',
           'clear': '#15151588'
         },
-        'crimson': '#DE3202'
+        'crimson': {
+          'DEFAULT': '#DE3202',
+          'active': '#F23602'
+        }
       },
       animation: {
         'beat': 'beat 1s infinite',

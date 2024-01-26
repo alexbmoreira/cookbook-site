@@ -5,11 +5,11 @@ import { observer } from 'mobx-react';
 const classesForTrait = (trait) => {
   switch (trait) {
     case 'primary':
-      return 'rounded p-2 w-full bg-carolina hover:bg-carolina-hover active:bg-carolina-active text-white'
-    case 'silver':
-      return 'flex justify-center items-center bg-powder hover:bg-silver';
+      return 'rounded p-2 w-full bg-carolina hover:bg-carolina-hover active:bg-carolina-active text-white disabled:bg-carolina'
+    case 'powder':
+      return 'flex justify-center items-center bg-powder hover:bg-powder-hover active:bg-powder-active disabled:bg-powder';
     case 'default':
-      return 'flex justify-center items-center hover:bg-powder active:bg-powder-active';
+      return 'flex justify-center items-center bg-white hover:bg-white-hover active:bg-white-active disabled:bg-white';
     default:
       throw `${trait} is not a valid trait for Button`;
   }
@@ -37,7 +37,7 @@ const Button = observer(({onClick, trait, className, ...rest}) => {
   return (
     <button
       {...rest}
-      className={`transition ease-in-out duration-200 ${classesForTrait(trait)} ${className ? className : ''}`}
+      className={`transition ease-in-out duration-200 cursor-pointer disabled:text-silver disabled:cursor-default ${classesForTrait(trait)} ${className ? className : ''}`}
       onClick={async (e) => _onClick(e, onClick)}
     />
   );
@@ -46,7 +46,7 @@ const Button = observer(({onClick, trait, className, ...rest}) => {
 Button.propTypes = {
   trait: PropTypes.oneOf([
     'primary',
-    'silver',
+    'powder',
     'default'
   ])
 };
