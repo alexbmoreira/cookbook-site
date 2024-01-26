@@ -9,7 +9,7 @@ const classesForTrait = (trait) => {
     case 'powder':
       return 'flex justify-center items-center bg-powder hover:bg-powder-hover active:bg-powder-active disabled:bg-powder';
     case 'default':
-      return 'flex justify-center items-center bg-white hover:bg-white-hover active:bg-white-active disabled:bg-white';
+      return 'flex justify-center items-center bg-white hover:text-lapis active:text-lapis-active disabled:bg-white';
     default:
       throw `${trait} is not a valid trait for Button`;
   }

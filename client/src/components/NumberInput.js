@@ -1,11 +1,9 @@
 import { observer } from 'mobx-react';
 import React from 'react';
-import { withState } from '../../shared';
 import { FormattedMessage } from 'react-intl';
-import NumberInputState from './state/NumberInputState';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Button from '../Button';
+import Button from './Button';
 
 const NumberInputLarge = observer(({value, label, onIncrement, onDecrement, decrementDisabled, errorMessage, className}) => {
   return (
@@ -83,4 +81,4 @@ NumberInput.propTypes = {
 NumberInput.defaultProps = {
   size: 'lg'
 };
-export default withState(NumberInput, NumberInputState);
+export default NumberInput;
