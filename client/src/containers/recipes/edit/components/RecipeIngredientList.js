@@ -16,10 +16,10 @@ const IngredientItem = observer(({ recipeIngredientViewModel, onRemove, canEditR
       </div>
       <div className='flex justify-end space-x-1 w-10 pr-1'>
         {canEditRecipeIngredient && <React.Fragment>
-          <div className='flex items-center justify-center text-black-bean-light cursor-pointer hover:text-black-bean' onClick={() => recipeIngredientViewModel.isEditing = true}>
+          <div className='flex items-center justify-center cursor-pointer text-silver hover:text-lapis active:text-lapis-active' onClick={() => recipeIngredientViewModel.isEditing = true}>
             <FontAwesomeIcon icon='fa-solid fa-pen-circle'/>
           </div>
-          <div className='flex items-center justify-center text-black-bean-light cursor-pointer hover:text-black-bean' onClick={() => onRemove(recipeIngredientViewModel)}>
+          <div className='flex items-center justify-center cursor-pointer text-silver hover:text-crimson active:text-crimson-active' onClick={() => onRemove(recipeIngredientViewModel)}>
             <FontAwesomeIcon icon='fa-solid fa-circle-xmark'/>
           </div>
         </React.Fragment>}
@@ -65,11 +65,11 @@ const EditingIngredientItem = observer(({ recipeIngredientViewModel, onSave }) =
         </div>
       </div>
       <div className='flex space-x-1 w-10 pr-1'>
-        <div className='flex items-center justify-center text-black-bean cursor-pointer hover:text-black-bean-hover' onClick={() => recipeIngredientViewModel.isEditing = false}>
-          <FontAwesomeIcon icon='fa-solid fa-circle-xmark'/>
-        </div>
-        <div className='flex items-center justify-center text-black-bean cursor-pointer hover:text-black-bean-hover' onClick={() => _onSave()}>
+        <div className='flex items-center justify-center cursor-pointer text-silver hover:text-lapis active:text-lapis-active' onClick={() => _onSave()}>
           <FontAwesomeIcon icon='fa-solid fa-circle-check'/>
+        </div>
+        <div className='flex items-center justify-center cursor-pointer text-silver hover:text-crimson active:text-crimson-active' onClick={() => recipeIngredientViewModel.isEditing = false}>
+          <FontAwesomeIcon icon='fa-solid fa-circle-xmark'/>
         </div>
       </div>
     </div>

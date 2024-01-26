@@ -36,15 +36,15 @@ const DragAndDropField = observer(({ onChange, loading }) => {
 
 const Image = observer(({ image, onRemove }) => {
   return (
-    <div className='bg-fairy drop-shadow-sm rounded'>
+    <div className='border border-silver rounded-lg rounded'>
       <div
         className='rounded-t-lg bg-cover bg-center h-64 lg:h-96 overflow-hidden'
         style={{backgroundImage: `url(${image.path}`}}
       />
-      <div className='flex space-x-1 justify-between items-center text-silver rounded-b p-2'>
+      <div className='flex space-x-1 justify-between items-center text-silver border-t border-silver rounded-b p-2'>
         <FontAwesomeIcon icon='fa-solid fa-image'/>
         <div className='overflow-hidden truncate flex-grow'>{image.originalFilename}</div>
-        <div className='cursor-pointer hover:text-black-bean' onClick={() => onRemove()}>
+        <div className='cursor-pointer hover:text-crimson active:text-crimson-active' onClick={() => onRemove()}>
           <FontAwesomeIcon icon='fa-solid fa-circle-xmark'/>
         </div>
       </div>
@@ -59,7 +59,7 @@ const ImageUpload = observer(({ value, label, onChange, loading, className }) =>
 
   return (
     <div className={className || ''}>
-      {label && <label className='block text-black-bean'>
+      {label && <label className='block'>
         <FormattedMessage id={label}/>
       </label>}
       {_.isEmpty(value) && <DragAndDropField onChange={(file) => onChange(file)} loading={loading}/>}

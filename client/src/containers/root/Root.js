@@ -15,7 +15,7 @@ const CreateRecipeButton = observer(() => {
     <div className='absolute h-full left-4 flex items-center'>
       <ActionLink onClick={() => {}}>
         <Link to='/recipes/new'>
-          <div className='flex items-center text-sm'>
+          <div className='flex items-center text-sm hover:text-carolina-hover active:text-carolina-active'>
             <div className='mr-1 text-lg'>
               <FontAwesomeIcon icon='fa-solid fa-pen-to-square'/>
             </div>
@@ -31,13 +31,13 @@ const Header = observer(({onClick}) => {
   return (
     <div className='flex relative h-full font-bold text-carolina justify-center items-center w-full bg-white sticky top-0 drop-shadow-sm z-20'>
       <CreateRecipeButton/>
-      <span className='text-xl py-2'>
+      <span className='text-xl py-2 hover:text-carolina-hover active:text-carolina-active'>
         <Link to='/'>
           <FontAwesomeIcon icon='fa-solid fa-utensils'/>
         </Link>
       </span>
       <div className='absolute h-full right-4 flex justify-end items-center'>
-        <div className='flex items-center cursor-pointer ml-2 text-xl' onClick={() => onClick()}>
+        <div className='flex items-center cursor-pointer ml-2 text-xl hover:text-carolina-hover active:text-carolina-active' onClick={() => onClick()}>
           <FontAwesomeIcon icon={`fa-solid ${authStore.isLoggedIn ? 'fa-right-from-bracket' : 'fa-circle-user'}`}/>
         </div>
       </div>
@@ -64,7 +64,7 @@ const Root = observer(() => {
   }
 
   return (
-    <div className='text-eerie-black flex flex-col min-h-screen'>
+    <div className='text-night flex flex-col min-h-screen'>
       <Header onClick={() => _handleUserClicked()}/>
       <div className='flex-grow'>
         <Outlet/>

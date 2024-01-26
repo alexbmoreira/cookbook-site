@@ -15,7 +15,7 @@ const TimeInput = observer(({value, label, onChange, errorMessage, className, ..
 
   return (
     <div className={className || ''}>
-      {label && <label className='block text-black-bean'>
+      {label && <label className='block'>
         <FormattedMessage id={label}/>
       </label>}
       <div className={`flex w-full border-silver border rounded p-2 ${errorMessage ? 'border border-crimson' : ''}`}>

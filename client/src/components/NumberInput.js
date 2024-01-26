@@ -1,11 +1,9 @@
 import { observer } from 'mobx-react';
 import React from 'react';
-import { withState } from '../../shared';
 import { FormattedMessage } from 'react-intl';
-import NumberInputState from './state/NumberInputState';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Button from '../Button';
+import Button from './Button';
 
 const NumberInputLarge = observer(({value, label, onIncrement, onDecrement, decrementDisabled, errorMessage, className}) => {
   return (
@@ -13,7 +11,7 @@ const NumberInputLarge = observer(({value, label, onIncrement, onDecrement, decr
       {label && <label className='block'>
         <FormattedMessage id={label}/>
       </label>}
-      <div className={`flex w-full bg-powder outline-none drop-shadow-sm rounded ${errorMessage ? 'border border-crimson' : ''}`}>
+      <div className={`flex w-full border border-silver outline-none rounded ${errorMessage ? 'border border-crimson' : ''}`}>
         <Button className='rounded-l w-10' onClick={() => onDecrement()} disabled={decrementDisabled}>
           <span className='m-auto px-2 py-1 text-lg'>
             <FontAwesomeIcon icon='fa-solid fa-minus'/>
@@ -35,7 +33,7 @@ const NumberInputLarge = observer(({value, label, onIncrement, onDecrement, decr
 const NumberInputSmall = observer(({value, onIncrement, onDecrement, decrementDisabled, className}) => {
   return (
     <div className={`flex rounded bg-powder select-none ${className || ''}`}>
-      <Button trait='silver' className='rounded-l' onClick={() => onDecrement()} disabled={decrementDisabled}>
+      <Button trait='powder' className='rounded-l' onClick={() => onDecrement()} disabled={decrementDisabled}>
         <span className='m-auto px-2 py-1'>
           <FontAwesomeIcon icon='fa-solid fa-minus'/>
         </span>
@@ -43,7 +41,7 @@ const NumberInputSmall = observer(({value, onIncrement, onDecrement, decrementDi
       <div className='px-2 py-1 text-sm text-center w-10 outline-none flex items-center justify-center'>
         <span>{value}</span>
       </div>
-      <Button trait='silver' className='rounded-r' onClick={() => onIncrement()}>
+      <Button trait='powder' className='rounded-r' onClick={() => onIncrement()}>
         <span className='m-auto px-2 py-1'>
           <FontAwesomeIcon icon='fa-solid fa-plus'/>
         </span>
@@ -83,4 +81,4 @@ NumberInput.propTypes = {
 NumberInput.defaultProps = {
   size: 'lg'
 };
-export default withState(NumberInput, NumberInputState);
+export default NumberInput;

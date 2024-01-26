@@ -7,8 +7,8 @@ import IconButton from './IconButton';
 import Input from './Input';
 import LoadingIcon from './LoadingIcon';
 import Modal from './Modal';
+import NumberInput from './NumberInput'
 import Select from './Select';
-import NumberInput from './number_input/NumberInput'
 import TextArea from './TextArea';
 
 Input.Basic = BasicInput;
@@ -22,7 +22,7 @@ export {
   Input,
   LoadingIcon,
   Modal,
-  Select,
   NumberInput,
+  Select,
   TextArea
 };

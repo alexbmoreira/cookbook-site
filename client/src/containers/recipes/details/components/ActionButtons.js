@@ -7,7 +7,7 @@ import { IconButton } from '../../../../components';
 const ActionItem = observer(({ label, icon, onClick }) => {
   return (
     <div
-      className='flex justify-between items-center space-x-4 p-2 cursor-pointer rounded transition ease-in-out duration-200 hover:bg-petal-hover active:bg-petal-active'
+      className='flex justify-between items-center space-x-4 p-2 cursor-pointer rounded transition ease-in-out duration-200 hover:bg-powder-hover hover:text-lapis active:bg-powder-active active:text-lapis-active'
       onClick={() => onClick()}
     >
       <div>
@@ -61,7 +61,7 @@ const ActionButtons = observer(({ uiState }) => {
           <FontAwesomeIcon icon='fa-solid fa-ellipsis'/>
         </IconButton>
       </div>
-      {expanded && <div className='absolute top-8 flex flex-row-reverse text-eerie-black' ref={menuRef}>
+      {expanded && <div className='absolute top-8 flex flex-row-reverse text-night' ref={menuRef}>
         <div className='flex-col bg-powder divide-y-1 divide-silver rounded drop-shadow'>
           <ActionItem label='recipes.Share' icon='fa-share-nodes' onClick={() => uiState.shareRecipe()}/>
           {uiState.canEditRecipe && <ActionItem label='recipes.Edit' icon='fa-pen' onClick={() => uiState.goToEditRecipe()}/>}

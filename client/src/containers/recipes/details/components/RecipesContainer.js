@@ -36,7 +36,7 @@ const RecipesContainer = observer(({uiState}) => {
       <ToastContainer
         className='bg-transparent'
         toastStyle={{ backgroundColor: 'transparent', boxShadow: '0 0 #0000' }}
-        bodyClassName='rounded bg-carolina text-white shadow-md font-sans'
+        bodyClassName='rounded bg-lapis text-white shadow-md font-sans'
         position='bottom-center'
         autoClose={2500}
         limit={1}
