@@ -1,7 +1,8 @@
 import React from 'react';
 import { observer } from 'mobx-react';
 import BlockHeader from '../BlockHeader';
-import { Button, TextArea } from '../../../../../components';
+import TextareaAutosize from 'react-textarea-autosize';
+import { Button } from '../../../../../components';
 import { authStore } from '../../../../../store';
 import { FormattedMessage } from 'react-intl';
 import { dateFormatter } from '../../../../../shared';
@@ -16,10 +17,11 @@ const Notes = observer(({uiState}) => {
     <React.Fragment>
       <BlockHeader title={'recipes.Notes'}/>
       <div className='relative w-full bg-white drop-shadow-md border-powder border p-2'>
-        <TextArea
+        <TextareaAutosize
           value={notes.body}
-          onChange={(value) => uiState.updateNotesBody(value)}
+          onChange={(e) => uiState.updateNotesBody(e.target.value)}
           placeholder='Add a note...'
+          className='outline-none resize-none w-full placeholder:text-silver'
           minRows={3}
         />
         <div className={`flex ${notes.isNew ? 'justify-end' : 'justify-between'}`}>

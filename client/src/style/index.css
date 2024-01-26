@@ -2,3 +2,21 @@
   background-color: transparent;
   background: repeating-linear-gradient( -45deg, #009FE3, #009FE3 2px, #FFFFFF 2px, #FFFFFF 35px );
 }
+
+.quill {
+  @apply border border-silver rounded;
+}
+
+.ql-toolbar.ql-snow {
+  @apply p-1 rounded-t border-0 border-b border-silver text-eerie-black;
+}
+
+.ql-container.ql-snow {
+  @apply p-2 rounded-b border-0 font-sans;
+  font-size: unset !important;
+}
+
+.ql-editor {
+  @apply p-0 outline-none;
+}
+
