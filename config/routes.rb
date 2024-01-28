@@ -11,4 +11,10 @@ Rails.application.routes.draw do
 
   resources :images, only: [:create]
   resources :notes, only: [:create, :update, :destroy]
+
+  resources :drafts, only: [:update] do
+    collection do
+      get :find_by_draftable
+    end
+  end
 end
