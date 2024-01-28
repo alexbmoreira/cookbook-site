@@ -10,9 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_01_24_030353) do
+ActiveRecord::Schema[7.0].define(version: 2024_01_29_010316) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "drafts", force: :cascade do |t|
+    t.string "draftable_type", null: false
+    t.string "draftable_id", null: false
+    t.bigint "user_id", null: false
+    t.jsonb "draft_object", default: {}, null: false
+    t.bigint "autosaved_at"
+    t.datetime "deleted_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["deleted_at"], name: "index_drafts_on_deleted_at"
+    t.index ["user_id", "draftable_type", "draftable_id"], name: "index_drafts_on_user_id_and_draftable_type_and_draftable_id", unique: true, where: "(deleted_at IS NULL)"
+    t.index ["user_id"], name: "index_drafts_on_user_id"
+  end
 
   create_table "images", force: :cascade do |t|
     t.string "original_filename", null: false
@@ -75,6 +89,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_01_24_030353) do
     t.datetime "updated_at", null: false
     t.integer "rest_time"
     t.integer "created_by_user_id"
+    t.datetime "published_at"
     t.index ["deleted_at"], name: "index_recipes_on_deleted_at"
     t.index ["slug"], name: "index_recipes_on_slug", unique: true
   end
@@ -90,6 +105,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_01_24_030353) do
     t.index ["deleted_at"], name: "index_users_on_deleted_at"
   end
 
+  add_foreign_key "drafts", "users"
   add_foreign_key "images", "recipes"
   add_foreign_key "notes", "recipes"
   add_foreign_key "notes", "users"
