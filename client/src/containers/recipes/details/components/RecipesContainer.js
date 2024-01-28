@@ -24,6 +24,7 @@ const RecipesContainer = observer(({uiState}) => {
         <ActionButtons uiState={uiState}/>
       </div>}
       <Container className='space-y-2 z-50'>
+        {!recipe.image && <ActionButtons uiState={uiState}/>}
         <BlockHeader title={recipe.name} size='lg' translateTitle={false}/>
         <RecipeInfo uiState={uiState}/>
         <BlockHeader title={'recipes.Ingredients'}/>
