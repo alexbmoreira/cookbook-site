@@ -3,6 +3,7 @@ import api, { postData, fetchData, patchData } from '../../../../api/api.service
 import { matchPath } from 'react-router';
 import { Recipe, Image } from '../../../../store/recipes';
 import RecipeIngredientViewModel from './RecipeIngredientViewModel';
+import { setupAutosaveDraft } from '../../../../shared';
 import _ from 'lodash';
 
 class RecipeEditContainerState {
@@ -24,7 +25,21 @@ class RecipeEditContainerState {
       this.recipe = new Recipe(recipe);
     } else {
       this.recipe = new Recipe();
+      await setupAutosaveDraft(
+        this.recipe,
+        {id: 'new', type: 'recipes'}
+      );
     }
+  }
+
+  updateValue(field, value) {
+    this.recipe[field] = value;
+    this.recipe.autosaver.autosave();
+  }
+
+  removeRecipeIngredient(recipeIngredientViewModel) {
+    _.remove(this.recipe.recipeIngredients, recipeIngredientViewModel.data);
+    this.recipe.autosaver.autosave();
   }
 
   async saveRecipe() {

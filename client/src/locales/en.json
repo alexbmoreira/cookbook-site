@@ -67,5 +67,11 @@
   "recipe_list": {
     "Search...": "Search..."
   },
-  "time": "{hours, plural, =0 {} other {{hours} h }}{minutes, plural, =0 {} other {{minutes} mins}}"
+  "time": "{hours, plural, =0 {} other {{hours} h }}{minutes, plural, =0 {} other {{minutes} mins}}",
+  "autosave": {
+    "status": {
+      "saving": "Saving",
+      "saved": "Saved"
+    }
+  }
 }

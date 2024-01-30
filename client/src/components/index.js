@@ -1,4 +1,5 @@
 import ActionLink from './ActionLink';
+import AutosaveStatus from './AutosaveStatus';
 import BasicInput from './BasicInput';
 import Button from './Button';
 import Container from './Container';
@@ -15,6 +16,7 @@ Input.Basic = BasicInput;
 
 export {
   ActionLink,
+  AutosaveStatus,
   Button,
   Container,
   HtmlRender,
