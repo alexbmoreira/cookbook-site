@@ -1,6 +1,5 @@
 import { makeObservable, observable } from 'mobx';
 import DomainObject from '../DomainObject';
-import _ from 'lodash';
 
 class Note extends DomainObject {
   body = '';
@@ -11,7 +10,7 @@ class Note extends DomainObject {
       body: observable
     });
 
-    _.merge(this, model);
+    this.merge(model);
   }
 }
 

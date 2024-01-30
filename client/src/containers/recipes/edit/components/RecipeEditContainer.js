@@ -1,6 +1,6 @@
 import React from 'react';
 import { observer } from 'mobx-react';
-import { Button, Container, Input, NumberInput, Select, TextArea } from '../../../../components';
+import { AutosaveStatus, Button, Container, Input, NumberInput, Select, TextArea } from '../../../../components';
 import { FormattedMessage } from 'react-intl';
 import RecipeEditContainerState from '../state/RecipeEditContainerState';
 import { withState } from '../../../../shared';
@@ -15,6 +15,9 @@ const RecipeEditContainer = observer(({ uiState }) => {
 
   return (
     <Container>
+      <div className='flex w-full justify-end h-3 mb-2'>
+        <AutosaveStatus autosaver={recipe.autosaver}/>
+      </div>
       <div className='font-serif text-3xl mb-4 text-center'>
         {recipe.name || <FormattedMessage id='recipes.edit.New Recipe'/>}
       </div>
@@ -22,7 +25,7 @@ const RecipeEditContainer = observer(({ uiState }) => {
         <Input
           label='recipes.edit.Name'
           value={recipe.name}
-          onChange={(value) => recipe.name = value}
+          onChange={(value) => uiState.updateValue('name', value)}
           errorMessage={errors.name}
         />
         <ImageUpload
@@ -35,7 +38,7 @@ const RecipeEditContainer = observer(({ uiState }) => {
           options={CATEGORIES}
           value={recipe.category}
           label='recipes.edit.Category'
-          onChange={(option) => recipe.category = option.value}
+          onChange={(option) => uiState.updateValue('category', option.value)}
           isSearchable={false}
           errorMessage={errors.category}
         />
@@ -43,19 +46,19 @@ const RecipeEditContainer = observer(({ uiState }) => {
           <TimeInput
             label='recipes.edit.Prep Time'
             value={recipe.prepTime}
-            onChange={(value) => recipe.prepTime = value}
+            onChange={(value) => uiState.updateValue('prepTime', value)}
             errorMessage={errors.prepTime}
           />
           <TimeInput
             label='recipes.edit.Cook Time'
             value={recipe.cookTime}
-            onChange={(value) => recipe.cookTime = value}
+            onChange={(value) => uiState.updateValue('cookTime', value)}
             errorMessage={errors.cookTime}
           />
           <TimeInput
             label='recipes.edit.Rest Time'
             value={recipe.restTime}
-            onChange={(value) => recipe.restTime = value}
+            onChange={(value) => uiState.updateValue('restTime', value)}
             errorMessage={errors.restTime}
           />
           <NumberInput
@@ -63,21 +66,21 @@ const RecipeEditContainer = observer(({ uiState }) => {
             value={recipe.servings}
             step={1}
             min={1}
-            onChange={(value) => recipe.servings = value}
+            onChange={(value) => uiState.updateValue('servings', value)}
           />
         </div>
         <RecipeIngredientList
           recipeIngredients={recipeIngredientViewModels}
-          onAdd={recipeIngredient => recipe.recipeIngredients.push(recipeIngredient)}
-          onEdit={recipeIngredient => recipe.recipeIngredients = _.map(recipe.recipeIngredients, i => i.id === recipeIngredient.id ? recipeIngredient : i)}
+          onAdd={recipeIngredient => uiState.updateValue('recipeIngredients', _.concat(recipe.recipeIngredients, [recipeIngredient]))}
+          onEdit={recipeIngredient => uiState.updateValue('recipeIngredients', _.map(recipe.recipeIngredients, i => i.id === recipeIngredient.id ? recipeIngredient : i))}
           canEditRecipeIngredient={uiState.canEditRecipeIngredient}
-          onRemove={recipeIngredientViewModel =>  _.remove(recipe.recipeIngredients, recipeIngredientViewModel.data)}
+          onRemove={recipeIngredientViewModel => uiState.removeRecipeIngredient(recipeIngredientViewModel.data)}
           errorMessage={errors.recipeIngredients}
         />
         <TextArea
           label='recipes.edit.Steps'
           value={recipe.steps}
-          onChange={(value) => recipe.steps = value}
+          onChange={(value) => uiState.updateValue('steps', value)}
           errorMessage={errors.steps}
         />
       </div>
