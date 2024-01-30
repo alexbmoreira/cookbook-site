@@ -3,13 +3,17 @@ class DraftsController < ApplicationController
 
   def find_by_draftable
     render_resource(
-      Draft.find_or_create_by(draftable_id: params[:draftable_id], draftable_type: params[:draftable_type]),
+      ::Draft.find_or_create_by(
+        draftable_id: params[:draftable_id],
+        draftable_type: params[:draftable_type],
+        user_id: logged_in_user.id
+      ),
       serializer: ::DraftSerializer
     )
   end
 
   def update
-    if autosave_params[:autosaved_at].blank?
+    if draft_params[:autosaved_at].blank?
       return head :bad_request
     end
 
@@ -28,7 +32,7 @@ class DraftsController < ApplicationController
   end
 
   def find_draft!
-    Draft.where(user: logged_in_user).find(params[:id])
+    ::Draft.where(user_id: logged_in_user.id).find(params[:id])
   end
 
   def draft_params
