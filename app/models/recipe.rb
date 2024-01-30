@@ -60,6 +60,7 @@ end
 #  deleted_at         :datetime
 #  name               :string           not null
 #  prep_time          :integer          not null
+#  published_at       :datetime
 #  rest_time          :integer
 #  servings           :integer
 #  slug               :string           not null
