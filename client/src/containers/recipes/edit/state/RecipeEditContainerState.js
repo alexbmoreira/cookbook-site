@@ -34,12 +34,12 @@ class RecipeEditContainerState {
 
   updateValue(field, value) {
     this.recipe[field] = value;
-    this.recipe.autosaver.autosave();
+    if (this.recipe.autosaver) this.recipe.autosaver.autosave();
   }
 
   removeRecipeIngredient(recipeIngredientViewModel) {
     _.remove(this.recipe.recipeIngredients, recipeIngredientViewModel.data);
-    this.recipe.autosaver.autosave();
+    if (this.recipe.autosaver) this.recipe.autosaver.autosave();
   }
 
   async saveRecipe() {
@@ -71,6 +71,7 @@ class RecipeEditContainerState {
 
     this.recipe.image = new Image(response.data);
     this.loadingImage = false;
+    if (this.recipe.autosaver) this.recipe.autosaver.autosave();
   }
 
   get recipeIngredientViewModels() {
