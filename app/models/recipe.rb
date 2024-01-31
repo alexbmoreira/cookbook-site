@@ -19,9 +19,9 @@ class Recipe < ApplicationRecord
   belongs_to :created_by_user, class_name: 'User'
 
   validates :name, presence: true
-  validates :cook_time, :prep_time, :servings, presence: true, numericality: {
-    greater_than_or_equal_to: 0
-  }
+  validates :prep_time, :servings, presence: true, numericality: { greater_than: 0 }
+  validates :cook_time, numericality: { greater_than: 0 }, if: -> { cook_time }
+  validates :rest_time, numericality: { greater_than: 0 }, if: -> { rest_time }
 
   before_validation :generate_slug
 
