@@ -38,7 +38,7 @@ class RecipeEditContainerState {
   }
 
   removeRecipeIngredient(recipeIngredientViewModel) {
-    _.remove(this.recipe.recipeIngredients, recipeIngredientViewModel.data);
+    _.remove(this.recipe.recipeIngredients, recipeIngredientViewModel);
     if (this.recipe.autosaver) this.recipe.autosaver.autosave();
   }
 

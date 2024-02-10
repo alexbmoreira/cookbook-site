@@ -1,6 +1,7 @@
 module Recipes
   class Create < ApplicationInteraction
     include Transactional
+    include Draftable
 
     string :name
     hash :image, default: nil do
@@ -52,6 +53,7 @@ module Recipes
       recipe.assign_attributes(image_attributes: image.compact) if image&.compact.present?
 
       errors.merge!(recipe.errors) unless recipe.save
+      delete_drafts_for(created_by_user_id)
 
       recipe
     end
