@@ -56,7 +56,7 @@ end
 #
 #  id                 :bigint           not null, primary key
 #  category           :integer          default(NULL), not null
-#  cook_time          :integer          not null
+#  cook_time          :integer
 #  deleted_at         :datetime
 #  name               :string           not null
 #  prep_time          :integer          not null
