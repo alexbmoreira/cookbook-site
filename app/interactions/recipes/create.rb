@@ -52,8 +52,11 @@ module Recipes
       recipe.assign_attributes(recipe_ingredients_attributes:)
       recipe.assign_attributes(image_attributes: image.compact) if image&.compact.present?
 
-      errors.merge!(recipe.errors) unless recipe.save
-      delete_drafts_for(created_by_user_id)
+      if recipe.save
+        delete_drafts_for(created_by_user_id)
+      else
+        errors.merge!(recipe.errors)
+      end
 
       recipe
     end
