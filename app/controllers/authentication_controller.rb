@@ -39,7 +39,7 @@ class AuthenticationController < ApplicationController
 
   def set_jwt_token(token)
     cookies.signed[:jwt] = {
-      value:  token,
+      value: token,
       httponly: true,
       secure: Rails.env.production?,
       same_site: :none
