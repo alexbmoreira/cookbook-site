@@ -72,7 +72,6 @@ namespace :recipes do
             rest_time: recipe_data[:rest_time],
             steps: recipe_data[:steps],
             servings: recipe_data[:servings],
-            created_by_user_id: recipe_data[:created_by_user_id],
             recipe_ingredients: recipe_data[:recipe_ingredients].map do |ingredient|
               {
                 quantity: ingredient[:quantity],
@@ -82,21 +81,21 @@ namespace :recipes do
             end
           }
   
-          result = ::Recipes::Create.run!(interaction_input.merge(draftable_id: '1', draftable_type: 'recipe'))
+          result = ::Recipes::Create.run!(interaction_input.merge(created_by_user_id: 1, draftable_id: '1', draftable_type: 'recipe'))
   
           if result.valid?
             successful_imports += 1
           else
             failed_imports += 1
             
-            Rails.logger.error "Failed to import recipe: #{result.errors.full_messages.join(', ')}"
+            puts "Failed to import recipe: #{result.errors.full_messages.join(', ')}"
           end
         rescue StandardError => e
           failed_imports += 1
           
           # Log any unexpected errors
-          Rails.logger.error "Error importing recipe from #{file.name}: #{e.message}"
-          Rails.logger.error e.backtrace.join("\n")
+          puts "Error importing recipe from #{file.name}: #{e.message}"
+          puts e.backtrace.join("\n")
         end
 
         puts "Import complete:"

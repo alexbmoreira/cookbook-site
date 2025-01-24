@@ -4,7 +4,7 @@ Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
   config.middleware.insert_before 0, Rack::Cors do
     allow do
-      origins /(cookbook-13--[-\w]+\.web\.app)|(twoscompanycookbook\.com)/
+      origins (/(cookbook-13--[-\w]+\.web\.app)|(twoscompanycookbook\.com)/)
       resource '*',
         headers: :any,
         methods: [:get, :post, :put, :patch, :delete, :options, :head],
@@ -24,7 +24,7 @@ Rails.application.configure do
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
 
-  config.hosts << /.*\.twoscompanycookbook\.com/
+  config.hosts << ENV["ALLOWED_HOST"]
 
   # Ensures that a master key has been made available in either ENV["RAILS_MASTER_KEY"]
   # or in config/master.key. This key is used to decrypt credentials (and other encrypted files).
