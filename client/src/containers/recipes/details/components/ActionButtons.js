@@ -21,18 +21,6 @@ const ActionItem = observer(({ label, icon, onClick }) => {
 const ActionButtons = observer(({ uiState }) => {
   const [expanded, setExpanded] = useState(false);
 
-  if (!uiState.canEditRecipe) {
-    return (
-      <div className='relative flex w-full text-white justify-end items-center text-sm'>
-        <IconButton onClick={() => uiState.shareRecipe()}>
-          <div className='mr-[2px]'>
-            <FontAwesomeIcon icon='fa-solid fa-share-nodes'/>
-          </div>
-        </IconButton>
-      </div>
-    );
-  }
-
   const buttonRef = useRef(null);
   const menuRef = useRef(null);
 
@@ -53,6 +41,18 @@ const ActionButtons = observer(({ uiState }) => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, [expanded]);
+
+  if (!uiState.canEditRecipe) {
+    return (
+      <div className='relative flex w-full text-white justify-end items-center text-sm'>
+        <IconButton onClick={() => uiState.shareRecipe()}>
+          <div className='mr-[2px]'>
+            <FontAwesomeIcon icon='fa-solid fa-share-nodes'/>
+          </div>
+        </IconButton>
+      </div>
+    );
+  }
 
   return (
     <div className='relative flex w-full text-white justify-end items-center'>
