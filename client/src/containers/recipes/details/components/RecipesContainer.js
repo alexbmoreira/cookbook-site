@@ -11,12 +11,14 @@ import Instructions from './Instructions';
 import { Notes } from './notes';
 import ActionButtons from './ActionButtons';
 import DeleteRecipeModal from './DeleteRecipeModal';
+import RecipeSchema from './RecipeSchema';
 
 const RecipesContainer = observer(({uiState}) => {
   const { recipe, relativeServings } = uiState;
 
   return (
     <div>
+      <RecipeSchema recipe={recipe}/>
       {recipe.image && <div
         className='relative bg-cover bg-center h-48 overflow-hidden bg-gray-600 p-2'
         style={{backgroundImage: `url(${recipe.image.path})`}}
