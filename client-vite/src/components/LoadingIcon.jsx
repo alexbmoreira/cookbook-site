@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const LoadingIcon = ({ color }) => {
+const LoadingIcon = ({ color = 'carolina' }) => {
   const _color = () => {
     switch (color) {
       case 'carolina':
@@ -28,10 +28,6 @@ LoadingIcon.propTypes = {
     'carolina',
     'silver'
   ])
-};
-
-LoadingIcon.defaultProps = {
-  color: 'carolina'
 };
 
 export default LoadingIcon;

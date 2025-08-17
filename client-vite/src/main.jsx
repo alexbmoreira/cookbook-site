@@ -14,12 +14,9 @@ import { flattenMessages } from './shared';
 import en from './locales/en.json';
 import { Root } from './containers/root';
 import { HomeContainer } from './containers/home';
+import { RecipesContainer } from './containers/recipes';
 
 library.add(...all);
-
-console.log('Main.jsx loaded');
-console.log('Root element:', document.getElementById('root'));
-console.log('Messages:', flattenMessages(en));
 
 const rootElement = document.getElementById('root');
 if (!rootElement) {
@@ -31,6 +28,7 @@ if (!rootElement) {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Root/>}>
+              <Route path="/recipes/:slug" element={<RecipesContainer />} />
               <Route index element={<HomeContainer/>} />
             </Route>
           </Routes>
