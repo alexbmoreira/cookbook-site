@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { observer } from 'mobx-react';
 import { FormattedMessage } from 'react-intl';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -25,6 +25,8 @@ const ActionButtons = observer(({ uiState }) => {
   const menuRef = useRef(null);
 
   const isClickOutside = (event) => {
+    if (!buttonRef.current || !menuRef.current) return false;
+
     return !buttonRef.current.contains(event.target) && !menuRef.current.contains(event.target);
   };
 

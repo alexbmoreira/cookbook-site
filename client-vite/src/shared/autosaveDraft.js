@@ -1,5 +1,5 @@
 import { fetchData } from '../api/api.service';
-import { Draft } from '../store/drafts';
+import { Draft } from '@store/drafts';
 import { makeAutoObservable } from 'mobx';
 import setupAutosave from './autosave';
 

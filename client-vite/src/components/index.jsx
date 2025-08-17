@@ -8,6 +8,8 @@ import NumberInput from './NumberInput.jsx';
 import IconButton from './IconButton.jsx';
 import Modal from './Modal.jsx';
 import Button from './Button.jsx';
+import TextArea from './TextArea.jsx';
+import AutosaveStatus from './AutosaveStatus.jsx';
 
 Input.Basic = BasicInput;
 
@@ -20,5 +22,7 @@ export {
   NumberInput,
   IconButton,
   Modal,
-  Button
+  Button,
+  TextArea,
+  AutosaveStatus
 };

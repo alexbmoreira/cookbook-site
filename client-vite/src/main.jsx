@@ -14,7 +14,7 @@ import { flattenMessages } from './shared';
 import en from './locales/en.json';
 import { Root } from './containers/root';
 import { HomeContainer } from './containers/home';
-import { RecipesContainer } from './containers/recipes';
+import { RecipesContainer, RecipeEditContainer } from './containers/recipes';
 
 library.add(...all);
 
@@ -28,12 +28,13 @@ if (!rootElement) {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Root/>}>
+              <Route path="/recipes/new" element={<RecipeEditContainer />} />
               <Route path="/recipes/:slug" element={<RecipesContainer />} />
+              <Route path="/recipes/:slug/edit" element={<RecipeEditContainer />} />
               <Route index element={<HomeContainer/>} />
             </Route>
           </Routes>
         </BrowserRouter>
-        <ToastContainer />
       </IntlProvider>
     </React.StrictMode>
   );

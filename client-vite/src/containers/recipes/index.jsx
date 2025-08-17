@@ -1,3 +1,4 @@
-import RecipesContainer from './details';
+import { RecipesContainer } from './details';
+import { RecipeEditContainer } from './edit';
 
-export { RecipesContainer };
+export { RecipesContainer, RecipeEditContainer };
