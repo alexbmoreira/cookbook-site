@@ -42,7 +42,7 @@ class AuthenticationController < ApplicationController
       value: token,
       httponly: true,
       secure: Rails.env.production?,
-      same_site: :none
+      same_site: Rails.env.production? ? :none : :lax
     }
   end
 end
