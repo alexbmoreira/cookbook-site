@@ -10,6 +10,7 @@ import Modal from './Modal.jsx';
 import Button from './Button.jsx';
 import TextArea from './TextArea.jsx';
 import AutosaveStatus from './AutosaveStatus.jsx';
+import ActionLink from './ActionLink.jsx';
 
 Input.Basic = BasicInput;
 
@@ -24,5 +25,6 @@ export {
   Modal,
   Button,
   TextArea,
-  AutosaveStatus
+  AutosaveStatus,
+  ActionLink
 };
