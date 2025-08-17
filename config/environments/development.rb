@@ -4,7 +4,7 @@ Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
   config.middleware.insert_before 0, Rack::Cors do
     allow do
-      origins 'localhost:3001'
+      origins 'localhost:5173'
       resource '*',
         headers: :any,
         methods: [:get, :post, :put, :patch, :delete, :options, :head],

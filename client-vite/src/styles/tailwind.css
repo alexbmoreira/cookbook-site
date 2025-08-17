@@ -1,0 +1,83 @@
+@import 'tailwindcss';
+
+@theme {
+  /* Font families */
+  --font-family-serif: Sanchez, serif;
+  --font-family-sans: Nunito, sans-serif;
+  
+  /* Custom color palette */
+  /* Carolina Blue */
+  --color-carolina: #009FE3;
+  --color-carolina-hover: #0095D5;
+  --color-carolina-active: #008AC6;
+  
+  /* Powder */
+  --color-powder: #F3F4F6;
+  --color-powder-hover: #E8EAED;
+  --color-powder-active: #DCDFE5;
+  
+  /* White variants */
+  --color-white: #FFFFFF;
+  --color-white-hover: #F5F5F5;
+  --color-white-active: #EBEBEB;
+  
+  /* Lapis */
+  --color-lapis: #075985;
+  --color-lapis-hover: #08689B;
+  --color-lapis-active: #0975AE;
+  
+  /* Silver */
+  --color-silver: #CCCCCC;
+  --color-silver-hover: #C2C2C2;
+  --color-silver-active: #B8B8B8;
+  
+  /* Night */
+  --color-night: #151515;
+  --color-night-clear: #15151588;
+  
+  /* Crimson */
+  --color-crimson: #DE3202;
+  --color-crimson-active: #F23602;
+  
+  /* Animations */
+  --animate-beat: beat 1s infinite;
+  --animate-spin: spin 3s linear infinite;
+  --animate-spin-reverse: spin-reverse 2.5s linear infinite;
+}
+
+/* Keyframe animations */
+@keyframes beat {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes spin {
+  0% { 
+    transform: rotate(0deg);
+  }
+  100% { 
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-reverse {
+  0% { 
+    transform: rotate(810deg);
+  }
+  100% { 
+    transform: rotate(90deg);
+  }
+}
+
+/* Apply important to all utilities */
+/* @layer utilities {
+  * {
+    @apply !important;
+  }
+} */

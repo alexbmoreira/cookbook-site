@@ -10,5 +10,5 @@ docker compose up -d --build
 ### Frontend
 
 ```
-cd client && npm yarn start
+cd client && npm run dev
 ```

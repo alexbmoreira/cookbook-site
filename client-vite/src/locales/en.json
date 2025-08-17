@@ -1,0 +1,77 @@
+{
+  "auth": {
+    "Log In": "Log In",
+    "Register": "Register",
+    "Username": "Username",
+    "Password": "Password"
+  },
+  "header": {
+    "Create": "Create"
+  },
+  "recipes": {
+    "Ingredients": "Ingredients",
+    "Instructions": "Instructions",
+    "Copied to clipboard!": "Copied to clipboard!",
+    "categories": {
+      "breakfast": "Breakfast",
+      "snack": "Snack",
+      "soup": "Soups",
+      "salad": "Salads",
+      "side": "Sides",
+      "pasta": "Pasta",
+      "meat_and_poultry": "Meat & Poultry",
+      "seafood": "Seafood",
+      "vegetarian": "Vegetarian",
+      "dessert": "Dessert",
+      "drink": "Drink",
+      "misc": "Odds & Ends"
+    },
+    "cook_info": {
+      "prep": "PREP",
+      "cook": "COOK",
+      "rest": "REST",
+      "total": "TOTAL",
+      "servings": "SERVINGS"
+    },
+    "Edit": "Edit",
+    "Share": "Share",
+    "Delete Recipe?": "Delete Recipe?",
+    "This action cannot be undone.": "This action cannot be undone.",
+    "Delete": "Delete",
+    "Notes": "Notes",
+    "notes": {
+      "Add a note...": "Add a note...",
+      "NOTES_UPDATED": "Last updated: {date}",
+      "Save": "Save"
+    },
+    "edit": {
+      "New Recipe": "New Recipe",
+      "Name": "Name",
+      "Image": "Image",
+      "Add an image": "Add an image",
+      "Category": "Category",
+      "Prep Time": "Prep Time",
+      "Cook Time": "Cook Time",
+      "Rest Time": "Rest Time",
+      "Servings": "Servings",
+      "Ingredients": "Ingredients",
+      "Quantity": "Quantity",
+      "Measurement": "Measurement",
+      "Ingredient": "Ingredient",
+      "No Ingredients": "No Ingredients",
+      "Steps": "Steps",
+      "Create Recipe": "Create Recipe",
+      "Save Recipe": "Save Recipe"
+    }
+  },
+  "recipe_list": {
+    "Search...": "Search..."
+  },
+  "time": "{hours, plural, =0 {} other {{hours} h }}{minutes, plural, =0 {} other {{minutes} mins}}",
+  "autosave": {
+    "status": {
+      "saving": "Saving",
+      "saved": "Saved"
+    }
+  }
+}
