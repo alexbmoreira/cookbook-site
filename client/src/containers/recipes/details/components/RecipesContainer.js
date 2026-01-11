@@ -51,7 +51,7 @@ const RecipesContainer = observer(({uiState}) => {
   return (
     <React.Fragment>
       <RecipeSchema recipe={recipe}/>
-      <div className='md:hidden'>
+      <div className='md:hidden flex-grow'>
         <RecipeImage uiState={uiState}/>
         <Container>
           <RecipeDetails uiState={uiState}/>
