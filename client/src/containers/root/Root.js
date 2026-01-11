@@ -29,7 +29,7 @@ const CreateRecipeButton = observer(() => {
 
 const Header = observer(({onClick}) => {
   return (
-    <div className='flex relative h-full font-bold text-carolina justify-center items-center w-full bg-white sticky top-0 drop-shadow-sm z-20'>
+    <div className='flex h-full font-bold text-carolina justify-center items-center w-full bg-white sticky top-0 drop-shadow-sm z-20'>
       <CreateRecipeButton/>
       <span className='text-xl py-2 hover:text-carolina-hover active:text-carolina-active'>
         <Link to='/'>
@@ -66,7 +66,7 @@ const Root = observer(() => {
   return (
     <div className='text-night flex flex-col min-h-screen'>
       <Header onClick={() => _handleUserClicked()}/>
-      <div className='flex-grow'>
+      <div className='flex flex-grow'>
         <Outlet/>
       </div>
       <Footer/>
