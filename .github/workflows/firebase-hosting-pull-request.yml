@@ -4,20 +4,19 @@
 name: Deploy to Firebase Hosting on PR
 'on': pull_request
 jobs:
+  name: Build and Preview
   build_and_preview:
-    name: Build and Preview
-    build_and_preview:
-      if: '${{ github.event.pull_request.head.repo.full_name == github.repository }}'
-      runs-on: ubuntu-latest
-      steps:
-        - uses: actions/checkout@v2
-        - run: cd client && npm install && npm run build
-          env:
-            REACT_APP_API_URL: ${{ secrets.REACT_APP_API_URL }}
-            FONTAWESOME_NPM_TOKEN: ${{ secrets.FONTAWESOME_NPM_TOKEN }}
-        - uses: FirebaseExtended/action-hosting-deploy@v0
-          with:
-            repoToken: '${{ secrets.GITHUB_TOKEN }}'
-            firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_COOKBOOK_13 }}'
-            projectId: cookbook-13
-            entrypoint: ./client
+    if: '${{ github.event.pull_request.head.repo.full_name == github.repository }}'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: cd client && npm install && npm run build
+        env:
+          REACT_APP_API_URL: ${{ secrets.REACT_APP_API_URL }}
+          FONTAWESOME_NPM_TOKEN: ${{ secrets.FONTAWESOME_NPM_TOKEN }}
+      - uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_COOKBOOK_13 }}'
+          projectId: cookbook-13
+          entrypoint: ./client
