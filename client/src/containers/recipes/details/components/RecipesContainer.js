@@ -32,7 +32,7 @@ const RecipeDetails = observer(({uiState}) => {
   const { recipe, relativeServings } = uiState;
 
   return (
-    <div className='flex flex-col space-y-2 z-50 flex-grow md:px-4'>
+    <div className='flex flex-col space-y-2 flex-grow md:px-4'>
       {!recipe.image && <ActionButtons uiState={uiState}/>}
       <BlockHeader title={recipe.name} size='lg' translateTitle={false}/>
       <RecipeInfo uiState={uiState}/>
