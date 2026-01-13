@@ -34,12 +34,10 @@ const CatgoriesDropdown = observer(({ uiState }) => {
 });
 
 const RecipesList = observer(({ fetchingRecipes, recipes }) => {
-  if (fetchingRecipes) {
-    return <LoadingIcon/>;
-  }
+  if (fetchingRecipes) return <LoadingIcon/>;
   
   return (
-    <div className='space-y-4'>
+    <div className='grid gap-4 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4'>
       {recipes.map((recipe) => (
         <RecipeLink key={recipe.slug} recipe={recipe}/>
       ))}
