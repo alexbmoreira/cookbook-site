@@ -16,11 +16,11 @@ import RecipeSchema from './RecipeSchema';
 const RecipeImage = observer(({uiState}) => {
   const { recipe } = uiState;
 
-  if (!recipe.image) return null;
+  if (!recipe.hasImage) return null;
 
   return (
     <div
-      className='relative bg-cover bg-center overflow-hidden bg-gray-600 p-2 h-48 md:w-1/2 md:h-full'
+      className='relative bg-cover bg-center overflow-hidden p-2 h-48 md:w-1/2 md:h-full'
       style={{backgroundImage: `url(${recipe.image.path})`}}
     >
       <ActionButtons uiState={uiState}/>
@@ -33,7 +33,7 @@ const RecipeDetails = observer(({uiState}) => {
 
   return (
     <div className='flex flex-col space-y-2 flex-grow md:px-4 md:w-1/2'>
-      {!recipe.image && <ActionButtons uiState={uiState}/>}
+      {!recipe.hasImage && <ActionButtons uiState={uiState}/>}
       <BlockHeader title={recipe.name} size='lg' translateTitle={false}/>
       <RecipeInfo uiState={uiState}/>
       <BlockHeader title={'recipes.Ingredients'}/>

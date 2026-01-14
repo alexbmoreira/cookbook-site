@@ -41,7 +41,7 @@ const RecipeSchema = ({ recipe }) => {
       '@context': 'https://schema.org/',
       '@type': 'Recipe',
       'name': recipe.name,
-      'image': recipe.image ? recipe.image.path : '',
+      'image': recipe.hasImage ? recipe.image.path : '',
       'prepTime': durationToISO8601(recipe.prepTime), // e.g., 'PT30M' for 30 minutes
       'cookTime': durationToISO8601(recipe.cookTime),
       'totalTime': durationToISO8601(recipe.timeEstimate),
