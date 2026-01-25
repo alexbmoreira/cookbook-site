@@ -13,28 +13,54 @@ import ActionButtons from './ActionButtons';
 import DeleteRecipeModal from './DeleteRecipeModal';
 import RecipeSchema from './RecipeSchema';
 
-const RecipesContainer = observer(({uiState}) => {
+const RecipeImage = observer(({uiState}) => {
+  const { recipe } = uiState;
+
+  if (!recipe.hasImage) return null;
+
+  return (
+    <div
+      className='relative bg-cover bg-center overflow-hidden p-2 h-48 md:w-1/2 md:h-full'
+      style={{backgroundImage: `url(${recipe.image.path})`}}
+    >
+      <ActionButtons uiState={uiState}/>
+    </div>
+  );
+});
+
+const RecipeDetails = observer(({uiState}) => {
   const { recipe, relativeServings } = uiState;
 
   return (
-    <div>
+    <div className='flex flex-col space-y-2 flex-grow md:px-4 md:w-1/2'>
+      {!recipe.hasImage && <ActionButtons uiState={uiState}/>}
+      <BlockHeader title={recipe.name} size='lg' translateTitle={false}/>
+      <RecipeInfo uiState={uiState}/>
+      <BlockHeader title={'recipes.Ingredients'}/>
+      <Ingredients ingredients={recipe.recipeIngredients} relativeServings={relativeServings}/>
+      <BlockHeader title={'recipes.Instructions'}/>
+      <Instructions steps={recipe.steps}/>
+      <Notes uiState={uiState}/>
+    </div>
+  );
+});
+
+const RecipesContainer = observer(({uiState}) => {
+  const { recipe } = uiState;
+
+  return (
+    <React.Fragment>
       <RecipeSchema recipe={recipe}/>
-      {recipe.image && <div
-        className='relative bg-cover bg-center h-48 overflow-hidden bg-gray-600 p-2'
-        style={{backgroundImage: `url(${recipe.image.path})`}}
-      >
-        <ActionButtons uiState={uiState}/>
-      </div>}
-      <Container className='space-y-2 z-50'>
-        {!recipe.image && <ActionButtons uiState={uiState}/>}
-        <BlockHeader title={recipe.name} size='lg' translateTitle={false}/>
-        <RecipeInfo uiState={uiState}/>
-        <BlockHeader title={'recipes.Ingredients'}/>
-        <Ingredients ingredients={recipe.recipeIngredients} relativeServings={relativeServings}/>
-        <BlockHeader title={'recipes.Instructions'}/>
-        <Instructions steps={recipe.steps}/>
-        <Notes uiState={uiState}/>
-      </Container>
+      <div className='md:hidden flex-grow'>
+        <RecipeImage uiState={uiState}/>
+        <Container>
+          <RecipeDetails uiState={uiState}/>
+        </Container>
+      </div>
+      <div className='hidden md:flex flex-grow'>
+        <RecipeImage uiState={uiState}/>
+        <RecipeDetails uiState={uiState}/>
+      </div>
       <DeleteRecipeModal isOpen={uiState.deleteRecipeModalOpen} onClose={() => uiState.closeDeleteRecipeModal()} uiState={uiState}/>
       <ToastContainer
         className='bg-transparent'
@@ -50,7 +76,7 @@ const RecipesContainer = observer(({uiState}) => {
         draggable={false}
         pauseOnHover={false}
       />
-    </div>
+    </React.Fragment>
   );
 });
 

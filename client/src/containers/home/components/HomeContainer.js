@@ -34,12 +34,10 @@ const CatgoriesDropdown = observer(({ uiState }) => {
 });
 
 const RecipesList = observer(({ fetchingRecipes, recipes }) => {
-  if (fetchingRecipes) {
-    return <LoadingIcon/>;
-  }
+  if (fetchingRecipes) return <LoadingIcon/>;
   
   return (
-    <div className='space-y-4'>
+    <div className='grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
       {recipes.map((recipe) => (
         <RecipeLink key={recipe.slug} recipe={recipe}/>
       ))}
@@ -51,7 +49,7 @@ const HomeContainer = observer(({ uiState }) => {
   const { fetchingRecipes, recipes } = uiState;
 
   return (
-    <Container>
+    <Container className='flex-grow'>
       <SearchBar uiState={uiState}/>
       <CatgoriesDropdown uiState={uiState}/>
       <RecipesList fetchingRecipes={fetchingRecipes} recipes={recipes}/>
