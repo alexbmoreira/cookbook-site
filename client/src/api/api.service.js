@@ -2,7 +2,7 @@ import axios from 'axios';
 import _ from 'lodash';
 
 const api = axios.create({
-  baseURL: `${process.env.REACT_APP_API_URL}`,
+  baseURL: `${import.meta.env.VITE_API_URL}`,
   withCredentials: true,
   headers: {
     Accept: 'application/json',

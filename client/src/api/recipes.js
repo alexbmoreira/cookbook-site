@@ -1,15 +1,18 @@
-const _ = require('lodash');
-const slugify = require('slugify');
+import _ from 'lodash';
+import slugify from 'slugify';
 
-const requireModule = require.context('./catalog/', true, /\.json$/);
+const modules = import.meta.glob('./catalog/**/*.json', { eager: true });
 
-const recipes = requireModule.keys().map(filename => {
-  const recipe = require(`./catalog/${filename.replace(/(\.\/|\.json)/g, '')}`);
-  return _.merge({ slug: slugify(recipe.name, { lower: true, remove: /[*+~.()'"!:@]/g }) }, recipe);
+const recipes = Object.entries(modules).map(([path, module]) => {
+  const recipe = module.default;
+  return _.merge(
+    { slug: slugify(recipe.name, { lower: true, remove: /[*+~.()'"!:@]/g }) },
+    recipe
+  );
 });
 
 if (_.uniqBy(recipes, 'slug').length !== recipes.length) {
   throw new Error('Duplicate ids in recipes');
 }
 
-module.exports = recipes;
+export default recipes;
