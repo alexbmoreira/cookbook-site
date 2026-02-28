@@ -1,5 +1,4 @@
 import { observer } from 'mobx-react';
-import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

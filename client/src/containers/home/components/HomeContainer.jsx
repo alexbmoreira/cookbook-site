@@ -1,4 +1,3 @@
-import React from 'react';
 import { observer } from 'mobx-react';
 import { Container, Input, LoadingIcon, Select } from '../../../components';
 import { withState } from '../../../shared';

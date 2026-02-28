@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { observer } from 'mobx-react';
 import { authStore } from '../../../store';
 import { ActionLink, Button, Input, Modal } from '../../../components';

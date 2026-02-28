@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { observer } from 'mobx-react';
 import ReactSelect from 'react-select'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

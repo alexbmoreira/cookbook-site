@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { observer } from 'mobx-react';
 
 const IconButton = observer(({onClick, size, className, children, ...rest}) => {

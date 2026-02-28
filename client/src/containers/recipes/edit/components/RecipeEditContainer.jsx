@@ -1,4 +1,3 @@
-import React from 'react';
 import { observer } from 'mobx-react';
 import { AutosaveStatus, Button, Container, Input, NumberInput, Select, TextArea } from '../../../../components';
 import { FormattedMessage } from 'react-intl';
