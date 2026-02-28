@@ -6,7 +6,7 @@ const BasicInput = observer(({value, onChange, className, ...rest}) => {
     <input
       {...rest}
       value={value || ''}
-      className={`outline-none w-full placeholder:text-silver ${className || ''}`}
+      className={`outline-hidden w-full placeholder:text-silver ${className || ''}`}
       onChange={(e) => onChange(e.target.value)}
     />
   );

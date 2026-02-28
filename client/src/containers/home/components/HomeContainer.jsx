@@ -49,7 +49,7 @@ const HomeContainer = observer(({ uiState }) => {
   const { fetchingRecipes, recipes } = uiState;
 
   return (
-    <Container className='flex-grow'>
+    <Container className='grow'>
       <SearchBar uiState={uiState}/>
       <CatgoriesDropdown uiState={uiState}/>
       <RecipesList fetchingRecipes={fetchingRecipes} recipes={recipes}/>

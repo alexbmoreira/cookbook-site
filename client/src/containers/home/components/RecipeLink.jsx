@@ -36,7 +36,7 @@ const RecipeInfo = ({recipe}) => {
   return (
     <div className='flex flex-col h-full'>
       <RecipeImage recipe={recipe}/>
-      <div className='flex flex-col flex-grow justify-between p-2 text-night'>
+      <div className='flex flex-col grow justify-between p-2 text-night'>
         <div className='font-serif text-2xl mb-1'>{recipe.name}</div>
         <div className='flex justify-between'>
           <div className='text-carolina'>

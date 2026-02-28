@@ -21,7 +21,7 @@ const Notes = observer(({uiState}) => {
           value={notes.body}
           onChange={(e) => uiState.updateNotesBody(e.target.value)}
           placeholder='Add a note...'
-          className='outline-none resize-none w-full placeholder:text-silver'
+          className='outline-hidden resize-none w-full placeholder:text-silver'
           minRows={3}
         />
         <div className={`flex ${notes.isNew ? 'justify-end' : 'justify-between'}`}>

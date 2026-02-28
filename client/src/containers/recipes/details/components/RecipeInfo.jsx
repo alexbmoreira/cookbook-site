@@ -27,7 +27,7 @@ const RecipeInfo = observer(({uiState}) => {
       {cookTime > 0 && <InfoLine title='cook' value={cookTime} isTime/>}
       {restTime > 0 && <InfoLine title='rest' value={restTime} isTime/>}
       {servings && <React.Fragment>
-        <div className='border-b'/>
+        <div className='border-b border-silver'/>
         <div className='flex justify-between'>
           <span className='bold text-lapis'><FormattedMessage id='recipes.cook_info.servings'/></span>
           <span className='font-serif justify-end'>

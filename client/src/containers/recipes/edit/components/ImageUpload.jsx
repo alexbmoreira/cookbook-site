@@ -43,7 +43,7 @@ const Image = observer(({ image, onRemove }) => {
       />
       <div className='flex space-x-1 justify-between items-center text-silver border-t border-silver rounded-b p-2'>
         <FontAwesomeIcon icon='fa-solid fa-image'/>
-        <div className='overflow-hidden truncate flex-grow'>{image.originalFilename}</div>
+        <div className='overflow-hidden truncate grow'>{image.originalFilename}</div>
         <div className='cursor-pointer hover:text-crimson active:text-crimson-active' onClick={() => onRemove()}>
           <FontAwesomeIcon icon='fa-solid fa-circle-xmark'/>
         </div>

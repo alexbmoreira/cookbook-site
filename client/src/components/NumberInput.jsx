@@ -11,13 +11,13 @@ const NumberInputLarge = observer(({value, label, onIncrement, onDecrement, decr
       {label && <label className='block'>
         <FormattedMessage id={label}/>
       </label>}
-      <div className={`flex w-full border border-silver outline-none rounded ${errorMessage ? 'border border-crimson' : ''}`}>
+      <div className={`flex w-full border border-silver outline-hidden rounded ${errorMessage ? 'border border-crimson' : ''}`}>
         <Button className='rounded-l w-10' onClick={() => onDecrement()} disabled={decrementDisabled}>
           <span className='m-auto px-2 py-1 text-lg'>
             <FontAwesomeIcon icon='fa-solid fa-minus'/>
           </span>
         </Button>
-        <div className='p-2 flex-grow text-center outline-none flex items-center justify-center'>
+        <div className='p-2 grow text-center outline-hidden flex items-center justify-center'>
           <span>{value}</span>
         </div>
         <Button className='rounded-r w-10' onClick={() => onIncrement()}>
@@ -38,7 +38,7 @@ const NumberInputSmall = observer(({value, onIncrement, onDecrement, decrementDi
           <FontAwesomeIcon icon='fa-solid fa-minus'/>
         </span>
       </Button>
-      <div className='px-2 py-1 text-sm text-center w-10 outline-none flex items-center justify-center'>
+      <div className='px-2 py-1 text-sm text-center w-10 outline-hidden flex items-center justify-center'>
         <span>{value}</span>
       </div>
       <Button trait='powder' className='rounded-r' onClick={() => onIncrement()}>

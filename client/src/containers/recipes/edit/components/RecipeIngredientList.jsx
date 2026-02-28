@@ -9,7 +9,7 @@ import { RecipeIngredient } from '../../../../store/recipes';
 const IngredientItem = observer(({ recipeIngredientViewModel, onRemove, canEditRecipeIngredient }) => {
   return (
     <div className='flex'>
-      <div className='flex-grow grid grid-cols-4 gap-2'>
+      <div className='grow grid grid-cols-4 gap-2'>
         <div className='py-2'>{recipeIngredientViewModel.quantity}</div>
         <div className='py-2'>{recipeIngredientViewModel.measurement}</div>
         <div className='py-2 col-span-2'>{recipeIngredientViewModel.name}</div>
@@ -38,7 +38,7 @@ const EditingIngredientItem = observer(({ recipeIngredientViewModel, onSave }) =
 
   return (
     <div className='flex'>
-      <div className='flex-grow grid grid-cols-4 gap-2'>
+      <div className='grow grid grid-cols-4 gap-2'>
         <div className='py-2 flex'>
           <Input.Basic
             placeholder={'Quantity'}
@@ -114,7 +114,7 @@ const RecipeIngredientInput = observer(({ onAdd }) => {
 
   return (
     <div className='flex'>
-      <div className='flex-grow grid grid-cols-4 gap-2 pl-2'>
+      <div className='grow grid grid-cols-4 gap-2 pl-2'>
         <div className='py-2 flex'>
           <Input.Basic
             placeholder={'Quantity'}

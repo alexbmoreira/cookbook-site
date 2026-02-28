@@ -66,7 +66,7 @@ const Root = observer(() => {
   return (
     <div className='text-night flex flex-col min-h-screen'>
       <Header onClick={() => _handleUserClicked()}/>
-      <div className='flex flex-grow'>
+      <div className='flex grow'>
         <Outlet/>
       </div>
       <Footer/>

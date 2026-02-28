@@ -32,7 +32,7 @@ const RecipeDetails = observer(({uiState}) => {
   const { recipe, relativeServings } = uiState;
 
   return (
-    <div className='flex flex-col space-y-2 flex-grow md:px-4 md:w-1/2'>
+    <div className='flex flex-col space-y-2 grow md:px-4 md:w-1/2'>
       {!recipe.hasImage && <ActionButtons uiState={uiState}/>}
       <BlockHeader title={recipe.name} size='lg' translateTitle={false}/>
       <RecipeInfo uiState={uiState}/>
@@ -51,13 +51,13 @@ const RecipesContainer = observer(({uiState}) => {
   return (
     <React.Fragment>
       <RecipeSchema recipe={recipe}/>
-      <div className='md:hidden flex-grow'>
+      <div className='md:hidden grow'>
         <RecipeImage uiState={uiState}/>
         <Container>
           <RecipeDetails uiState={uiState}/>
         </Container>
       </div>
-      <div className='hidden md:flex flex-grow'>
+      <div className='hidden md:flex grow'>
         <RecipeImage uiState={uiState}/>
         <RecipeDetails uiState={uiState}/>
       </div>

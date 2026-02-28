@@ -22,7 +22,7 @@ const TimeInput = observer(({value, label, onChange, errorMessage, className, ..
         <input
           {...rest}
           value={value || ''}
-          className='flex-grow outline-none overflow-hidden placeholder:text-silver mr-1'
+          className='grow outline-hidden overflow-hidden placeholder:text-silver mr-1'
           onChange={(e) => _onChange(e.target.value)}
         />
         {timeFormatter(value) && <div className='whitespace-nowrap text-silver'>

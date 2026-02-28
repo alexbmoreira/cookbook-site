@@ -46,7 +46,7 @@ const Select = observer(({options, value, defaultValue, label, onChange, clearVa
           placeholder: () => 'text-silver',
           valueContainer: () => 'p-0',
           clearIndicator: () => 'text-silver hover:text-silver-hover',
-          control: () => `w-full outline-none border border-silver text-base text-night shadow-none rounded p-2 ${errorMessage ? 'border-crimson' : ''}`
+          control: () => `w-full outline-hidden border border-silver text-base text-night shadow-none rounded p-2 ${errorMessage ? 'border-crimson' : ''}`
         }}
         {...rest}
       />
