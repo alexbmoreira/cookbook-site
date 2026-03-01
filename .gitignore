@@ -31,3 +31,6 @@
 .env
 
 /config/credentials/development.key
+
+# Claude
+CLAUDE.md
