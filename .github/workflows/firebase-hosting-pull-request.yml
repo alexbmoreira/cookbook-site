@@ -22,7 +22,7 @@ jobs:
       - name: Install function dependencies
         run: cd client/functions && npm install
       - name: Deploy Cloud Functions
-        run: cd client && npx firebase-tools deploy --only functions --project cookbook-13
+        run: cd client && npx firebase-tools deploy --force --only functions --project cookbook-13
         env:
           GOOGLE_APPLICATION_CREDENTIALS: /tmp/firebase-sa.json
       - uses: FirebaseExtended/action-hosting-deploy@v0
