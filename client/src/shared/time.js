@@ -5,7 +5,9 @@ export function timeFormatter(time) {
   return { hours, minutes };
 }
 
-export function durationToISO8601(hours, minutes) {
+export function durationToISO8601(totalMinutes) {
+  if (!totalMinutes) return '';
+  const { hours, minutes } = timeFormatter(totalMinutes);
   const hoursString = hours ? `${hours}H` : '';
   const minutesString = minutes ? `${minutes}M` : '';
 
