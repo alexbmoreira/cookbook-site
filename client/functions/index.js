@@ -7,15 +7,12 @@ const path = require('path');
 const API_BASE = process.env.API_BASE;
 const SITE_URL = 'https://twoscompanycookbook.com';
 
-// Read the SPA index.html at cold-start time (copied from dist/ during deploy)
 let spaHtml;
 try {
   spaHtml = fs.readFileSync(path.join(__dirname, 'index.html'), 'utf8');
 } catch {
   spaHtml = '<!DOCTYPE html><html><head><meta http-equiv="refresh" content="0;url=/"></head></html>';
 }
-
-// --- Bot detection ---
 
 const BOT_AGENTS = [
   'googlebot', 'bingbot', 'slurp', 'duckduckbot', 'baiduspider',
@@ -31,8 +28,6 @@ function isBot(userAgent) {
   const ua = userAgent.toLowerCase();
   return BOT_AGENTS.some(bot => ua.includes(bot));
 }
-
-// --- Helpers ---
 
 function escapeHtml(str) {
   if (!str) return '';
@@ -84,8 +79,6 @@ function ingredientString(ingredient) {
     .trim();
 }
 
-// --- API ---
-
 async function fetchRecipe(slug) {
   const response = await fetch(`${API_BASE}/recipes/${slug}`, {
     headers: { 'Accept': 'application/json' },
@@ -93,8 +86,6 @@ async function fetchRecipe(slug) {
   if (!response.ok) return null;
   return response.json();
 }
-
-// --- HTML generation ---
 
 function buildHtml(recipe) {
   const imageUrl = recipe.image ? recipe.image.path : '';
@@ -119,7 +110,6 @@ function buildHtml(recipe) {
     recipeInstructions: parseRecipeSteps(recipe.steps),
   };
 
-  // Remove undefined values from schema
   Object.keys(schemaData).forEach(key => {
     if (schemaData[key] === undefined) delete schemaData[key];
   });
@@ -157,12 +147,9 @@ function buildHtml(recipe) {
 </html>`;
 }
 
-// --- Cloud Function ---
-
 exports.ssrRecipe = functions.https.onRequest(async (req, res) => {
   const pathMatch = req.path.match(/^\/recipes\/([^/]+)\/?$/);
 
-  // Not a recipe path, or a special path like /recipes/new or /recipes/slug/edit
   if (!pathMatch || pathMatch[1] === 'new') {
     res.status(200).send(spaHtml);
     return;
@@ -175,14 +162,12 @@ exports.ssrRecipe = functions.https.onRequest(async (req, res) => {
     return;
   }
 
-  // Non-bot users get the normal SPA
   if (!isBot(req.headers['user-agent'])) {
     res.set('Cache-Control', 'public, max-age=300');
     res.status(200).send(spaHtml);
     return;
   }
 
-  // Bot flow: fetch recipe and serve meta tags
   try {
     const recipe = await fetchRecipe(slug);
     if (!recipe) {
