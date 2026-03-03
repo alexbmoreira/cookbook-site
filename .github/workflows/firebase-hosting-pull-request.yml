@@ -14,6 +14,9 @@ jobs:
         env:
           VITE_API_URL: ${{ secrets.VITE_API_URL }}
           FONTAWESOME_NPM_TOKEN: ${{ secrets.FONTAWESOME_NPM_TOKEN }}
+      - name: Write functions .env
+        run: |
+          echo "API_BASE=${{ secrets.VITE_API_URL }}" > client/functions/.env
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
