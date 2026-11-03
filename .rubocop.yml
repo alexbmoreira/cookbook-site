@@ -1,4 +1,4 @@
-require: rubocop-rails
+plugins: rubocop-rails
 
 AllCops:
   Exclude:
@@ -10,19 +10,7 @@ AllCops:
     - 'tmp/**/*'
     - 'vendor/**/*'
   DisplayCopNames: true
-  TargetRubyVersion: 3.2
-
-Gemspec/DateAssignment:
-  Enabled: false
-
-Gemspec/DeprecatedAttributeAssignment:
-  Enabled: false
-
-Gemspec/RequireMFA:
-  Enabled: false
-
-Gemspec/DateAssignment:
-  Enabled: false
+  TargetRubyVersion: 4.0
 
 Gemspec/DeprecatedAttributeAssignment:
   Enabled: false
