@@ -32,6 +32,7 @@ export const postData = async (url, payload) => {
 
     const status = _.get(error, 'response.status');
     switch (status) {
+      case 401:
       case 422:
         return error.response.data;
       default:

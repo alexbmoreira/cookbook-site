@@ -44,7 +44,7 @@ const AuthModal = observer(({isOpen, onClose}) => {
       <div className='font-serif text-2xl mb-4 text-center'>
         <FormattedMessage id={`auth.${formType === 'login' ? 'Log In' : 'Register'}`}/>
       </div>
-      <div>
+      <form>
         <Input
           value={username}
           placeholder='Username'
@@ -74,17 +74,18 @@ const AuthModal = observer(({isOpen, onClose}) => {
           errorMessage={formErrors.passwordConfirmation}
         />}
         <div className='mt-6'>
-          <Button onClick={handleSubmit} trait='primary'>
+          <Button type='submit' onClick={handleSubmit} trait='primary'>
             <FormattedMessage id={`auth.${formType === 'login' ? 'Log In' : 'Register'}`}/>
           </Button>
         </div>
         <ActionLink
+          type='button'
           className='w-full mt-2'
           onClick={() => formType === 'login' ? setFormType('register') : setFormType('login')}
         >
           <FormattedMessage id={`auth.${formType === 'login' ? 'Register' : 'Log In'}`}/>
         </ActionLink>
-      </div>
+      </form>
     </Modal>
   );
 });
