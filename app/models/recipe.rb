@@ -1,5 +1,5 @@
 class Recipe < ApplicationRecord
-  enum category: {
+  enum :category, {
     misc: 1,
     breakfast: 2,
     snack: 3,
@@ -56,7 +56,7 @@ end
 # Table name: recipes
 #
 #  id                 :bigint           not null, primary key
-#  category           :integer          default(NULL), not null
+#  category           :integer          default(0), not null
 #  cook_time          :integer
 #  deleted_at         :datetime
 #  name               :string           not null

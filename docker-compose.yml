@@ -27,6 +27,9 @@ services:
       - RACK_ENV=${RACK_ENV}
       - RAILS_ENV=${RAILS_ENV}
       - ALLOWED_HOST=${ALLOWED_HOST}
+      - SEED_USER_EMAIL=${SEED_USER_EMAIL}
+      - SEED_USER_USERNAME=${SEED_USER_USERNAME}
+      - SEED_USER_PASSWORD=${SEED_USER_PASSWORD}
     depends_on:
       - db
 
