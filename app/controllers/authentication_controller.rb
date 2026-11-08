@@ -21,7 +21,7 @@ class AuthenticationController < ApplicationController
         set_jwt_token(token)
         render_resource(user, status: :ok)
       else
-        render_resource({ error: 'Invalid credentials' }, status: :unauthorized)
+        render_resource({ errors: { password: 'Invalid username or password' } }, status: :unauthorized)
       end
     end
   end

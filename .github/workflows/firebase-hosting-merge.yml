@@ -21,6 +21,8 @@ jobs:
           echo "API_BASE=${{ secrets.VITE_API_URL }}" > client/functions/.env
       - name: Write service account key
         run: echo '${{ secrets.FIREBASE_SERVICE_ACCOUNT_COOKBOOK_13 }}' > /tmp/firebase-sa.json
+      - name: Copy SPA index.html into functions
+        run: cp client/dist/index.html client/functions/index.html
       - name: Install function dependencies
         run: cd client/functions && npm install
       - name: Deploy Cloud Functions
